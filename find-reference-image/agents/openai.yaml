@@ -1,0 +1,4 @@
+interface:
+  display_name: "Find Reference Image"
+  short_description: "Find the strongest factual image reference"
+  default_prompt: "Use $find-reference-image to find the best factual reference image for this text."
