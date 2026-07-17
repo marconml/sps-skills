@@ -1,0 +1,4 @@
+interface:
+  display_name: "Refine Pillar Prompts"
+  short_description: "Improve SPS pillar prompts from one week"
+  default_prompt: "Use $refine-pillar-prompts to run one weekly Compare and Invent refinement iteration for this SPS page."
