@@ -1,4 +1,10 @@
 interface:
   display_name: "Refine Pillar Prompts"
-  short_description: "Improve SPS pillar prompts from one week"
-  default_prompt: "Use $refine-pillar-prompts to run one weekly Compare and Invent refinement iteration for this SPS page."
+  short_description: "Refine SPS prompts with MCP-only evidence"
+  default_prompt: "Use $refine-pillar-prompts to run one weekly Compare and Invent refinement iteration using only Social Page Studio MCP providers."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "social_page_studio"
+      description: "Required for history, embeddings, image references, prompt versions, and drafts."

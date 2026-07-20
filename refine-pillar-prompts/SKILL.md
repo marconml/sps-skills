@@ -1,6 +1,6 @@
 ---
 name: refine-pillar-prompts
-description: "Improve Social Page Studio (SPS) pillar prompts from one week of Facebook history using two complementary modes: reach-aware Compare analysis and performance-blind Invent analysis. Use when Codex is asked to refine, improve, learn, or self-improve one or more existing SPS pillar prompts from similar Facebook posts, compare reach differences, or create one evaluation draft per pillar. Run one weekly iteration by default; run multiple weeks only when the user explicitly requests it."
+description: "Improve Social Page Studio (SPS) pillar prompts from one week of Facebook history using SPS MCP-only data, text embeddings, image discovery, prompt storage, and drafts, with reach-aware Compare and performance-blind Invent analysis. Use when Codex is asked to refine, improve, learn, or self-improve one or more existing SPS pillar prompts from similar Facebook posts, compare reach differences, or create one evaluation draft per pillar. Run one weekly iteration by default; run multiple weeks only when the user explicitly requests it."
 ---
 
 # Refine Pillar Prompts
@@ -23,20 +23,23 @@ Determine:
 1. SPS page and Facebook page.
 2. Requested pillars; if omitted, use all enabled pillars on the SPS page.
 3. The 7-day analysis window; default to the preceding 7 days ending now.
-4. Where Facebook credentials are stored if SPS cannot return post history. Never print or store access-token values in output.
+4. Whether SPS MCP exposes the required page history, reach, embedding, image-reference, prompt, and draft capabilities for this agent.
 
 Snapshot every pillar's initial prompt before analysis.
 
-## Data and Embedding Priority
+## MCP-Only Provider Boundary
 
-Use the following order:
+Use the persistent Social Page Studio MCP as the only provider for this workflow:
 
-1. Use the persistent Social Page Studio MCP first for page context, pillar prompts, post history, reach, embeddings, clustering, prompt updates, and evaluation drafts whenever those capabilities are available.
-2. If SPS MCP can supply the posts but cannot create embeddings or clusters, use LiteLLM only for the missing content embeddings. Reuse the configured LiteLLM endpoint, credentials, and embedding model; do not hardcode secrets.
-3. If SPS MCP cannot supply Facebook history, use the Facebook Graph API read-only with the credential source supplied by the user, while continuing to use SPS MCP for pillar reads and writes.
-4. Stop and report the exact missing capability if neither SPS MCP nor LiteLLM can produce embeddings, or if post reach cannot be read.
+1. Read page context, enabled pillars, current prompts, Facebook post history, lifetime reach, and actual post-image URLs through SPS MCP.
+2. Generate every caption/content embedding with `generate_text_embedding`. Use the returned vector only for this analysis and preserve the MCP metadata receipt when available.
+3. Compute deterministic cosine similarity or clustering locally from MCP-returned vectors when SPS does not expose a clustering tool. Local similarity math is allowed; generating vectors outside MCP is not.
+4. Use actual post images returned through SPS MCP for Compare and Invent inspection. If a new reference-image search is necessary, use `search_reference_images` and carry the selected reference through `submit_research` or `attach_reference_image` as appropriate.
+5. Apply prompt updates and create evaluation drafts through SPS MCP.
 
-Do not bypass a working SPS MCP embedding or clustering capability in favor of LiteLLM.
+Do not use LiteLLM, OpenAI or Azure directly, a local embedding model, sentence-transformers, Facebook Graph API directly, Serper directly, browser/general web image search, bundled search scripts, or any other custom provider or fallback.
+
+Treat providers behind SPS MCP as server-owned and opaque. Never read or require provider API keys. If a required MCP capability is unavailable, disabled, or denied, stop and report the exact tool, organization setting, or scope that is missing; do not bypass MCP.
 
 ## Build Comparable Sets
 

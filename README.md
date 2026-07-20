@@ -8,6 +8,7 @@ Reusable Codex skills for Social Page Studio workflows.
 
 Runs one weekly pillar-prompt refinement iteration using:
 
+- Social Page Studio MCP-only history, reach, embeddings, and image references
 - content-similar Facebook post pairs or clusters
 - reach-aware Compare analysis
 - performance-blind Invent analysis
@@ -22,7 +23,8 @@ weekly iterations run only when explicitly requested.
 Finds and verifies the strongest factual reference image for user-supplied text.
 It extracts real visual anchors, improves weak search queries, inspects candidate
 sources, ranks exact matches, and returns `no_match` instead of unrelated generic
-imagery.
+imagery. Image discovery and research media references use Social Page Studio MCP
+only.
 
 ## Install with Codex
 
@@ -80,11 +82,13 @@ Back up and replace the existing installed copy.
 
 ## Requirements
 
-- Social Page Studio MCP connection for SPS prompt and draft operations
-- Facebook page history with reach data
-- SPS MCP embeddings/clustering when available
-- Configured LiteLLM embedding access only when SPS MCP embedding is unavailable
-- An available image-search/browser tool, or `SERPER_API_KEY` for the bundled
-  Serper helper
+- Social Page Studio MCP connection with access to the target page
+- MCP-provided Facebook page history and lifetime reach
+- MCP `generate_text_embedding` capability
+- MCP `search_reference_images` and `submit_research` capabilities when image
+  discovery or research media references are needed
+- MCP prompt-version and draft capabilities
 
-Do not store Facebook, LiteLLM, or Serper credentials in this repository.
+The skills do not use direct Facebook, LiteLLM, Azure, Serper, browser-search, or
+other provider credentials. Provider access must remain behind Social Page Studio
+MCP.

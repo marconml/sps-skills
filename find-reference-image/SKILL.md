@@ -1,11 +1,23 @@
 ---
 name: find-reference-image
-description: Find and verify the strongest factual reference image for user-supplied text by extracting real visual anchors, refining image-search queries, inspecting candidate source pages, and rejecting generic or unrelated imagery. Use when asked to find, choose, verify, rank, or improve a reference image or image-search query for a news story, social post, article, film or TV item, person, event, place, or official statement.
+description: Find and verify the strongest factual reference image for user-supplied text through Social Page Studio MCP only by extracting real visual anchors, refining image-search queries, inspecting returned provenance, and rejecting generic or unrelated imagery. Use when asked to find, choose, verify, rank, or improve a reference image or image-search query for a news story, social post, article, film or TV item, person, event, place, or official statement.
 ---
 
 # Find Reference Image
 
 Return one strong, factual image reference or an explicit `no_match`. Never fill a gap with an attractive but unrelated image.
+
+## Provider Boundary
+
+Use Social Page Studio (SPS) MCP as the only image-search provider and the only route for carrying a found reference into SPS.
+
+- Search with `search_reference_images` in the persistent `social_page_studio` MCP.
+- Preserve its `receiptId`, result ID, image URL, and source-page URL.
+- When the reference belongs to new research, pass the chosen URL and source-page URL through `submit_research` using `candidates[].mediaReferences` or `providedMediaReferences`.
+- When attaching a search result to an existing candidate or post, use `attach_reference_image` only when that MCP tool and scope are available.
+- Do not call Serper, Google Images, Bing, a browser image search, general web search, a bundled helper, or any direct/custom image-search API.
+- Treat the provider behind SPS MCP as server-owned and opaque. Do not bypass MCP to call that provider directly.
+- If SPS MCP image search is unavailable, disabled, or denied, stop with `no_match` and report the exact MCP capability or scope that is missing. Do not fall back to another provider.
 
 ## Workflow
 
@@ -16,25 +28,26 @@ Return one strong, factual image reference or an explicit `no_match`. Never fill
    - Use the official English name for Western people and works. Mix languages when that best identifies the subject.
    - Add an event, action, place, or date only when it improves identity or freshness.
    - Do not add invented visual details or style words such as `blurred`, `background`, `generic`, `street view`, `dramatic`, `silhouette`, `stock photo`, `illustration`, or `cinematic`.
-4. Search, inspect, and adjust. Make at most three query attempts:
+4. Search through SPS MCP, inspect, and adjust. Make at most three query attempts:
    - Start with the strongest real-world anchor.
    - If results show the wrong subject, add the full name plus the event, place, or date.
    - If results are generic, remove style terms and add the real action, official statement, or source organization.
    - If results are outdated, add the relevant year or date.
    - If results are noisy, add an official domain or source type.
    - Record how and why each query changed.
-5. Inspect the candidate's source page and preview. Do not trust only a thumbnail or result title.
+5. Inspect the preview and provenance returned by SPS MCP. If MCP does not return enough evidence to verify identity, event, date, and source page, reject the candidate. Do not open a browser or use another search provider as a fallback.
 6. Rank candidates and select the best valid result.
 
-## Search Tools
+## MCP Tools
 
-Prefer an available image-search or browser tool. If none is available and `SERPER_API_KEY` is configured, run the bundled helper from this skill's directory:
+Use only these SPS MCP routes:
 
-```bash
-python3 scripts/search_images.py --query '香港愛護動物協會 虐狗影片 下架 聲明' --limit 10
-```
+1. `get_image_search_strategy` when page or pillar search rules are needed.
+2. `search_reference_images` for each query attempt.
+3. `submit_research` to persist new research with the selected media reference.
+4. `attach_reference_image` only for an existing candidate or post.
 
-The helper uses Hong Kong and Traditional Chinese search localization by default. Never print, return, or store the API key.
+Never require or read a local image-search API key.
 
 ## Selection Rules
 
@@ -63,9 +76,11 @@ Return:
 ```yaml
 status: selected | no_match
 query_used: "..."
+search_receipt_id: "..."
 query_adjustments:
   - "query -> reason for change"
 selected:
+  result_id: "..."
   image_url: "..."
   source_page_url: "..."
   title: "..."

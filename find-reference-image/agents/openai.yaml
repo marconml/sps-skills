@@ -1,4 +1,10 @@
 interface:
   display_name: "Find Reference Image"
-  short_description: "Find the strongest factual image reference"
-  default_prompt: "Use $find-reference-image to find the best factual reference image for this text."
+  short_description: "Find factual reference images through SPS MCP"
+  default_prompt: "Use $find-reference-image to find the best factual reference image for this text using only Social Page Studio MCP."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "social_page_studio"
+      description: "Required for reference-image search and research media references."
