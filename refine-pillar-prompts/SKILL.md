@@ -1,137 +1,243 @@
 ---
 name: refine-pillar-prompts
-description: "Improve Social Page Studio (SPS) pillar prompts from one week of Facebook history using SPS MCP-only data, text embeddings, image discovery, prompt storage, and drafts, with reach-aware Compare and performance-blind Invent analysis. Use when Codex is asked to refine, improve, learn, or self-improve one or more existing SPS pillar prompts from similar Facebook posts, compare reach differences, or create one evaluation draft per pillar. Run one weekly iteration by default; run multiple weeks only when the user explicitly requests it."
+description: "Analyze existing Social Page Studio (SPS) pillar prompts through explicitly selected evidence methods: Benchmarking compares similar internal posts using reach differences; Reframing proposes performance-blind improvements from an audience perspective; Internalizing extracts transferable caption and image lessons from user-supplied external examples; Corresponding learns from comments on the page's own posts. Use when Codex is asked to refine, improve, learn, or self-improve one or more SPS pillar prompts. Explain SPS and week labels to newcomers, ask for all missing access and source information before using tools, and first produce a numbered Markdown learning brief without SPS writes. Then ask which item indexes the user wants to apply and update only those explicitly selected items."
 ---
 
 # Refine Pillar Prompts
 
-Run one evidence-traceable refinement iteration for each requested existing SPS pillar.
+Run one evidence-traceable learning iteration for each requested pillar in two phases. Phase 1 is SPS-read-only: ask for context, analyze the evidence, and write a numbered Markdown brief without changing SPS. The Markdown brief is the only permitted output write in this phase. Phase 2 may update versioned SPS prompts, but only after the user selects exact item indexes from that brief. Never infer approval from a recommendation level. Evaluation drafts are a separate optional action and require a separate user request.
 
-## Defaults
+## Explain the Concepts
 
-- Analyze only the immediately previous 7 days. Do not fetch W-2, W-3, W-4, or other older windows unless the user explicitly requests a multi-iteration run.
-- Run exactly one iteration. If the user requests multiple weeks, repeat this single-iteration workflow in chronological order, one week at a time.
-- Use Facebook reach as the only performance KPI. Ignore engagement, reactions, comments, shares, and clicks when deciding which post performed better.
-- Use existing SPS pillars and their current prompts. Do not invent a new pillar taxonomy.
-- Create evaluation posts as drafts only. Do not approve, schedule, or publish unless the user explicitly requests that separately.
-- Preserve full captions in the evidence report so the user can understand each comparison.
+Do not assume the user or a new Codex instance knows this system. Explain only the concepts needed for the requested run:
 
-## Resolve Inputs
+- **Social Page Studio (SPS)** is the workspace that stores social pages, topic-specific pillars, versioned prompts, designs, source material, and draft/publish records.
+- A **page** is one social brand/account inside SPS.
+- A **pillar** is one topic or editorial workflow inside a page, such as traffic accidents or entertainment.
+- Pillar prompt files normally have separate responsibilities:
+  - `research.md`: story selection, routing, source, and evidence rules.
+  - `caption.md`: framing, information order, wording, attribution, and CTA rules.
+  - `image.md`: source-image choice, composition, evidence, privacy, and generation/editing rules.
+  - `engagement.md`: Page-authored first comments or replies.
+  - `design.md`: stable visual identity and layout rules.
+- **W-1, W-2, W-3...** label consecutive 7-day analysis slices. W-1 is the most recent slice, W-2 is the seven days before W-1, and so on. Always translate a W-x label into exact start/end dates and the page timezone before analysis. Do not make the user reason in W-x labels.
 
-Determine:
+Explain the four methods in plain language:
 
-1. SPS page and Facebook page.
-2. Requested pillars; if omitted, use all enabled pillars on the SPS page.
-3. The 7-day analysis window; default to the preceding 7 days ending now.
-4. Whether SPS MCP exposes the required page history, reach, embedding, image-reference, prompt, and draft capabilities for this agent.
+- **Benchmarking**: retrieve genuinely similar posts from the same page, then use reach differences to form observational improvement hypotheses.
+- **Reframing**: hide all performance information and review similar captions/images as a reader to find clarity, trust, or presentation improvements.
+- **Internalizing**: study examples supplied by the user from other sources and extract transferable craft without copying wording, assets, layouts, or brand identity.
+- **Corresponding**: study comments and replies on the page's own posts to find verified corrections, misunderstandings, visual-trust problems, and successful communication.
 
-Snapshot every pillar's initial prompt before analysis.
+Treat the legacy name **Compare** as **Benchmarking** and **Invent** as **Reframing**.
 
-## MCP-Only Provider Boundary
+## Mandatory Preflight
 
-Use the persistent Social Page Studio MCP as the only provider for this workflow:
+Before any tool call or data access, check what the user has already supplied and ask for every missing item. Group the questions concisely and explain unfamiliar terms. Wait for the answers; do not silently assume values.
 
-1. Read page context, enabled pillars, current prompts, Facebook post history, lifetime reach, and actual post-image URLs through SPS MCP.
-2. Generate every caption/content embedding with `generate_text_embedding`. Use the returned vector only for this analysis and preserve the MCP metadata receipt when available.
-3. Compute deterministic cosine similarity or clustering locally from MCP-returned vectors when SPS does not expose a clustering tool. Local similarity math is allowed; generating vectors outside MCP is not.
-4. Use actual post images returned through SPS MCP for Compare and Invent inspection. If a new reference-image search is necessary, use `search_reference_images` and carry the selected reference through `submit_research` or `attach_reference_image` as appropriate.
-5. Apply prompt updates and create evaluation drafts through SPS MCP.
+Ask for:
 
-Do not use LiteLLM, OpenAI or Azure directly, a local embedding model, sentence-transformers, Facebook Graph API directly, Serper directly, browser/general web image search, bundled search scripts, or any other custom provider or fallback.
+1. **Method**: Benchmarking, Reframing, Internalizing, Corresponding, or an explicit combination.
+2. **Target**: page/brand and pillar in plain language. If SPS is connected, ask for the workspace/team, agent connection, page slug/name, and pillar slug/name. If the user does not know these identifiers, ask permission to list accessible SPS pages and pillars read-only.
+3. **Prompt source**: permission to read the current full prompt files from SPS, or exported prompt files supplied by the user. Record paths, versions, status, and timezone.
+4. **Evidence range**: exact dates and timezone. If the user says W-x, translate it into exact dates and ask for confirmation.
+5. **Data access**:
+   - Ask whether SPS exposes the required history, reach, images, embeddings, or comments for the selected methods.
+   - If Facebook data is required and SPS does not expose it, ask whether direct read-only Meta Graph API access is allowed and whether `META_PAGE_ID` plus `META_PAGE_ACCESS_TOKEN` are available in an environment file or secret store.
+   - Never ask the user to paste an access token into chat. Never print, log, copy into a report, or commit a token.
+   - Explain that Benchmarking usually needs post history, images, publication times, and lifetime reach; Corresponding needs posts, comments, and replies. Required Page permissions vary, so capability-test read-only access before analysis.
+6. **Method-specific material**:
+   - Benchmarking: which Facebook Page/history source and which performance field means reach.
+   - Reframing: which post set should be judged with performance hidden.
+   - Internalizing: CSV/file location, source identities, column meanings, image locations, metric meanings, and whether external performance is comparable.
+   - Corresponding: comment source, whether replies are included, how Page-authored comments are identified, and whether commenter data must be further de-identified.
+7. **Brief destination**: where to save the Markdown learning brief. If the user has no preference, propose `pillar-learning-brief-{pillar}-{YYYY-MM-DD}.md` in the current workspace and obtain confirmation.
 
-Treat providers behind SPS MCP as server-owned and opaque. Never read or require provider API keys. If a required MCP capability is unavailable, disabled, or denied, stop and report the exact tool, organization setting, or scope that is missing; do not bypass MCP.
+If a required answer, permission, prompt snapshot, image, metric definition, or data capability is missing, stop before analysis and report exactly what remains missing.
 
-## Build Comparable Sets
+## Safety and Data Boundaries
 
-For every post in the 7-day window, retain:
+- Prefer SPS MCP for current prompts, internal history, embeddings, image references, and comments when those read capabilities are available.
+- Allow user-supplied CSV files, exported prompts, attached images, and image URLs as evidence for Internalizing.
+- Allow direct Facebook Page-token reads only after explicit user authorization and only when SPS lacks the required read capability. Use them read-only.
+- Generate text embeddings through SPS MCP when available. If unavailable, ask the user how to proceed; never silently choose an outside embedding provider.
+- Compute deterministic clustering or cosine similarity locally from approved embeddings.
+- Inspect actual images visually. Do not treat image-embedding distance as human visual similarity.
+- De-identify audience comments. Do not retain commenter names unless the user establishes a necessary, lawful reason.
+- Do not reply, moderate, approve, schedule, publish, create evaluation drafts, update prompts, or make any other external change during the learning phase.
+- Treat prompt application as a separate, user-authorized phase inside this skill. Create an evaluation draft only when the user requests it separately; selecting a learning item does not authorize draft creation.
 
-- post ID and permalink
-- full caption/content
-- actual image or image URL when present
-- publication time, normalized to the page's timezone
-- lifetime reach as currently returned by Facebook
+## Read the Full Current Prompt
 
-Assign posts to the closest existing pillar from their meaning and the pillar prompt. Exclude ambiguous posts rather than forcing membership.
+Before learning, read every current prompt file relevant to the selected method. Never interpret a pillar from a shortened summary alone.
 
-Create one content embedding per post from the caption/content only. Use embeddings only to retrieve semantically comparable posts; do not include reach, image, or publication time in the embedding input.
+Keep a complete snapshot containing:
 
-Within each pillar:
+- page and pillar
+- prompt path and purpose
+- full current text
+- version/status/update time
+- evidence window and timezone
 
-1. Cluster or rank posts by content similarity.
-2. Select the closest useful pairs or small clusters before examining reach differences.
-3. Prefer up to three high-similarity comparisons with distinct posts. Never select a pair mainly because it has a large reach gap.
-4. After retrieval, inspect the full captions, actual images, and publication times with visual and audience reasoning. Do not treat image-embedding distance as human visual similarity.
+Use the full snapshot to check whether a proposed learning is already present, adds something genuinely new, or conflicts with an old instruction.
 
-If a pillar has fewer than two genuinely comparable posts, record insufficient comparison evidence and keep that mode's prompt patch empty.
+## Build Internal Comparable Sets
 
-## Mode A: Compare
+Use this section for Benchmarking and Reframing.
 
-For each selected pair or cluster, reveal reach and compare:
+For every eligible post, retain the post ID/permalink, full caption, actual image, publication time in the page timezone, pillar assignment, and reach when available. Keep reach hidden until Benchmarking explicitly reveals it.
 
-- full caption and framing
-- information order and drafting choices
-- actual visual composition and what the audience sees first
-- publication time
-- reach and reach difference
+Assign posts to the closest existing pillar from meaning and the current full pillar prompt. Exclude ambiguous posts.
 
-Start from the audience's likely experience. Explain why the higher-reach post may have been more immediately understandable, relevant, curiosity-producing, or emotionally legible than the lower-reach post.
+Embed caption/content only; never put reach, image, or publication time into the embedding input. Within each pillar:
 
-Do not begin with predefined claims such as "clearer images win," "danger wins," or "repeated posts lose." Derive each hypothesis from the actual matched posts. Treat explanations as hypotheses, not proven causation.
+1. Rank or cluster posts by semantic similarity.
+2. Select useful pairs or small clusters before examining reach.
+3. Prefer up to three high-similarity comparisons with distinct posts. Never select mainly for a large reach gap.
+4. Inspect full captions, actual images, and publication times after retrieval.
 
-Produce a minimal `compare_patch` against the initial pillar prompt. Each added or changed rule must cite the matched evidence that motivated it. Leave unrelated prompt text unchanged.
+If fewer than two posts are genuinely comparable, record insufficient evidence instead of forcing a learning.
 
-## Mode B: Invent
+## Benchmarking
 
-Run this mode in an isolated context. Provide:
+Reveal reach only after comparable posts are fixed. Compare caption framing, information order, visual composition, publication time, reach, and reach difference.
 
-- the initial pillar prompt
-- the selected semantically similar captions
-- the actual images
-- publication times
+Reason from the audience's likely experience, but describe the explanation as an observational hypothesis rather than causation. Check counterexamples and avoid predefined universal rules such as “clearer images win,” “danger wins,” or “repeated posts lose.”
 
-Do not provide reach, performance labels, ordering by performance, Compare conclusions, or the `compare_patch`. Ask the judge to reason only from an audience perspective and identify concrete improvements to the content drafting or image-generation instructions.
+Return `benchmarking_learnings` for the brief; do not create or apply a prompt patch yet.
 
-Produce a minimal `invent_patch` against the same initial prompt. Do not claim that an invented rule is performance-proven.
+## Reframing
 
-## Produce the Final Prompt
+Run in an isolated context containing the full current prompt, selected captions, actual images, and publication times. Hide reach, performance labels/order, Benchmarking conclusions, and `benchmarking_learnings`.
 
-Reconcile both independent patches:
+Ask the judge to review the material as a reader and identify concrete improvements to clarity, credibility, information order, visual understanding, or caption-image coordination. Mark every result as performance-blind.
 
-1. Remove duplicates and keep changes local to the relevant pillar.
-2. Preserve existing constraints that the evidence does not address.
-3. Prefer measured Compare evidence when an Invent suggestion conflicts with it.
-4. Record rejected or conflicting rules instead of silently applying them.
-5. Apply the resulting minimal change to the versioned SPS pillar prompt through MCP.
+Return `reframing_learnings` for the brief; do not create or apply a prompt patch yet.
 
-Do not replace the whole prompt merely to incorporate a small learned rule.
+## Internalizing
 
-## Create One Evaluation Draft per Pillar
+Use only examples supplied or explicitly approved by the user. Require a caption plus an accessible image for caption-and-image learning; if images are unavailable, state that the run is caption-only.
 
-Generate one new draft using each final prompt. The draft should make the newly applied rules visible in normal use.
+1. Validate the dataset and column meanings.
+2. Map examples to the requested existing pillar and exclude weak matches.
+3. Embed captions through the approved provider and retrieve semantically comparable examples.
+4. Inspect images visually within content groups.
+5. Extract abstract, transferable choices in information order, visual thesis, evidence presentation, caption-image coordination, and CTA framing.
+6. Do not copy wording, taglines, layouts, assets, or source identity.
+7. When performance exists, compare like-for-like examples and normalize within the same source/page and period. Never compare raw reach across differently sized pages or treat public likes/comments as reach.
+8. When performance is absent or incomparable, keep the analysis performance-blind.
+9. Check counterexamples and local audience fit.
 
-Append this note to the caption:
+Treat one example as an observation, three comparable examples as a candidate pattern, and a pattern across at least two independent sources that survives counterexamples as stronger transfer evidence.
 
-```text
-*Week {window_label} - {pillar}: applied learned rules {concise_rule_list}*
+Return `internalizing_learnings` for the brief; do not create or apply a prompt patch yet.
+
+## Corresponding
+
+Use comments and replies from the page's own posts. Retain each post's caption, image, publication time, pillar, exact prompt versions when traceable, and de-identified audience text. Exclude identifiable Page-authored comments from audience evidence but inspect them separately when evaluating `engagement.md`.
+
+Classify comments as verified factual correction, missing information/confusion, visual misunderstanding, AI/authenticity concern, successful understanding, direct CTA response, opinion about the underlying subject, or spam/abuse/unrelated discussion.
+
+Decide whether the reaction was caused by the post's drafting/image choice. Disagreement with the event or person is not automatically prompt-addressable.
+
+- Treat verified factual, legal, privacy, safety, identity, or false-evidence problems as high-priority evidence.
+- Treat the same addressable misunderstanding across at least three independent comments and two posts as a strong pattern.
+- Treat useful feedback confined to one post as limited evidence.
+- Ignore isolated preference, unrelated disagreement, spam, coordinated repetition, and requests that conflict with accuracy or safety.
+
+Comment likes can indicate visibility but never correctness. Comment volume and sentiment do not replace reach as the performance KPI.
+
+Return `corresponding_learnings` for the brief; do not reply, moderate, or apply a prompt patch yet.
+
+## Interpret Learnings Against SPS Prompts
+
+For each learning, compare it against the complete current prompt and classify it:
+
+1. **Already covered**: cite the existing rule and recommend no prompt change.
+2. **Additive**: identify the correct prompt file and recommend one narrow addition. Preserve every old instruction verbatim.
+3. **Conflict**: quote or precisely identify the conflicting old rule, explain the evidence, and recommend replacing only that rule. Preserve all unrelated text.
+
+Route additions correctly:
+
+- Story selection, pillar routing, source requirements, or evidence availability → `research.md`.
+- Hook, fact order, attribution, wording, CTA, or caption-image division → `caption.md`.
+- Source image, composition, visual evidence, privacy, or image editing/generation → `image.md`.
+- Page-authored first comment or reply behavior → `engagement.md`.
+- Stable visual identity/layout system → `design.md`; do not put short-lived weekly observations here.
+
+Prefer additions over rewrites. Never propose replacing the whole prompt. Never omit old content merely because it was not relevant to the new evidence. When two rules conflict, recommend the smallest explicit replacement and show both the old and proposed wording in the evidence description.
+
+Do not create a prompt patch or update SPS during interpretation. Put each recommendation into the numbered brief so the user can choose it independently. Use the apply phase below only after an explicit selection.
+
+## Write the Markdown Learning Brief
+
+Finish every successful learning phase by saving a Markdown file. Do not update SPS before the user selects items.
+
+Start with concise context:
+
+```md
+# Pillar Learning Brief
+
+- Page: ...
+- Pillar: ...
+- Method(s): ...
+- Evidence window/dataset: exact dates and timezone
+- Data source: SPS / authorized Facebook read / user-supplied files
+- Prompt snapshot: paths and versions
+- Limitations: ...
 ```
 
-Keep the post in draft state unless the user explicitly asks to approve, schedule, or publish it.
+Then include exactly these required columns:
 
-## Report
+```md
+| Index | Learning | Evidence(s) | Recommended level |
+|---:|---|---|---|
+| 1 | [caption.md] Add: ... | Post IDs/links, reach comparison, image observation, or de-identified comment quotes. State whether already covered/additive/conflicting. | High / Medium / Low |
+```
 
-For each pillar, show:
+Assign levels consistently:
 
-1. Analysis window and number of usable posts.
-2. Each Compare pair/cluster: full captions, image links/previews, publication times, reach, similarity, observed differences, and the resulting hypothesis.
-3. Invent evidence: full captions, image links/previews, publication times, and confirmation that performance was hidden from the judge.
-4. Compare learning and `compare_patch`.
-5. Invent learning and `invent_patch`.
-6. Conflicts or rejected rules.
-7. Initial prompt and final prompt, preferably as a compact diff plus full final text.
-8. Evaluation draft ID/link and its caption.
+- **High**: verified factual/safety problem, or repeated independent evidence across multiple comparable posts/sources with no unresolved counterexample.
+- **Medium**: coherent evidence from one strong cluster or repeated reactions within one post, but not yet stable across posts/sources.
+- **Low**: one anecdote, performance-blind hypothesis, weakly comparable example, or unresolved confound.
 
-Clearly separate observed facts from interpretation. Do not present a one-week pattern as a universal causal law.
+For already-covered learning, state “No change recommended” in the Learning cell and cite the matching current rule. For conflicts, include the exact narrow replacement recommendation; never silently discard the old rule.
 
-## Multi-Week Requests
+Keep the brief compact but traceable. Link evidence where possible, state observed facts separately from interpretation, and never present one iteration as a universal causal law.
 
-Only when the user explicitly asks for multiple iterations, run the same workflow once per requested week, oldest to newest. Carry the final prompt from one iteration into the next, preserve every version, create one evaluation draft per pillar per week, and report the initial prompt from the first iteration and final prompt from the last.
+## Offer Selective Application
+
+After saving and presenting the brief, stop and ask:
+
+> Which item indexes, if any, should I apply to SPS? Reply with indexes such as `1,3`, or `none`.
+
+For a multi-pillar brief, make indexes globally unique or ask for selections as `{pillar}:{index}` so authorization cannot be ambiguous.
+
+Do not apply anything until the user answers. If the user answers `none`, end with a read-only receipt. A recommendation level is advisory and never selects an item automatically. Treat the user's answer as authorization for exactly those indexes; leave every unselected item untouched.
+
+For each selected item:
+
+1. Reread the latest full target prompt file from SPS and record its live path, version, status, and update time. Never reconstruct it from the brief or the earlier snapshot.
+2. Compare the live prompt with the snapshot used for learning. If it changed, rebase the recommendation onto the live text. If version drift changes the recommendation's meaning or exact wording, show the revised change and ask the user to confirm it again before writing.
+3. If the learning is already covered in the live prompt, make no write and record it as already covered.
+4. For an additive learning, insert only the narrow approved addition in the correct location. Preserve the complete existing prompt, including every unrelated instruction.
+5. For a conflicting learning, show the exact old rule and proposed replacement and obtain explicit replacement confirmation before writing. Selecting the item's index alone does not authorize deleting or weakening a conflicting old rule.
+6. Never merge, infer, or apply an unselected learning merely because it is related to a selected item.
+7. Use the SPS versioned prompt-update capability, then reread the saved full prompt and verify that the approved change is present and all unrelated content remains.
+8. If an update fails or verification is uncertain, stop, report the exact state, and do not continue silently with other writes.
+
+Append the result to the same Markdown file:
+
+```md
+## Application receipt
+
+- Item 1: Applied additively to `caption.md`, version 7 → 8. Verification passed.
+- Item 2: Not written; already covered by the live prompt.
+- Item 3: Not applied; awaiting explicit conflict-replacement confirmation.
+```
+
+Do not create an evaluation draft after application unless the user separately asks for one. After verified application, optionally offer a private evaluation draft as a distinct next action; never treat item selection as draft authorization.
+
+## Multi-Iteration Requests
+
+Run multiple weeks or datasets only when explicitly requested. Convert every W-x label into exact dates first. Produce one table section per iteration plus a final cross-iteration summary. Carry a recommendation forward as applied only when its application receipt confirms a successful verified SPS update.

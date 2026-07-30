@@ -1,10 +1,10 @@
 interface:
   display_name: "Refine Pillar Prompts"
-  short_description: "Refine SPS prompts with MCP-only evidence"
-  default_prompt: "Use $refine-pillar-prompts to run one weekly Compare and Invent refinement iteration using only Social Page Studio MCP providers."
+  short_description: "Brief SPS learnings, then apply selected items"
+  default_prompt: "Use $refine-pillar-prompts to ask for required context, create a numbered Markdown learning brief, then apply only the item indexes I explicitly select."
 
 dependencies:
   tools:
     - type: "mcp"
       value: "social_page_studio"
-      description: "Required for history, embeddings, image references, prompt versions, and drafts."
+      description: "Preferred for reading evidence and versioned prompts, and applying only user-selected prompt recommendations."

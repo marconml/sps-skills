@@ -1,0 +1,10 @@
+interface:
+  display_name: "Set Up Content Pillars"
+  short_description: "Build SPS pillars and offer selectable improvements"
+  default_prompt: "Use $set-up-content-pillars to infer a source-grounded pillar taxonomy, draft complete SPS prompt sets, activate only approved pillars, and apply later improvement items only when I select their indexes."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "social_page_studio"
+      description: "Read source context and create, preview, activate, archive, and verify SPS pillar settings."
