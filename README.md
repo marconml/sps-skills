@@ -26,6 +26,17 @@ sources, ranks exact matches, and returns `no_match` instead of unrelated generi
 imagery. Image discovery and research media references use Social Page Studio MCP
 only.
 
+### `fix-monster-glyphs` · 怪獸字修復
+
+Repairs malformed Chinese characters in images using exactly three steps:
+
+1. **Find** a font library containing the verified character.
+2. **Overlay** the correct glyph at the original position.
+3. **Match** the surrounding lettering's weight, color, outline, shadow, and texture.
+
+Supports Hong Kong Traditional Chinese glyphs and preserves the rest of the image.
+Includes a practical style-matching guide. It does not require an SPS MCP connection.
+
 ## Install with Codex
 
 Ask Codex:
@@ -40,6 +51,13 @@ For reference-image search, install:
 ```text
 Use $skill-installer to install the skill from:
 https://github.com/marconml/sps-skills/tree/main/find-reference-image
+```
+
+For malformed-character repair, install:
+
+```text
+Use $skill-installer to install the skill from:
+https://github.com/marconml/sps-skills/tree/main/fix-monster-glyphs
 ```
 
 If the skill does not appear automatically, restart Codex.
@@ -58,6 +76,13 @@ Or provide source text directly:
 ```text
 Use $find-reference-image to find the best factual reference image for this text:
 [paste text]
+```
+
+Or attach an image and specify the correct characters:
+
+```text
+Use $fix-monster-glyphs to correct the text to 「響咹」.
+Follow Find → Overlay → Match and keep the original headline style.
 ```
 
 ## Update
@@ -80,7 +105,18 @@ https://github.com/marconml/sps-skills/tree/main/find-reference-image
 Back up and replace the existing installed copy.
 ```
 
+For malformed-character repair:
+
+```text
+Update $fix-monster-glyphs from:
+https://github.com/marconml/sps-skills/tree/main/fix-monster-glyphs
+
+Back up and replace the existing installed copy.
+```
+
 ## Requirements
+
+For the SPS-connected content and reference-image workflows:
 
 - Social Page Studio MCP connection with access to the target page
 - MCP-provided Facebook page history and lifetime reach
@@ -89,6 +125,11 @@ Back up and replace the existing installed copy.
   discovery or research media references are needed
 - MCP prompt-version and draft capabilities
 
-The skills do not use direct Facebook, LiteLLM, Azure, Serper, browser-search, or
+Those workflows do not use direct Facebook, LiteLLM, Azure, Serper, browser-search, or
 other provider credentials. Provider access must remain behind Social Page Studio
 MCP.
+
+`fix-monster-glyphs` instead needs the source image, the intended correct text,
+a suitable font library, and local font-rendering and image-compositing tools.
+Fonts must be used under their applicable licenses; no fonts or user images are
+bundled with the skill.
