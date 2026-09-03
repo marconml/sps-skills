@@ -2,12 +2,15 @@
 
 ## Scope
 
-These rules govern user-requested changes to reusable skill source in this
-repository: instructions, references, scripts, assets, metadata and supporting
-documentation. Reading, installing or running a skill, generating an output, or
-editing live SPS prompts does **not** authorize source edits or Git publication.
-An explicit user instruction such as read-only, no commit or no push takes
-precedence over this default maintenance workflow.
+These rules govern changes to reusable skill source in this repository:
+instructions, references, scripts, assets, metadata and supporting
+documentation. Run the maintenance workflow when the user requests a source
+change, or when a skill-specific self-maintenance contract expressly grants
+standing authorization and the current run identifies a concrete defect in
+that skill's instructions. Reading, installing or running any other skill,
+generating an output, or editing live SPS prompts does **not** authorize source
+edits or Git publication. An explicit user instruction such as read-only, no
+commit or no push takes precedence over this default maintenance workflow.
 
 ## Repository and branch
 
@@ -54,9 +57,11 @@ precedence over this default maintenance workflow.
 8. Report the changed files, validation result, commit ID and verified remote
    branch. Do not create empty commits when no source change was needed.
 
-Apply this workflow after every user-authorized skill-source change unless the
-user explicitly opts out. Commit/push does not authorize an SPS write, Facebook
-publication, automatic release to `main`, or replacement of installed copies.
+Apply this workflow after every user-requested skill-source change and every
+change authorized by a skill-specific self-maintenance contract unless the user
+explicitly opts out. Commit/push does not authorize an SPS write, Facebook
+publication, automatic release to `main`, or replacement of installed copies
+unless that same contract explicitly includes refreshing its own installed copy.
 
 ## New skills
 

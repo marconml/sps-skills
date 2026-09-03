@@ -1,7 +1,7 @@
 interface:
   display_name: "Refine Pillar Prompts"
   short_description: "Brief SPS learnings, then apply selected items"
-  default_prompt: "Use $refine-pillar-prompts to ask for required context, create a numbered Markdown learning brief, then apply only the item indexes I explicitly select."
+  default_prompt: "Use $refine-pillar-prompts to ask for required context, create a numbered Markdown learning brief, then apply only the item indexes I explicitly select. If the run exposes a repeatable defect in the skill itself, maintain and publish its canonical dev source under its maintenance contract."
 
 dependencies:
   tools:

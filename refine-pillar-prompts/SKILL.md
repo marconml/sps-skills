@@ -1,6 +1,6 @@
 ---
 name: refine-pillar-prompts
-description: "Analyze existing Social Page Studio (SPS) pillar prompts through explicitly selected evidence methods: Benchmarking compares similar internal posts using reach differences; Reframing proposes performance-blind improvements from an audience perspective; Internalizing extracts transferable caption and image lessons from user-supplied external examples; Corresponding learns from comments on the page's own posts. Use when Codex is asked to refine, improve, learn, or self-improve one or more SPS pillar prompts. Explain SPS and week labels to newcomers, ask for all missing access and source information before using tools, and first produce a numbered Markdown learning brief without SPS writes. Then ask which item indexes the user wants to apply and update only those explicitly selected items."
+description: "Analyze existing Social Page Studio (SPS) pillar prompts through explicitly selected evidence methods: Benchmarking compares similar internal posts using reach differences; Reframing proposes performance-blind improvements from an audience perspective; Internalizing extracts transferable caption and image lessons from user-supplied external examples; Corresponding learns from comments on the page's own posts. Use when Codex is asked to refine, improve, learn, or self-improve one or more SPS pillar prompts. Explain SPS and week labels to newcomers, ask for all missing access and source information before using tools, and first produce a numbered Markdown learning brief without SPS writes. Then ask which item indexes the user wants to apply and update only those explicitly selected items. When a run exposes a repeatable defect in this skill's own instructions, maintain its canonical dev source under the skill-source maintenance contract."
 ---
 
 # Refine Pillar Prompts
@@ -244,14 +244,35 @@ Run multiple weeks or datasets only when explicitly requested. Convert every W-x
 
 ## Skill-source maintenance
 
-This section applies only to user-requested edits to this skill's own reusable
-files, not ordinary skill use, generated outputs or live SPS prompt changes.
-Work in the `marconml/sps-skills` source checkout on `dev` and follow its root
-`AGENTS.md`. After each change, validate, commit only task-owned changes and
-push to `origin/dev`; verify the remote commit before reporting completion.
-An explicit user instruction not to commit or push overrides this default.
-Never force-push, publish unrelated commits or push to `main`.
+Treat this section as standing authorization to maintain this skill after a
+refinement run exposes a concrete, repeatable defect in its instructions. A
+source change is warranted when the skill's success criteria, workflow boundary,
+source of truth, gate/status definition, or examples caused an incorrect,
+blocked, or materially ambiguous result. Record the diagnosis; when the run
+only produces new SPS pillar learnings, leave the skill source unchanged.
 
-For an installed copy outside the source checkout, locate that checkout first;
-do not initialize Git here or use an unrelated project's remote. Report missing
-access, validation failures or conflicts instead of claiming publication.
+When maintenance is warranted:
+
+1. Finish or safely stop the current learning/application phase. Skill
+   maintenance never selects brief items or expands authorization for SPS writes.
+2. Locate the canonical `marconml/sps-skills` checkout, work on `dev`, and follow
+   its root `AGENTS.md`. An installed copy is not a Git source checkout.
+3. Replace, merge, or remove the responsible instruction so the success contract
+   states the expected output, order, field contents, stopping point, and handoff.
+   Add a negative hard stop only for safety, permission, source-of-truth,
+   editor-owned, live-publishing, legal, or factual-risk boundaries, and combine
+   overlapping rules.
+4. Run a canary or shadow sample that reproduces the diagnosed failure, validate
+   the skill with the available skill-creator validator, check references and
+   contradictions, and run `git diff --check`. Reclassify the root cause before
+   revising again if the sample fails.
+5. Commit only the validated, task-owned source changes and push them to
+   `origin/dev`. Verify the remote commit, then refresh this skill's installed
+   copy from that exact validated source when the environment permits it.
+6. Report the diagnosis, changed files, validation/canary result, commit ID,
+   remote verification, and installed-copy status.
+
+An explicit user instruction not to edit, commit, push, or refresh the installed
+copy overrides the corresponding step. Never force-push, publish unrelated
+commits, push to `main`, initialize Git inside an installed copy, or claim
+publication when access, validation, conflicts, or remote verification failed.
