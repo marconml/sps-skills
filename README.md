@@ -114,6 +114,30 @@ https://github.com/marconml/sps-skills/tree/main/fix-monster-glyphs
 Back up and replace the existing installed copy.
 ```
 
+## Contributing on `dev`
+
+`dev` is the shared development branch; `main` remains the stable release branch.
+Contributors need GitHub write access to this repository and working SSH access.
+Creating the branch does not grant repository access.
+
+For a new contributor checkout:
+
+```bash
+git clone --branch dev git@github.com:marconml/sps-skills.git
+cd sps-skills
+```
+
+Read [AGENTS.md](AGENTS.md) before editing. Every user-requested skill-source
+change should be validated, committed and pushed to `dev`, unless the user
+explicitly opts out. Keep unrelated work out of commits; never force-push.
+Merging or releasing to `main` is a separate action.
+
+To install or update a development version, use the same instructions above but
+replace `/tree/main/` with `/tree/dev/` in the skill URL. Pushing a change does not
+automatically update already installed copies. Each skill includes a conditional
+maintenance note so the source-editing rule travels with single-skill installs;
+ordinary skill runs do not commit or push anything.
+
 ## Requirements
 
 For the SPS-connected content and reference-image workflows:
