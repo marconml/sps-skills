@@ -179,6 +179,8 @@ Return `internalizing_learnings` for the selected deliverable; do not create or 
 
 Actively search for cases where the page and one or more competitors covered the same news event, person, study, product announcement, source article, or a highly similar topic in the same period. Establish a reliable match from shared entities, dates, source/event details, and semantic similarity before revealing performance.
 
+Before inclusion, record a short match receipt naming the shared person, organization, incident, study or source and the event details that make the posts the same case. A broad theme, profession or adjacent controversy is not a case match. Split posts into separate cases when material incident details conflict.
+
 For each reliable match, compare the selected KPI and supporting metrics with the headline, angle, visual thesis, format, timing, and CTA. Distinguish the observed performance gap from the inferred content or creative mechanism. Skip uncertain matches instead of forcing a pair.
 
 ## Pillar Mechanisms and Competitor Discovery
