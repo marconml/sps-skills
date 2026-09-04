@@ -1,11 +1,30 @@
 ---
 name: refine-pillar-prompts
-description: "Analyze existing Social Page Studio (SPS) pillar prompts through explicitly selected evidence methods: Benchmarking compares similar internal posts using reach differences; Reframing proposes performance-blind improvements from an audience perspective; Internalizing extracts transferable caption and image lessons from user-supplied external examples; Corresponding learns from comments on the page's own posts. Use when Codex is asked to refine, improve, learn, or self-improve one or more SPS pillar prompts. Explain SPS and week labels to newcomers, ask for all missing access and source information before using tools, and first produce a numbered Markdown learning brief without SPS writes. Then ask which item indexes the user wants to apply and update only those explicitly selected items. When a run exposes a repeatable defect in this skill's own instructions, maintain its canonical dev source under the skill-source maintenance contract."
+description: "Analyze SPS pillar prompts and social content through performance-first Benchmarking, Reframing, Internalizing, and Corresponding. Use for evidence-backed prompt learning or a stable editorial performance report: contrast high and low performers, compare reliable same-topic cases across pages, discover competitor territories, and separate observations and supported inferences from hypotheses. Keep accuracy as a guardrail, not the performance objective. Prompt updates still require explicit item selection."
 ---
 
 # Refine Pillar Prompts
 
-Run one evidence-traceable learning iteration for each requested pillar in two phases. Phase 1 is SPS-read-only: ask for context, analyze the evidence, and write a numbered Markdown brief without changing SPS. The Markdown brief is the only permitted output write in this phase. Phase 2 may update versioned SPS prompts, but only after the user selects exact item indexes from that brief. Never infer approval from a recommendation level. Evaluation drafts are a separate optional action and require a separate user request.
+Run an evidence-traceable social-performance review for the requested page and pillars. Choose the deliverable mode from the user's request:
+
+- **Prompt-refinement mode** has two phases. Phase 1 is SPS-read-only and ends with a numbered Markdown learning brief. Phase 2 may update versioned SPS prompts only after the user selects exact item indexes from that brief.
+- **Editorial-report mode** is report-only. Read and analyze approved evidence, follow [the editorial report contract](references/editorial-report-contract.md), deliver the requested report, and stop without offering or applying SPS changes unless the user separately asks for prompt refinement.
+
+Evaluation drafts are a separate optional action and require a separate user request. Never infer approval from a recommendation level or a report recommendation.
+
+## Performance Success Contract
+
+The primary objective is the user's selected social-performance outcome, such as shares, reach, qualified comments, clicks, or conversions. Find repeatable content and creative mechanisms in the page's own work and approved competitors, explain the evidence behind them, and turn uncertainty into controlled tests.
+
+Accuracy, non-misleading presentation, legal/privacy requirements, and source fidelity are guardrails. Satisfying a guardrail does not by itself prove that a change will improve performance.
+
+Label every material conclusion by evidence status:
+
+- **Observation**: directly reported or computed from approved data, with the metric, sample/post count, period, comparison basis, and post IDs or links where relevant.
+- **Inference**: a performance explanation reasonably supported by one or more observations. Name confounders and counterexamples; do not state causation unless the design supports it.
+- **Hypothesis / Test**: a reader perspective, editorial judgement, performance-blind finding, single example, or otherwise unverified proposal. State what future comparison would test it.
+
+Only an Observation or evidence-anchored Inference may be presented as a performance finding. Performance-blind analysis is primarily for detecting possible problems and generating hypotheses.
 
 ## Explain the Concepts
 
@@ -24,9 +43,9 @@ Do not assume the user or a new Codex instance knows this system. Explain only t
 
 Explain the four methods in plain language:
 
-- **Benchmarking**: retrieve genuinely similar posts from the same page, then use reach differences to form observational improvement hypotheses.
-- **Reframing**: hide all performance information and review similar captions/images as a reader to find clarity, trust, or presentation improvements.
-- **Internalizing**: study examples supplied by the user from other sources and extract transferable craft without copying wording, assets, layouts, or brand identity.
+- **Benchmarking**: compare genuinely similar high-, middle-, and low-performing posts from the same page using the selected social KPI to find repeatable mechanisms.
+- **Reframing**: hide all performance information and review similar captions/images as a reader to detect possible clarity, trust, or presentation problems and propose tests.
+- **Internalizing**: compare approved competitor examples, including reliable same-topic cases across pages, and extract transferable performance logic without copying wording, assets, layouts, or brand identity.
 - **Corresponding**: study comments and replies on the page's own posts to find verified corrections, misunderstandings, visual-trust problems, and successful communication.
 
 Treat the legacy name **Compare** as **Benchmarking** and **Invent** as **Reframing**.
@@ -37,21 +56,24 @@ Before any tool call or data access, check what the user has already supplied an
 
 Ask for:
 
-1. **Method**: Benchmarking, Reframing, Internalizing, Corresponding, or an explicit combination.
-2. **Target**: page/brand and pillar in plain language. If SPS is connected, ask for the workspace/team, agent connection, page slug/name, and pillar slug/name. If the user does not know these identifiers, ask permission to list accessible SPS pages and pillars read-only.
-3. **Prompt source**: permission to read the current full prompt files from SPS, or exported prompt files supplied by the user. Record paths, versions, status, and timezone.
-4. **Evidence range**: exact dates and timezone. If the user says W-x, translate it into exact dates and ask for confirmation.
-5. **Data access**:
+1. **Objective and metric**: the primary social KPI, its field definition, denominator when relevant, and whether paid and organic performance can be separated.
+2. **Method**: Benchmarking, Reframing, Internalizing, Corresponding, or an explicit combination.
+3. **Target and comparison scope**: page/brand, existing pillars, approved competitor pages, and whether competitor territory discovery is in scope. If SPS is connected, ask for the workspace/team, agent connection, page slug/name, and pillar slug/name. If the user does not know these identifiers, ask permission to list accessible SPS pages and pillars read-only.
+4. **Prompt source for prompt-refinement mode**: permission to read the current full prompt files from SPS, or exported prompt files supplied by the user. Record paths, versions, status, and timezone. A report-only run may proceed without prompt files, but must say that it does not assess current prompt coverage.
+5. **Evidence range**: exact dates and timezone. If the user says W-x, translate it into exact dates and ask for confirmation.
+6. **Data access**:
    - Ask whether SPS exposes the required history, reach, images, embeddings, or comments for the selected methods.
    - If Facebook data is required and SPS does not expose it, ask whether direct read-only Meta Graph API access is allowed and whether `META_PAGE_ID` plus `META_PAGE_ACCESS_TOKEN` are available in an environment file or secret store.
    - Never ask the user to paste an access token into chat. Never print, log, copy into a report, or commit a token.
-   - Explain that Benchmarking usually needs post history, images, publication times, and lifetime reach; Corresponding needs posts, comments, and replies. Required Page permissions vary, so capability-test read-only access before analysis.
-6. **Method-specific material**:
-   - Benchmarking: which Facebook Page/history source and which performance field means reach.
+   - Approved exports or third-party collectors may be used read-only after scope and cost approval. Explain missing coverage and capability-test access without exposing secrets.
+   - Explain that Benchmarking needs post history, images, publication times, the selected KPI, and any promotion/ad flags; Corresponding needs posts, comments, and replies. Required Page permissions vary, so capability-test read-only access before analysis.
+7. **Advertising and exclusions**: the authoritative ad/sponsored/boosted field or approved classification rule, plus any other exclusions. If ad status is unavailable, record it as unknown rather than guessing.
+8. **Method-specific material**:
+   - Benchmarking: which Facebook Page/history source contains the chosen performance field.
    - Reframing: which post set should be judged with performance hidden.
    - Internalizing: CSV/file location, source identities, column meanings, image locations, metric meanings, and whether external performance is comparable.
    - Corresponding: comment source, whether replies are included, how Page-authored comments are identified, and whether commenter data must be further de-identified.
-7. **Brief destination**: where to save the Markdown learning brief. If the user has no preference, propose `pillar-learning-brief-{pillar}-{YYYY-MM-DD}.md` in the current workspace and obtain confirmation.
+9. **Deliverable and language**: prompt-learning brief or editorial report, destination/format, audience, report language, and the source language that editorial examples should preserve. If a prompt-refinement destination is unspecified, propose `pillar-learning-brief-{pillar}-{YYYY-MM-DD}.md` in the current workspace.
 
 If a required answer, permission, prompt snapshot, image, metric definition, or data capability is missing, stop before analysis and report exactly what remains missing.
 
@@ -63,13 +85,14 @@ If a required answer, permission, prompt snapshot, image, metric definition, or 
 - Generate text embeddings through SPS MCP when available. If unavailable, ask the user how to proceed; never silently choose an outside embedding provider.
 - Compute deterministic clustering or cosine similarity locally from approved embeddings.
 - Inspect actual images visually. Do not treat image-embedding distance as human visual similarity.
+- Use an authoritative ad/promotion field or a user-approved rule to identify advertising. Exclude identified ads from organic performance comparisons, retain them in an audit count by page, and state the pre-exclusion count, excluded-ad count, and analyzed count. Do not infer advertising solely from high performance or sales-oriented language.
 - De-identify audience comments. Do not retain commenter names unless the user establishes a necessary, lawful reason.
 - Do not reply, moderate, approve, schedule, publish, create evaluation drafts, update prompts, or make any other external change during the learning phase.
 - Treat prompt application as a separate, user-authorized phase inside this skill. Create an evaluation draft only when the user requests it separately; selecting a learning item does not authorize draft creation.
 
 ## Read the Full Current Prompt
 
-Before learning, read every current prompt file relevant to the selected method. Never interpret a pillar from a shortened summary alone.
+In prompt-refinement mode, read every current prompt file relevant to the selected method before learning. Never interpret a pillar from a shortened summary alone.
 
 Keep a complete snapshot containing:
 
@@ -81,56 +104,93 @@ Keep a complete snapshot containing:
 
 Use the full snapshot to check whether a proposed learning is already present, adds something genuinely new, or conflicts with an old instruction.
 
+## Prepare the Performance Dataset
+
+Use the same confirmed dates and timezone across pages. Retain post ID/permalink, page, full caption, actual media, publication time, pillar or territory, format, selected KPI, supporting metrics, ad/promotion status, and data-coverage flags. Keep missing values missing; never replace them with zero.
+
+Before comparisons:
+
+1. Record the collected post count by page.
+2. Identify ads using the approved source or rule and record the excluded count by page.
+3. Build the organic analysis set and record its post count by page.
+4. State any unknown ad status, missing KPI coverage, unequal post age, or unavailable reach/promotion data.
+
+The exclusions receipt belongs in the learning brief context or the report's `Review Basis / Scope`.
+
 ## Build Internal Comparable Sets
 
 Use this section for Benchmarking and Reframing.
 
-For every eligible post, retain the post ID/permalink, full caption, actual image, publication time in the page timezone, pillar assignment, and reach when available. Keep reach hidden until Benchmarking explicitly reveals it.
+For every eligible post, retain the fields from the prepared performance dataset. Keep the selected KPI and supporting performance fields hidden until Benchmarking explicitly reveals them.
 
-Assign posts to the closest existing pillar from meaning and the current full pillar prompt. Exclude ambiguous posts.
+Assign posts to the closest existing pillar from meaning and the user-approved pillar definitions; in prompt-refinement mode, also use the current full pillar prompt. Exclude ambiguous posts.
 
-Embed caption/content only; never put reach, image, or publication time into the embedding input. Within each pillar:
+Embed caption/content only; never put performance, image, or publication time into the embedding input. Within each pillar:
 
 1. Rank or cluster posts by semantic similarity.
-2. Select useful pairs or small clusters before examining reach.
-3. Prefer up to three high-similarity comparisons with distinct posts. Never select mainly for a large reach gap.
+2. Select useful pairs or small clusters before examining performance.
+3. Include comparable high and low performers, plus a middle case when it materially tests the pattern. Do not select only winners or mainly select for a large performance gap.
 4. Inspect full captions, actual images, and publication times after retrieval.
+5. Check whether the proposed mechanism also appears in low-performing or contradictory examples before calling it repeatable.
 
 If fewer than two posts are genuinely comparable, record insufficient evidence instead of forcing a learning.
 
 ## Benchmarking
 
-Reveal reach only after comparable posts are fixed. Compare caption framing, information order, visual composition, publication time, reach, and reach difference.
+Reveal performance only after comparable sets are fixed. Compare the primary KPI, supporting metrics, caption framing, information order, visual composition, format, publication time, and available distribution controls.
 
-Reason from the audience's likely experience, but describe the explanation as an observational hypothesis rather than causation. Check counterexamples and avoid predefined universal rules such as “clearer images win,” “danger wins,” or “repeated posts lose.”
+Analyze both sides of the contrast:
 
-Return `benchmarking_learnings` for the brief; do not create or apply a prompt patch yet.
+- For high performers, explain the likely success mechanism and what is worth scaling. A strong post does not need a forced problem, rewrite, or cosmetic improvement.
+- For low performers, identify the most plausible performance drag and propose a narrow improvement test.
+- Use middle cases and counterexamples to test whether the mechanism survives beyond winners and to reduce survivorship bias.
+
+Describe supported explanations as Inferences rather than causation. Keep reader-perspective explanations without a performance anchor as Hypotheses / Tests. Derive mechanisms from the current evidence instead of applying universal formulas such as “clearer images win,” “danger wins,” or “repeated posts lose.”
+
+Return `benchmarking_learnings` for the selected deliverable; do not create or apply a prompt patch yet.
 
 ## Reframing
 
-Run in an isolated context containing the full current prompt, selected captions, actual images, and publication times. Hide reach, performance labels/order, Benchmarking conclusions, and `benchmarking_learnings`.
+Run in an isolated context containing the approved audience/pillar brief, selected captions, actual images, publication times, and the full current prompt when prompt-refinement mode requires it. Hide all performance, performance labels/order, Benchmarking conclusions, and `benchmarking_learnings`.
 
-Ask the judge to review the material as a reader and identify concrete improvements to clarity, credibility, information order, visual understanding, or caption-image coordination. Mark every result as performance-blind.
+Ask the judge to review the material as a reader and identify possible improvements to clarity, credibility, information order, visual understanding, or caption-image coordination. Mark every result as performance-blind and classify it as a Hypothesis / Test until performance evidence supports it.
 
-Return `reframing_learnings` for the brief; do not create or apply a prompt patch yet.
+Return `reframing_learnings` for the selected deliverable; do not create or apply a prompt patch yet.
 
 ## Internalizing
 
 Use only examples supplied or explicitly approved by the user. Require a caption plus an accessible image for caption-and-image learning; if images are unavailable, state that the run is caption-only.
 
 1. Validate the dataset and column meanings.
-2. Map examples to the requested existing pillar and exclude weak matches.
+2. Map examples to the requested existing pillar or a discovered competitor territory and exclude weak matches.
 3. Embed captions through the approved provider and retrieve semantically comparable examples.
 4. Inspect images visually within content groups.
 5. Extract abstract, transferable choices in information order, visual thesis, evidence presentation, caption-image coordination, and CTA framing.
 6. Do not copy wording, taglines, layouts, assets, or source identity.
-7. When performance exists, compare like-for-like examples and normalize within the same source/page and period. Never compare raw reach across differently sized pages or treat public likes/comments as reach.
+7. When performance exists, contrast high and low examples and normalize the selected KPI within the same source/page and period. Raw public counts may support directional cross-page comparison when clearly labelled, but they are not reach or an engagement rate.
 8. When performance is absent or incomparable, keep the analysis performance-blind.
 9. Check counterexamples and local audience fit.
 
-Treat one example as an observation, three comparable examples as a candidate pattern, and a pattern across at least two independent sources that survives counterexamples as stronger transfer evidence.
+Treat one example as an Observation, three comparable examples as a candidate pattern, and a pattern across at least two independent sources that survives low-performing counterexamples as stronger transfer evidence. Use high performers to extract successful logic; reserve corrective rewrites mainly for low performers.
 
-Return `internalizing_learnings` for the brief; do not create or apply a prompt patch yet.
+Return `internalizing_learnings` for the selected deliverable; do not create or apply a prompt patch yet.
+
+## Cross-Page Same-Topic Comparisons
+
+Actively search for cases where the page and one or more competitors covered the same news event, person, study, product announcement, source article, or a highly similar topic in the same period. Establish a reliable match from shared entities, dates, source/event details, and semantic similarity before revealing performance.
+
+For each reliable match, compare the selected KPI and supporting metrics with the headline, angle, visual thesis, format, timing, and CTA. Distinguish the observed performance gap from the inferred content or creative mechanism. Skip uncertain matches instead of forcing a pair.
+
+## Pillar Mechanisms and Competitor Discovery
+
+For every pillar with enough evidence, move beyond topic ranking and identify the content or creative mechanism associated with performance: for example the type of promise, human stakes, specificity, evidence presentation, visual action, format, or CTA behavior. These are examples of dimensions to inspect, not preset formulas.
+
+Also review competitor posts outside the user's existing pillars:
+
+1. Group recurring content into plain-language territories using meaning, not isolated keywords.
+2. Show organic post count, selected-KPI distribution, period, and contributing pages for each material territory.
+3. Identify territories with sustained competitor investment and a performance signal that the user's page does not currently cover.
+4. Present those gaps as Opportunities / Tests. A small number of examples is not enough to establish a new pillar.
 
 ## Corresponding
 
@@ -145,13 +205,13 @@ Decide whether the reaction was caused by the post's drafting/image choice. Disa
 - Treat useful feedback confined to one post as limited evidence.
 - Ignore isolated preference, unrelated disagreement, spam, coordinated repetition, and requests that conflict with accuracy or safety.
 
-Comment likes can indicate visibility but never correctness. Comment volume and sentiment do not replace reach as the performance KPI.
+Comment likes can indicate visibility but never correctness. Comment volume and sentiment do not replace the selected primary KPI unless the user's stated objective is specifically qualified conversation.
 
-Return `corresponding_learnings` for the brief; do not reply, moderate, or apply a prompt patch yet.
+Return `corresponding_learnings` for the selected deliverable; do not reply, moderate, or apply a prompt patch yet.
 
 ## Interpret Learnings Against SPS Prompts
 
-For each learning, compare it against the complete current prompt and classify it:
+In prompt-refinement mode, compare each learning against the complete current prompt and classify it:
 
 1. **Already covered**: cite the existing rule and recommend no prompt change.
 2. **Additive**: identify the correct prompt file and recommend one narrow addition. Preserve every old instruction verbatim.
@@ -167,7 +227,13 @@ Route additions correctly:
 
 Prefer additions over rewrites. Never propose replacing the whole prompt. Never omit old content merely because it was not relevant to the new evidence. When two rules conflict, recommend the smallest explicit replacement and show both the old and proposed wording in the evidence description.
 
+A high-performing post may yield a scale/retain learning or show that the current prompt is already effective. Do not manufacture a prompt change or rewrite merely to produce an action item.
+
 Do not create a prompt patch or update SPS during interpretation. Put each recommendation into the numbered brief so the user can choose it independently. Use the apply phase below only after an explicit selection.
+
+## Editorial Report Mode
+
+When the requested deliverable is an editorial report, read and follow [references/editorial-report-contract.md](references/editorial-report-contract.md). Keep its core section order stable across business units and periods while including only data-supported sub-analyses. Report mode ends after the verified report is delivered; it does not enter the selective SPS application phase.
 
 ## Write the Markdown Learning Brief
 
@@ -184,26 +250,28 @@ Start with concise context:
 - Evidence window/dataset: exact dates and timezone
 - Data source: SPS / authorized Facebook read / user-supplied files
 - Prompt snapshot: paths and versions
+- Primary KPI and comparison basis: ...
+- Ad exclusions: collected count, excluded-ad count and analyzed count by page
 - Limitations: ...
 ```
 
 Then include exactly these required columns:
 
 ```md
-| Index | Learning | Evidence(s) | Recommended level |
-|---:|---|---|---|
-| 1 | [caption.md] Add: ... | Post IDs/links, reach comparison, image observation, or de-identified comment quotes. State whether already covered/additive/conflicting. | High / Medium / Low |
+| Index | Evidence status | Learning | Evidence(s) | Recommended level |
+|---:|---|---|---|---|
+| 1 | Observation / Inference / Hypothesis-Test | [caption.md] Add: ... | Post IDs/links, selected-KPI comparison, image observation, or de-identified comment quotes. State whether already covered/additive/conflicting. | High / Medium / Low |
 ```
 
 Assign levels consistently:
 
-- **High**: verified factual/safety problem, or repeated independent evidence across multiple comparable posts/sources with no unresolved counterexample.
-- **Medium**: coherent evidence from one strong cluster or repeated reactions within one post, but not yet stable across posts/sources.
-- **Low**: one anecdote, performance-blind hypothesis, weakly comparable example, or unresolved confound.
+- **High**: repeated performance evidence across multiple comparable posts or sources that survives low-performing counterexamples, or a verified factual/safety problem.
+- **Medium**: a coherent performance pattern from one strong cluster with a clear evidence anchor but unresolved generalizability.
+- **Low**: one anecdote, performance-blind hypothesis, weakly comparable example, or unresolved confound. A performance-blind idea may still be urgent as a safety guardrail, but it is not high-confidence performance evidence.
 
 For already-covered learning, state “No change recommended” in the Learning cell and cite the matching current rule. For conflicts, include the exact narrow replacement recommendation; never silently discard the old rule.
 
-Keep the brief compact but traceable. Link evidence where possible, state observed facts separately from interpretation, and never present one iteration as a universal causal law.
+Keep the brief compact but traceable. Link evidence where possible, separate Observation, Inference, and Hypothesis / Test, and never present one iteration as a universal causal law.
 
 ## Offer Selective Application
 
