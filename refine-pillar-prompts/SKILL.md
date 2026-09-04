@@ -123,6 +123,8 @@ Use this section for Benchmarking and Reframing.
 
 For every eligible post, retain the fields from the prepared performance dataset. Keep the selected KPI and supporting performance fields hidden until Benchmarking explicitly reveals them.
 
+Resolve content identity before forming contrasts. Record exact or materially identical reposts separately: retain each published occurrence in page-level post counts and total performance, but treat unchanged caption-and-media executions as one creative for mechanism analysis. A repost with different results may expose a distribution or context confound; it does not identify a creative driver because the creative did not change.
+
 Assign posts to the closest existing pillar from meaning and the user-approved pillar definitions; in prompt-refinement mode, also use the current full pillar prompt. Exclude ambiguous posts.
 
 Embed caption/content only; never put performance, image, or publication time into the embedding input. Within each pillar:
@@ -208,6 +210,8 @@ Decide whether the reaction was caused by the post's drafting/image choice. Disa
 - Ignore isolated preference, unrelated disagreement, spam, coordinated repetition, and requests that conflict with accuracy or safety.
 
 Comment likes can indicate visibility but never correctness. Comment volume and sentiment do not replace the selected primary KPI unless the user's stated objective is specifically qualified conversation.
+
+Promote a Corresponding result into the management reading path only when it supports an editorial or business decision tied to the stated objective, or reveals a repeated addressable pattern. Known CTA or chatbot triggers are intentional tactic operations; when downstream conversion outcomes are unavailable, record that limitation in methodology instead of presenting trigger volume as an audience insight.
 
 Return `corresponding_learnings` for the selected deliverable; do not reply, moderate, or apply a prompt patch yet.
 

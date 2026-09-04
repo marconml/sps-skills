@@ -16,21 +16,25 @@ Give management the most important findings and actions first. Each decision nee
 
 ### 2. Performance Overview
 
-Show overall and competitor performance, then pillar performance. Include format, frequency, timing, or other dimensions only when the data contains a material signal. Report post counts and the selected KPI's distribution or median; show supporting metrics separately when useful. Preserve missing values and explain non-comparable data.
+Show overall and competitor performance, then pillar performance. Include format, frequency, timing, or other dimensions only when the data contains a material signal. Report post counts and the selected KPI's distribution or median; show supporting metrics separately when useful. Preserve missing values and explain non-comparable data. Give every bar, scale and colour an explicit nearby metric label so it cannot be mistaken for an adjacent value, and make the decision-driving comparator KPI visually prominent.
 
 ### 3. What Drove Performance
 
 Contrast comparable high, middle, and low performers. Explain successful logic from high performers without forcing a rewrite. Diagnose likely performance drag and improvement directions mainly from low performers. Include reliable cross-page same-topic comparisons when available; skip them when the match is uncertain.
 
-Name examples with the source-language hook or a faithful short title and make the title clickable to the original post. Present each reliable same-topic case as a compact side-by-side comparison with every page's original image, hook, direct post link, date, format, selected KPI and supporting metrics. If an approved source is genuinely text-only or its media is unavailable, label that state instead of substituting unrelated artwork.
+Name examples with the source-language first-line headline or the most recognisable on-image headline, rather than an analyst shorthand, and make the title clickable to the original post. Present each reliable same-topic case as a compact side-by-side comparison with every page's original image, hook, direct post link, date, format, selected KPI and supporting metrics. Show original media uncropped; use contain or letterboxing when aspect ratios differ. Keep the match receipt available for audit but subordinate to the observation and inference. If an approved source is genuinely text-only or its media is unavailable, label that state instead of substituting unrelated artwork.
+
+Exclude exact or materially identical reposts from content-mechanism contrasts because no creative variable changed. Keep their published occurrences in page-level counts and totals, and disclose the repeat as a distribution/context limitation when it affects interpretation.
 
 ### 4. Key Learnings & Opportunities
 
-Combine mechanisms worth scaling, recurring weaknesses, competitor learnings, audience feedback, and material competitor territories outside the existing pillars. A territory becomes an Opportunity / Test only when post volume and performance show a sustained signal; do not create a new pillar from a few cases.
+Combine mechanisms worth scaling, recurring weaknesses, competitor learnings, decision-relevant audience feedback, and material competitor territories outside the existing pillars. Promote comment analysis only when it changes an editorial/business decision or supports a repeated addressable pattern; intentional CTA/chatbot triggers without downstream conversion outcomes belong in Methodology / Caveats. A territory becomes an Opportunity / Test only when post volume and performance show a sustained signal; do not create a new pillar from a few cases.
 
 ### 5. Recommendations & Tests
 
 Number the actions and classify each as **Scale**, **Improve**, **Stop**, or **Test**. Support each action with the observation or inference behind it. State the metric, comparison and review window for proposed tests.
+
+When another compact decision taxonomy appears elsewhere, define its complete set once beside the first use. Use short action meanings, such as **Scale** = increase allocation behind a proven mechanism, **Defend** = maintain a working strength, **Improve** = retain the product but redesign its package, and **Hold** = wait for clearer evidence before adding allocation. Keep that status legend distinct from the recommendation categories above.
 
 This board is for decisions an editor, content lead or business owner can act on. Put data-definition cautions, causal limits, missing-denominator warnings and instructions for the analyzing agent in `Review Basis / Scope` or `Methodology / Caveats`; they are not operating actions. Use **Stop** only when the evidence supports ceasing a content, creative, distribution or audience practice. When no such decision is supported, state that clearly or omit the empty subordinate panel rather than filling it with analytical guardrails.
 
@@ -64,7 +68,7 @@ Keep headings, numbering, information hierarchy, evidence-card anatomy, table de
 
 For more than two competitor pages, prefer a page-level scorecard followed by horizontally scrollable or responsive matrices for pillar, territory and format comparisons. Keep post counts and metric coverage visible so extra competitors do not make the comparison look more precise than it is.
 
-Use a CEO scan gate before delivery: the first screen and action board should expose the principal performance decision, its business implication and its evidence in about 30 seconds. Keep audit language in the trust layer. Use bilingual copy where it improves recognition: report narrative may remain in the requested report language while source hooks, post titles and editorial examples retain the original content language.
+Use a CEO scan gate before delivery: the first screen and action board should expose the principal performance decision, its business implication and its evidence in about 30 seconds. Subordinate copy under section headings must carry a decision-useful takeaway; move selection rules, match mechanics and other process notes into Methodology / Caveats. Keep principal comparison analysis at normal body-reading size, not caption or metadata size. Keep audit language in the trust layer. Use bilingual copy where it improves recognition: report narrative may remain in the requested report language while source hooks, post titles and editorial examples retain the original content language.
 
 ## Report QA
 
@@ -77,9 +81,14 @@ Before delivery, verify:
 - high and low content both appear in the evidence path;
 - reliable same-topic cross-page matches are included or their absence is stated;
 - every same-topic match has a receipt for the shared case, and conflicting incident details have not been merged;
+- exact or materially identical reposts are not used as creative contrasts;
 - cross-page and paired evidence exposes every comparator post link and available original image;
+- original evidence media is fully visible rather than cropped, and principal analysis text is body-readable;
 - competitor territories outside existing pillars were checked;
 - editorial examples preserve the source language;
 - suggested hooks and visual directions identify their evidence basis and do not introduce unsupported claims;
 - the operating board contains business/editorial actions rather than analysis instructions or methodology caveats;
+- every visual encoding has an explicit metric label, decision-driving comparator KPIs are prominent, and any decision-call taxonomy has a concise legend;
+- visible section leads contain decisions or implications rather than analysis-process narration;
+- comment findings in the main reading path are decision-relevant; intentional trigger volume without conversion outcomes stays in the trust layer;
 - post links, embedded assets, desktop/mobile layout, prior reports and credential exclusion pass validation.
