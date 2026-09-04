@@ -1,4 +1,4 @@
 interface:
   display_name: "怪獸字修復 · Fix Monster Glyphs"
-  short_description: "Find a font, overlay the glyph, then match its styling"
-  default_prompt: "Use $fix-monster-glyphs with exactly three steps: find the font library, overlay the correct glyph, then fix its styling to match the original text."
+  short_description: "Compare fonts, stretch to measured bounds, match style"
+  default_prompt: "Use $fix-monster-glyphs with exactly three steps: find a matching font, stretch and overlay the correct glyph to measured original bounds, then match the original styling."
