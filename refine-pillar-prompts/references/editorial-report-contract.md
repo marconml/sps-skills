@@ -32,6 +32,8 @@ Keep post-level evidence beside the mechanism or comparison it supports, or plac
 
 Combine mechanisms worth scaling, recurring weaknesses, competitor learnings and material territories outside the existing pillars here. A territory becomes an Opportunity / Test only when post volume and performance show a sustained signal; do not create a new pillar from a few cases.
 
+Pair every material competitor opportunity with at least one representative successful example when approved media is available. Show the original media uncropped, source-language hook, direct post link, page, primary KPI and supporting metrics, then state the transferable mechanism and one source-language adaptation for the focal brand. Treat the example as an execution reference while keeping opportunity confidence anchored to the territory's sustained volume, performance signal and counterexamples. Elsewhere, add or cross-link a concrete example only when it materially clarifies an editorial instruction; prefer a cross-link when the full evidence card already appears earlier in the report.
+
 For comment analysis, first exclude intentional PM-CTA posts and residual trigger replies under the approved rule, then screen the full usable de-identified sample. Promote exactly three decision-useful newsroom insights when the evidence supports three; use fewer when it does not. Each insight should state the reader signal, editorial meaning, commissioning or packaging response and linked example posts. Treat comment evidence as input to selection and usefulness, not proof that the proposed change will increase shares. Keep trigger-volume and sampling mechanics in `Methodology / Caveats`.
 
 ### 4. Next-Month Commissioning Plan
@@ -88,6 +90,7 @@ Before delivery, verify:
 - cross-page and paired evidence exposes every comparator post link and available original image;
 - original evidence media is fully visible rather than cropped, and principal analysis text is body-readable;
 - competitor territories outside existing pillars were checked;
+- every material competitor opportunity includes a linked successful execution reference, transferable mechanism and focal-brand adaptation when approved media is available;
 - editorial examples preserve the source language;
 - suggested hooks and visual directions identify their evidence basis and do not introduce unsupported claims;
 - the operating board contains business/editorial actions rather than analysis instructions or methodology caveats;
