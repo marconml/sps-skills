@@ -8,17 +8,19 @@ Keep this section order stable across business units and reporting periods. The 
 
 ### Review Basis / Scope
 
-State the exact period and timezone, pages, audience, primary KPI and comparison basis. Show collected post count, ads excluded and analyzed post count by page. Name important exclusions, missing coverage, promotion/reach limitations, classification uncertainty, and whether public counts are not reach or an engagement rate.
+State the exact period and timezone, approved page set, audience, primary KPI and comparison basis in a compact band. For a recurring three-month review, name the current month as the decision month and the prior two months as comparison context. Keep collection receipts, named competitor omissions, ad counts and detailed data limitations in `Methodology / Caveats`; bring one into the opening path only when it changes the management conclusion.
 
-### 1. Executive Summary / Key Decisions
+### 1. Executive Summary / Editorial Calls
 
-Give management the most important findings and actions first. Each decision needs an evidence anchor or must be labelled Hypothesis / Test. Separate performance decisions from accuracy, legal, privacy, and non-misleading guardrails.
+Give management two to four editorial calls for the next cycle. Lead each call with the commissioning, content-mix or packaging decision, explain why it matters in Chief Editor language, then add one compact evidence anchor or label it Hypothesis / Test. Metrics support the judgement; they are not the card headline unless the number itself is the decision.
 
-### 2. Performance Overview
+### 2. Current-Month Movement & Diagnosis
 
-Show overall and competitor performance, then pillar performance. Include format, frequency, timing, or other dimensions only when the data contains a material signal. Report post counts and the selected KPI's distribution or median; show supporting metrics separately when useful. Preserve missing values and explain non-comparable data. Give every bar, scale and colour an explicit nearby metric label so it cannot be mistaken for an adjacent value, and make the decision-driving comparator KPI visually prominent.
+Make the current month the narrative subject. Use the two prior months to decide whether its movement is a continuation, a reversal after an unusual month, or a new break; avoid three parallel month summaries. Explain what carried the current month, what dragged it and whether the main competitors point to an internal editorial issue or a broader market movement. Connect the movement to pillar mix, topic choice, headline and visual packaging, breakout concentration or another supported editorial mechanism.
 
-### 3. What Drove Performance
+Use median performance on the primary KPI for the typical post and total performance as a separate scale signal. When only three monthly points exist, use a slope view, grouped period comparison or concise table and label it as a discrete rolling comparison rather than a long-run trend. Highlight the current month, show post counts, keep exact values available and give every scale and colour an explicit metric label. Include format, frequency or timing only when they change an editorial decision; otherwise keep them as secondary tests.
+
+### 3. Why Readers Shared — and What They Asked For
 
 Contrast comparable high, middle, and low performers. Explain successful logic from high performers without forcing a rewrite. Diagnose likely performance drag and improvement directions mainly from low performers. Include reliable cross-page same-topic comparisons when available; skip them when the match is uncertain.
 
@@ -26,21 +28,21 @@ Name examples with the source-language first-line headline or the most recognisa
 
 Exclude exact or materially identical reposts from content-mechanism contrasts because no creative variable changed. Keep their published occurrences in page-level counts and totals, and disclose the repeat as a distribution/context limitation when it affects interpretation.
 
-### 4. Key Learnings & Opportunities
+Keep post-level evidence beside the mechanism or comparison it supports, or place a compact evidence book inside this section. Use representative high and low examples with original media, source-language hook, direct post link, page, pillar or territory, format, date, selected KPI and supporting metrics. For a high performer, lead with the success mechanism and what to replicate; include an editorial change only when evidence supports a real weakness. For a low performer, show the likely issue and a specific improvement test.
 
-Combine mechanisms worth scaling, recurring weaknesses, competitor learnings, decision-relevant audience feedback, and material competitor territories outside the existing pillars. Promote comment analysis only when it changes an editorial/business decision or supports a repeated addressable pattern; intentional CTA/chatbot triggers without downstream conversion outcomes belong in Methodology / Caveats. A territory becomes an Opportunity / Test only when post volume and performance show a sustained signal; do not create a new pillar from a few cases.
+Combine mechanisms worth scaling, recurring weaknesses, competitor learnings and material territories outside the existing pillars here. A territory becomes an Opportunity / Test only when post volume and performance show a sustained signal; do not create a new pillar from a few cases.
 
-### 5. Recommendations & Tests
+For comment analysis, first exclude intentional PM-CTA posts and residual trigger replies under the approved rule, then screen the full usable de-identified sample. Promote exactly three decision-useful newsroom insights when the evidence supports three; use fewer when it does not. Each insight should state the reader signal, editorial meaning, commissioning or packaging response and linked example posts. Treat comment evidence as input to selection and usefulness, not proof that the proposed change will increase shares. Keep trigger-volume and sampling mechanics in `Methodology / Caveats`.
 
-Number the actions and classify each as **Scale**, **Improve**, **Stop**, or **Test**. Support each action with the observation or inference behind it. State the metric, comparison and review window for proposed tests.
+### 4. Next-Month Commissioning Plan
+
+Translate the findings into briefs an editor can assign next month. Number the actions and classify each as **Scale**, **Improve**, **Stop**, or **Test**. For every action, state what to commission, the successful headline/visual/content contract and how the following monthly review will judge it. Support the action with the observation or inference already established in Sections 2 or 3 rather than repeating a new block of metrics.
 
 When another compact decision taxonomy appears elsewhere, define its complete set once beside the first use. Use short action meanings, such as **Scale** = increase allocation behind a proven mechanism, **Defend** = maintain a working strength, **Improve** = retain the product but redesign its package, and **Hold** = wait for clearer evidence before adding allocation. Keep that status legend distinct from the recommendation categories above.
 
-This board is for decisions an editor, content lead or business owner can act on. Put data-definition cautions, causal limits, missing-denominator warnings and instructions for the analyzing agent in `Review Basis / Scope` or `Methodology / Caveats`; they are not operating actions. Use **Stop** only when the evidence supports ceasing a content, creative, distribution or audience practice. When no such decision is supported, state that clearly or omit the empty subordinate panel rather than filling it with analytical guardrails.
+This board is for decisions an editor, content lead or business owner can act on. Put data-definition cautions, causal limits, missing-denominator warnings and instructions for the analyzing agent in `Methodology / Caveats`; they are not operating actions. Use **Stop** only when the evidence supports ceasing a content, creative, distribution or audience practice. When no such decision is supported, state that clearly or omit the empty subordinate panel rather than filling it with analytical guardrails.
 
-### 6. Post-level Evidence
-
-Use representative high and low examples with original media, hook/caption, link, page, pillar or territory, format, date, selected KPI and supporting metrics. For a high performer, lead with the success mechanism and what to replicate; include an editorial change only when evidence supports a real weakness. For a low performer, show the likely issue and a specific improvement test.
+## Post-level Evidence Contract
 
 When a claim depends on a comparable post, include the comparator's direct post link and key metrics beside the focal post. For a cross-page same-topic claim, include the original image and link for every post in the matched case so the comparison can be audited without searching elsewhere in the report.
 
@@ -75,7 +77,8 @@ Use a CEO scan gate before delivery: the first screen and action board should ex
 Before delivery, verify:
 
 - the section order matches this contract;
-- ads and other exclusions have numeric receipts;
+- recurring monthly reports make the current month the decision subject and use the prior two months only to explain direction;
+- ads and other exclusions have numeric receipts in the trust layer and do not displace the editorial decision in the hero or opening highlights;
 - every performance conclusion has an Observation or evidence-anchored Inference;
 - reader/editorial ideas are labelled Hypothesis / Test;
 - high and low content both appear in the evidence path;
@@ -90,5 +93,6 @@ Before delivery, verify:
 - the operating board contains business/editorial actions rather than analysis instructions or methodology caveats;
 - every visual encoding has an explicit metric label, decision-driving comparator KPIs are prominent, and any decision-call taxonomy has a concise legend;
 - visible section leads contain decisions or implications rather than analysis-process narration;
-- comment findings in the main reading path are decision-relevant; intentional trigger volume without conversion outcomes stays in the trust layer;
+- comment findings in the main reading path are limited to the supported newsroom insights, each with an editorial response and linked evidence; intentional trigger volume without conversion outcomes stays in the trust layer;
+- post-level evidence sits with the finding it supports or inside Section 3, before the next-month commissioning plan;
 - post links, embedded assets, desktop/mobile layout, prior reports and credential exclusion pass validation.

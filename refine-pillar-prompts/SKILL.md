@@ -115,7 +115,7 @@ Before comparisons:
 3. Build the organic analysis set and record its post count by page.
 4. State any unknown ad status, missing KPI coverage, unequal post age, or unavailable reach/promotion data.
 
-The exclusions receipt belongs in the learning brief context or the report's `Review Basis / Scope`.
+The exclusions receipt belongs in the learning brief context or the report's `Methodology / Caveats`. Keep the report's opening scope decision-focused; elevate an exclusion there only when it materially changes the management conclusion.
 
 ## Build Internal Comparable Sets
 
