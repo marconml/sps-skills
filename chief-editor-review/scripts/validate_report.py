@@ -11,6 +11,7 @@ from pathlib import Path
 
 
 REQUIRED_IDS = {"scope", "decisions", "movement", "drivers", "actions", "methodology"}
+REQUIRED_MODULES = {"page-scorecard", "core-pillar-comparison"}
 SECRET_PATTERNS = {
     "apify_token": re.compile(r"apify_api_[A-Za-z0-9_-]+", re.I),
     "bearer_token": re.compile(r"Bearer\s+[A-Za-z0-9._~-]{16,}", re.I),
@@ -24,6 +25,7 @@ class ReportParser(HTMLParser):
         self.ids: set[str] = set()
         self.images: list[dict[str, str]] = []
         self.links: list[str] = []
+        self.modules: set[str] = set()
         self.title_depth = 0
         self.title_text: list[str] = []
         self.h1_count = 0
@@ -32,6 +34,8 @@ class ReportParser(HTMLParser):
         values = {key: value or "" for key, value in attrs}
         if values.get("id"):
             self.ids.add(values["id"])
+        if values.get("data-module"):
+            self.modules.add(values["data-module"])
         if tag == "img":
             self.images.append({"src": values.get("src", ""), "alt": values.get("alt", "")})
         if tag == "a" and values.get("href"):
@@ -63,6 +67,7 @@ def main() -> int:
         "has_title": bool("".join(tree.title_text).strip()),
         "one_h1": tree.h1_count == 1,
         "required_sections": not (REQUIRED_IDS - tree.ids),
+        "standard_part2_modules": not (REQUIRED_MODULES - tree.modules),
         "no_unresolved_template_tokens": not re.search(r"\{\{[^{}]+\}\}", text),
         "images_embedded": all(item["src"].startswith("data:image/") for item in tree.images),
         "images_have_alt": all(bool(item["alt"].strip()) for item in tree.images),
@@ -78,6 +83,7 @@ def main() -> int:
         "status": "PASS" if all(checks.values()) else "FAIL",
         "checks": checks,
         "missing_section_ids": sorted(REQUIRED_IDS - tree.ids),
+        "missing_module_ids": sorted(REQUIRED_MODULES - tree.modules),
         "image_count": len(tree.images),
         "facebook_link_count": sum(
             link.startswith("https://www.facebook.com/") for link in tree.links

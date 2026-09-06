@@ -135,6 +135,7 @@ def run_canary(output_dir: Path) -> None:
     )
     assert report_receipt["status"] == "PASS"
     assert report_receipt["image_count"] == 1
+    assert report_receipt["checks"]["standard_part2_modules"] is True
 
 
 def main() -> int:

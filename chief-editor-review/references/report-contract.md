@@ -48,6 +48,15 @@ For three monthly observations, a clean multi-page line/slope chart is suitable 
 
 Check every bar/line length against its exact value. Make the strongest comparator's median conspicuous rather than burying it in body copy.
 
+### Standard comparison modules
+
+Part 2 always includes two compact comparison modules, collapsed by default in standalone HTML and marked for QA with `data-module="page-scorecard"` and `data-module="core-pillar-comparison"`. When the output format cannot collapse content, use two equivalently labelled compact blocks.
+
+1. **Page-level scorecard**: include every approved page, the stated comparison period, organic analyzed post count, median primary KPI, total primary KPI, and one concise editorial read. Add breakout concentration only when it changes interpretation.
+2. **Core-pillar comparison and Chief Editor calls**: include every focal-page Core pillar, decision-month output and median primary KPI, the prior-two-month baseline, the strongest relevant comparator with its median and post count, and a Scale / Improve / Stop / Test call with a short editorial reason.
+
+These modules are the reusable diagnostic index across business units and months. Keep the main narrative selective; place detailed rows inside the modules. If a required value is unavailable, keep the module and label the field unavailable with its coverage limitation.
+
 ## 3. Why Readers Shared — and What They Asked For
 
 This is the main analytical section. Organize it around up to three editorial mechanisms or opportunities, not around a list of charts.
@@ -127,6 +136,7 @@ Before delivery verify:
 - comment findings exclude PM-CTA posts and are limited to supported newsroom insights;
 - action cards contain editorial decisions rather than agent instructions or methodology warnings;
 - chart encodings, bar lengths, scales, legends, and exact values agree;
+- Part 2 contains the Page-level scorecard and Core-pillar comparison modules with the required fields and QA markers;
 - all images render fully, links work, and no external image dependency remains;
 - desktop and mobile views have no clipped text, accidental tiny analysis, or horizontal page overflow;
 - unresolved template tokens, credentials, commenter identities, and private collection URLs are absent;
