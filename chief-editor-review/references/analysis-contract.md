@@ -29,6 +29,18 @@ Resolve duplicate/repost identity first. Within pillar and format where possible
 
 Inspect the whole eligible cohort before choosing the three most decision-useful drivers. A driver must survive low-performing counterexamples; a feature seen only in winners is a hypothesis, not a proven mechanism. High performers primarily show what to replicate. Low performers carry diagnosis and improvement tests.
 
+## Deriving hooks and visual tests
+
+Build every Suggested Hook or Visual Test from three distinct evidence roles:
+
+1. **Content need**: approved source material, editorial brief, and reader feedback identify the subject, unresolved question, or useful point the story should answer.
+2. **Packaging mechanism**: comparable high, middle, and low posts—or a reliable same-topic cross-Page match—show which headline order, promise, visual thesis, proof treatment, or format is worth testing.
+3. **Claim support**: the approved source determines every factual claim, number, authority, and boundary condition used in the proposed package.
+
+Comments can prioritize the question or point the coverage should answer. They are not evidence that placing that point in the headline or visual will increase performance. Choose that placement only from the packaging evidence; when no reliable packaging pattern exists, present the content opportunity and defer the hook, or label the draft as editorial judgement rather than a data-backed mechanism.
+
+When extracting a competitor formula, define the relevant content-and-format cohort, resolve duplicates and materially repeated creatives, reveal performance, then compare high, middle, and low packages. Retain only mechanisms that recur across stronger posts, are weaker or absent in lower posts, and survive counterexamples. Treat a repeated phrase such as “explained,” “mystery,” or a question mark as surface wording unless the wider package comparison supports it.
+
 ## Same-topic comparisons
 
 Actively search approved pages for the same named event, person, study, source article, product announcement, or materially identical topic. Establish the match from shared entities, dates, and incident/source details before revealing performance. Broad themes or adjacent controversies are not matches.
@@ -52,11 +64,11 @@ Exclude PM-CTA posts and residual trigger replies from newsroom insight. Screen 
 Each finding states:
 
 - the recurring reader signal;
-- what it means for selection, headline, visual, usefulness, or follow-up coverage;
-- the commissioning or packaging response;
+- what it means for selection, usefulness, or follow-up coverage;
+- the coverage response, including facts or reader questions that a future story should answer;
 - linked example posts and bounded comment counts.
 
-Comments may suggest reader needs or discussion triggers but do not prove that a proposed change will increase shares. Page-authored replies are listed separately.
+When a headline or visual response is also proposed, cite its independent high–middle–low or same-topic packaging evidence. Page-authored replies are listed separately.
 
 ## Timing and frequency
 

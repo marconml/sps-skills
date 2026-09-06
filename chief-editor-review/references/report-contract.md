@@ -66,17 +66,19 @@ Use `object-fit: contain` or equivalent letterboxing so original images are full
 
 Place evidence beside the mechanism it supports. High performers lead with **What to replicate** and need no forced rewrite. Low performers lead with the likely issue, then an evidence-based suggested hook and visual improvement labelled as a test. Editorial examples follow the source language, even when the report narrative is English.
 
+For every Suggested Hook or Visual Test, make the evidence trail auditable in nearby prose: reader feedback may identify the content question; comparable performance evidence determines the packaging mechanism; approved sources support the claims. If the performance evidence supports only a content opportunity, do not manufacture a data-backed hook—defer it until the source and packaging basis are available.
+
 ### Same-topic cases
 
 Present every reliable case as a compact side-by-side comparison. Include every page's original image, source-language hook, direct link, date, format, selected KPI, and supporting metrics. Explain the shared incident/source briefly, then focus on angle and execution differences. Do not compare materially different incidents or unchanged reposts as creative variants.
 
 ### Competitor opportunities
 
-Pair every material opportunity with at least one successful linked execution reference when approved media is available. Show its original media and metrics, identify the transferable mechanism, and provide one source-language adaptation for the focal brand. The opportunity itself must rest on sustained territory volume, performance distribution, and counterexamples—not the single winner.
+Pair every material opportunity with at least one successful linked execution reference and one lower-performing counterexample when approved media is available. Show original media and metrics, identify the transferable mechanism from the relevant high–middle–low cohort, and provide one source-language adaptation for the focal brand. The opportunity itself must rest on sustained territory volume, performance distribution, and counterexamples—not the single winner or its surface wording.
 
 ### Comments
 
-Promote up to three supported newsroom insights from non-PM-CTA posts. Each insight includes the reader signal, editorial meaning, commissioning/packaging response, and linked example posts. Do not present chatbot trigger volume as reader conversation. Keep sampling mechanics and excluded trigger volume in Methodology / Caveats.
+Promote up to three supported newsroom insights from non-PM-CTA posts. Each insight includes the reader signal, editorial meaning, coverage response, and linked example posts. Add a packaging response only when independently supported by comparable performance evidence. Do not present chatbot trigger volume as reader conversation. Keep sampling mechanics and excluded trigger volume in Methodology / Caveats.
 
 ## 4. Next-Month Commissioning Plan
 
@@ -120,6 +122,7 @@ Before delivery verify:
 - identical reposts are not treated as creative comparisons;
 - reliable same-topic matches have match receipts, every comparator link, and available original media;
 - competitor opportunities have sustained evidence plus a successful execution reference;
+- every Suggested Hook and Visual Test identifies comparable packaging evidence; comments are used only for content needs unless an independent performance anchor is present;
 - editorial examples preserve source language and introduce no unsupported claim;
 - comment findings exclude PM-CTA posts and are limited to supported newsroom insights;
 - action cards contain editorial decisions rather than agent instructions or methodology warnings;

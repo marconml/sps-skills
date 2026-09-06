@@ -66,6 +66,18 @@ def run_canary(output_dir: Path) -> None:
     assert performance["organic_post_count"] == 2
     assert performance["confirmed_ads_excluded_by_page"]["Example Health"] == 1
 
+    hook_case = json.loads(
+        (FIXTURES / "hook-evidence-case.json").read_text(encoding="utf-8")
+    )
+    tiers = {post["tier"] for post in hook_case["posts"]}
+    proposal = hook_case["proposal_evidence"]
+    assert {"high", "middle", "low"}.issubset(tiers)
+    assert hook_case["duplicates_resolved"] is True
+    assert proposal["packaging_basis"] == "comparable_high_middle_low"
+    assert proposal["claim_basis"] == "approved source"
+    assert proposal["surface_phrase_is_formula"] is False
+    assert all(comment["allowed_role"] == "content_need" for comment in hook_case["comments"])
+
     template = (ROOT / "assets" / "chief-editor-report-template.html").read_text(
         encoding="utf-8"
     )
