@@ -1,7 +1,7 @@
 interface:
   display_name: "Refine Pillar Prompts"
-  short_description: "Performance-led SPS learnings and editorial reports"
-  default_prompt: "Use $refine-pillar-prompts to run a performance-first evidence review and produce either a stable editorial report or a numbered prompt-learning brief, applying SPS changes only when I explicitly select item indexes."
+  short_description: "Evidence-led SPS prompt refinement"
+  default_prompt: "Use $refine-pillar-prompts to produce a numbered, evidence-backed pillar prompt-learning brief and apply only the item indexes I select."
 
 dependencies:
   tools:

@@ -1,0 +1,8 @@
+.DS_Store
+.env
+.env.*
+*.token
+__pycache__/
+*.py[cod]
+**/.canary-output/
+**/runs/

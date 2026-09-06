@@ -4,19 +4,21 @@ Reusable Codex skills for Social Page Studio workflows.
 
 ## Skills
 
+### `chief-editor-review`
+
+Creates a recurring evidence-backed Facebook review for a Chief Editor or CEO.
+It can reuse approved exports or run bounded collection, then compares the
+current month with the prior two months, diagnoses high/middle/low content,
+same-topic competitor cases, creative mechanisms and non-PM reader feedback,
+and delivers a verified standalone HTML report. It is report-only and never
+changes SPS prompts or publishes content.
+
 ### `refine-pillar-prompts`
 
-Runs one weekly pillar-prompt refinement iteration using:
-
-- Social Page Studio MCP-only history, reach, embeddings, and image references
-- content-similar Facebook post pairs or clusters
-- reach-aware Compare analysis
-- performance-blind Invent analysis
-- minimal versioned SPS prompt updates
-- one evaluation draft per pillar
-
-The default analysis window is the immediately previous seven days. Multiple
-weekly iterations run only when explicitly requested.
+Turns approved performance evidence into a numbered SPS pillar prompt-learning
+brief using Benchmarking, Reframing, Internalizing and Corresponding. It applies
+only user-selected items to versioned SPS prompts. Management/editorial reports
+belong to `chief-editor-review`.
 
 ### `find-reference-image`
 
@@ -40,6 +42,13 @@ Includes a practical style-matching guide. It does not require an SPS MCP connec
 ## Install with Codex
 
 Ask Codex:
+
+```text
+Use $skill-installer to install the skill from:
+https://github.com/marconml/sps-skills/tree/main/chief-editor-review
+```
+
+For SPS pillar prompt refinement, install:
 
 ```text
 Use $skill-installer to install the skill from:
@@ -67,8 +76,15 @@ If the skill does not appear automatically, restart Codex.
 Ask Codex:
 
 ```text
-Use $refine-pillar-prompts to run one weekly Compare and Invent refinement
-iteration for this SPS page.
+Use $chief-editor-review to compare our Facebook page with approved competitors
+and produce a verified Chief Editor HTML review.
+```
+
+For prompt refinement:
+
+```text
+Use $refine-pillar-prompts to produce a numbered, evidence-backed pillar
+prompt-learning brief and apply only the item indexes I select.
 ```
 
 Or provide source text directly:
@@ -88,6 +104,15 @@ Follow Find → Overlay → Match and keep the original headline style.
 ## Update
 
 Ask Codex:
+
+```text
+Update $chief-editor-review from:
+https://github.com/marconml/sps-skills/tree/main/chief-editor-review
+
+Back up and replace the existing installed copy.
+```
+
+For pillar prompt refinement:
 
 ```text
 Update $refine-pillar-prompts from:
@@ -140,7 +165,17 @@ ordinary skill runs do not commit or push anything.
 
 ## Requirements
 
-For the SPS-connected content and reference-image workflows:
+`chief-editor-review` needs approved Facebook evidence or approved access to a
+collection source. Apify collection requires a suitable actor/input, a securely
+configured token and explicit scope/cost approval. The skill never stores the
+token in its manifest, receipts or report.
+
+`refine-pillar-prompts` needs Social Page Studio access to read current full
+prompt files and to apply only selected prompt recommendations. Performance
+evidence may come from SPS, an approved export or a `chief-editor-review`
+evidence package.
+
+For other SPS-connected content and reference-image workflows:
 
 - Social Page Studio MCP connection with access to the target page
 - MCP-provided Facebook page history and lifetime reach
@@ -149,9 +184,8 @@ For the SPS-connected content and reference-image workflows:
   discovery or research media references are needed
 - MCP prompt-version and draft capabilities
 
-Those workflows do not use direct Facebook, LiteLLM, Azure, Serper, browser-search, or
-other provider credentials. Provider access must remain behind Social Page Studio
-MCP.
+Provider access for those workflows must remain behind Social Page Studio MCP
+unless their own skill explicitly defines another approved source.
 
 `fix-monster-glyphs` instead needs the source image, the intended correct text,
 a suitable font library, and local font-rendering and image-compositing tools.

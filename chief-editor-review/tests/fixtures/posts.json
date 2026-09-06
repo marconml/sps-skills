@@ -1,0 +1,41 @@
+[
+  {
+    "post_id": "example-1",
+    "page": "Example Health",
+    "permalink": "https://www.facebook.com/example.health/posts/example-1",
+    "published_at": "2026-08-12T09:00:00+08:00",
+    "caption": "A de-identified canary post about a practical food choice.",
+    "format": "image",
+    "media_path": "evidence.svg",
+    "shares": 42,
+    "reactions": 108,
+    "comments": 9,
+    "ad_status": "organic"
+  },
+  {
+    "post_id": "comparator-1",
+    "page": "Comparator Health",
+    "permalink": "https://www.facebook.com/comparator.health/posts/comparator-1",
+    "published_at": "2026-08-13T10:00:00+08:00",
+    "caption": "A de-identified comparison post covering the same broad test topic.",
+    "format": "image",
+    "media_path": "evidence.svg",
+    "shares": 28,
+    "reactions": 91,
+    "comments": 7,
+    "ad_status": "organic"
+  },
+  {
+    "post_id": "example-ad-1",
+    "page": "Example Health",
+    "permalink": "https://www.facebook.com/example.health/posts/example-ad-1",
+    "published_at": "2026-08-20T11:00:00+08:00",
+    "caption": "A declared paid-partnership fixture.",
+    "format": "image",
+    "media_path": "evidence.svg",
+    "shares": 12,
+    "reactions": 40,
+    "comments": 3,
+    "ad_status": "paid_partnership"
+  }
+]

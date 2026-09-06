@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chief Editor Review"
+  short_description: "Evidence-backed Facebook editorial reviews"
+  default_prompt: "Use $chief-editor-review to compare our Facebook page with approved competitors and produce a verified Chief Editor HTML review."

@@ -1,0 +1,16 @@
+[
+  {
+    "post_id": "example-1",
+    "text": "Could a future post compare the practical choices more clearly?",
+    "likes": 3,
+    "is_page_authored": false,
+    "is_pm_cta": false
+  },
+  {
+    "post_id": "example-1",
+    "text": "The portion example made this easier to understand.",
+    "likes": 2,
+    "is_page_authored": false,
+    "is_pm_cta": false
+  }
+]

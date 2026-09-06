@@ -1,0 +1,21 @@
+{
+  "focal_page": {"name": "Example Health", "url": "https://www.facebook.com/example.health"},
+  "competitors": [
+    {"name": "Comparator Health", "url": "https://www.facebook.com/comparator.health"}
+  ],
+  "excluded_pages": [],
+  "date_start": "2026-06-01",
+  "date_end": "2026-08-31",
+  "timezone": "Asia/Hong_Kong",
+  "decision_month": "2026-08",
+  "primary_kpi": "shares",
+  "pillars": [{"name": "Nutrition", "tags": []}],
+  "report_language": "English",
+  "comments": {
+    "enabled": true,
+    "max_ranked_top_level_per_post": 20,
+    "exclude_pm_cta_posts": true
+  },
+  "ad_rule": "Fixture-declared status",
+  "maximum_approved_cost_usd": 0
+}
