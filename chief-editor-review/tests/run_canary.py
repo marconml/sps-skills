@@ -107,6 +107,14 @@ def run_canary(output_dir: Path) -> None:
         "FORMAT": "Image",
         "MONTHLY_CHART_SVG": '<svg viewBox="0 0 600 160" role="img" aria-label="Canary monthly median shares"><polyline points="30,120 300,90 570,55" fill="none" stroke="#087f83" stroke-width="5"/></svg>',
         "METHODOLOGY": "Synthetic evidence only. No credentials or identities.",
+        "ZH_TRANSLATION_JSON": json.dumps(
+            {
+                "Canary Chief Editor Review": "Canary Chief Editor 中文檢討",
+                "Protect the useful mechanism.": "保護真正有用的內容機制。",
+                "Synthetic content validates the reusable report path.": "合成內容用於驗證可重用報告流程。",
+            },
+            ensure_ascii=False,
+        ),
     }
 
     def replace(match: re.Match[str]) -> str:
@@ -136,6 +144,7 @@ def run_canary(output_dir: Path) -> None:
     assert report_receipt["status"] == "PASS"
     assert report_receipt["image_count"] == 1
     assert report_receipt["checks"]["standard_part2_modules"] is True
+    assert report_receipt["checks"]["bilingual_language_switch"] is True
 
 
 def main() -> int:

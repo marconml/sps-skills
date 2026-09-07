@@ -19,14 +19,15 @@ Ask only for missing information:
 2. Audience, performance objective, existing content pillars, and usable pillar tags.
 3. Available posts, metrics, images, comments, previous reports, and approved data access.
 4. Editorial rules and exclusions to preserve.
-5. Report language and any presentation-only reference report.
+5. Any language override and any presentation-only reference report.
 
 Unless the user specifies otherwise, propose:
 
 - the latest completed calendar month as the decision month and the two preceding completed months as context;
 - Hong Kong time;
 - shares per post as the primary KPI;
-- English report narrative with source-language hooks and editorial examples;
+- one bilingual English / Traditional Chinese report, defaulting to English with a top-right `中 / ENG` switch;
+- source-language hooks and editorial examples in their original language;
 - a new standalone HTML report with embedded images.
 
 State the exact dates. If pillars are unknown, propose a working classification from approved data before drawing pillar conclusions. Present a short plan and wait for approval.
@@ -77,6 +78,8 @@ Keep the stable four-part reading path:
 
 Place post-level evidence with the finding it supports. Show original media uncropped, use the source-language first line as the linked title, and include competitor links wherever a comparison or opportunity depends on them. High performers explain what to replicate; low performers carry the improvement tests.
 
+Unless the user explicitly opts out, deliver both English and Traditional Chinese in the same standalone file. English is the initial view; the language switch changes the complete management narrative while keeping evidence, metrics, images, links, and source-language examples shared.
+
 Use `scripts/embed_images.py` to make local evidence media self-contained. Run `scripts/validate_report.py` and `scripts/browser_qa.js`, then inspect the resulting desktop and mobile screenshots. Verify chart scales, labels, exact values, images, links, text hierarchy, evidence status, credential exclusion, and preservation of previous reports.
 
 ## Deliver and stop
@@ -88,7 +91,7 @@ Return the new standalone HTML plus a short receipt naming:
 - collected, ad-excluded, and analyzed post counts;
 - comment coverage;
 - material limitations;
-- report and QA paths.
+- report and English / Chinese QA paths.
 
 Do not offer or apply SPS prompt changes as part of the report. If the user later wants prompt changes, hand the approved findings to `refine-pillar-prompts` as a separate task.
 

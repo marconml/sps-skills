@@ -119,6 +119,14 @@ Preserve the approved business unit's broad typography, colors, hierarchy, evide
 
 For more than two competitors, use a compact page scorecard followed by responsive or horizontally scrollable pillar/territory matrices. Remove optional charts that do not change a decision. Principal analysis stays at normal body-reading size; captions and metadata may be smaller.
 
+## Bilingual standalone output
+
+Unless the user explicitly requests a single language, deliver one standalone HTML containing a complete English and Traditional Chinese editorial layer. English is the default on every load. Place a fixed, keyboard-accessible `中 / ENG` switch at the top right and update the document language, title, active state, and visible copy when it changes.
+
+Translate the hero, navigation, scope, section headings, editorial analysis, chart and table labels, calls, recommendations, and methodology. Keep original post hooks, quoted wording, links, metrics, and media shared rather than duplicating the evidence layer. Source-language editorial examples remain in that language; familiar newsroom terms such as shares, median, hook, visual, Core pillar, Scale, Improve, Stop, and Test may remain in English when that is clearer.
+
+Use authored bilingual copy embedded in the file; the report must not depend on a browser translation feature, network request, or external translation service at runtime. English and Chinese must communicate the same finding, evidence status, numbers, and action—translation may adapt phrasing for natural reading but must not introduce a new claim.
+
 ## QA gate
 
 Before delivery verify:
@@ -137,7 +145,8 @@ Before delivery verify:
 - action cards contain editorial decisions rather than agent instructions or methodology warnings;
 - chart encodings, bar lengths, scales, legends, and exact values agree;
 - Part 2 contains the Page-level scorecard and Core-pillar comparison modules with the required fields and QA markers;
+- the report defaults to English, the top-right `中 / ENG` switch changes the complete editorial layer, and both languages preserve evidence and action parity;
 - all images render fully, links work, and no external image dependency remains;
-- desktop and mobile views have no clipped text, accidental tiny analysis, or horizontal page overflow;
+- English and Chinese desktop/mobile views have no clipped text, accidental tiny analysis, or horizontal page overflow;
 - unresolved template tokens, credentials, commenter identities, and private collection URLs are absent;
 - previous reports remain unchanged.

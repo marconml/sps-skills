@@ -29,13 +29,26 @@ class ReportParser(HTMLParser):
         self.title_depth = 0
         self.title_text: list[str] = []
         self.h1_count = 0
+        self.default_language = ""
+        self.language_toggle = False
+        self.language_options: set[str] = set()
+        self.bilingual_script = False
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = {key: value or "" for key, value in attrs}
+        keys = {key for key, _ in attrs}
         if values.get("id"):
             self.ids.add(values["id"])
         if values.get("data-module"):
             self.modules.add(values["data-module"])
+        if tag == "body":
+            self.default_language = values.get("data-default-language", "")
+        if "data-language-toggle" in keys:
+            self.language_toggle = True
+        if values.get("data-lang-option"):
+            self.language_options.add(values["data-lang-option"])
+        if tag == "script" and "data-bilingual-report" in keys:
+            self.bilingual_script = True
         if tag == "img":
             self.images.append({"src": values.get("src", ""), "alt": values.get("alt", "")})
         if tag == "a" and values.get("href"):
@@ -68,6 +81,12 @@ def main() -> int:
         "one_h1": tree.h1_count == 1,
         "required_sections": not (REQUIRED_IDS - tree.ids),
         "standard_part2_modules": not (REQUIRED_MODULES - tree.modules),
+        "bilingual_language_switch": (
+            tree.default_language == "en"
+            and tree.language_toggle
+            and tree.language_options == {"en", "zh"}
+            and tree.bilingual_script
+        ),
         "no_unresolved_template_tokens": not re.search(r"\{\{[^{}]+\}\}", text),
         "images_embedded": all(item["src"].startswith("data:image/") for item in tree.images),
         "images_have_alt": all(bool(item["alt"].strip()) for item in tree.images),
