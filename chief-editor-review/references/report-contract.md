@@ -55,11 +55,15 @@ For each material mechanism, show:
 
 A negative example should match pillar/topic, format, and period where possible. Do not treat an exact repost, confirmed ad, or materially different incident as a creative counterexample. Representative cases illustrate a cohort-level conclusion; they do not create it.
 
+Use one visible hierarchy inside Part 2: chapter `2` → subpart `2A` / `2B` / `2C` → labelled case or opportunity. Case labels inherit the parent subpart, such as `2A · Case study` or `2B · Same-event comparison`. Use independent numeric sequences only for the four main chapters and the final numbered action list.
+
+Keep a deep case to one interpretation layer. The post cards contain identity, original media, hook, date, metrics, link, and evidence role such as higher-share or lower-share. Follow them with at most three non-overlapping blocks: **what differed**, **why it likely mattered plus counterevidence/limit**, and **editorial response**. Combine content promise, headline, visual hierarchy, sharing logic, and the test inside those blocks instead of repeating them as separate labels.
+
 ### Post evidence
 
 Name each example with the source-language first-line caption or most recognizable on-image headline. Make it link directly to the original Facebook post. Show page, date, pillar/territory, format, primary KPI, reactions, comments, shares, and original media.
 
-Use `object-fit: contain` or equivalent letterboxing so original images are fully visible. When media is unavailable or a post is text-only, label the state rather than substituting unrelated imagery.
+Use a bounded media frame with `object-fit: contain` or equivalent letterboxing so original images are fully visible. Keep metrics and interpretation in a separate content region below or beside that frame. When media is unavailable or a post is text-only, label the state rather than substituting unrelated imagery.
 
 Place evidence beside the mechanism it supports. High performers lead with **What to replicate** and need no forced rewrite. Low performers lead with the likely issue, then an evidence-based suggested hook and visual improvement labelled as a test. Editorial examples follow the source language, even when the report narrative is English.
 
@@ -132,7 +136,7 @@ Translate the hero, navigation, scope, section headings, editorial analysis, cha
 
 Approved business-unit content-pillar names are taxonomy identifiers, not prose translations. Render each approved label verbatim in the English and Chinese views wherever the pillar is named, including tables, chart labels, diagnosis, takeaways, actions, and evidence metadata. For example, if the approved labels are `三高管理` and `長者照顧`, both language views use those exact labels while translating the surrounding sentence.
 
-Use authored bilingual copy embedded in the file; the report must not depend on a browser translation feature, network request, or external translation service at runtime. English and Chinese must communicate the same finding, evidence status, numbers, and action—translation may adapt phrasing for natural reading but must not introduce a new claim.
+Use authored bilingual copy embedded in the file; the report must not depend on a browser translation feature, network request, or external translation service at runtime. Build both layers from the same locked evidence and meaning. Write the Traditional Chinese layer as idiomatic editorial Chinese with natural sentence order and concise newsroom phrasing, not as a literal sentence-by-sentence rendering. English and Chinese must communicate the same finding, evidence status, numbers, and action without introducing a new claim. Final reports use production labels in both views; preview or test wording belongs only in QA receipts.
 
 ## QA gate
 
@@ -155,8 +159,9 @@ Before delivery verify:
 - chart encodings, bar lengths, scales, legends, and exact values agree;
 - Part 1 contains the Page-level scorecard and Core-pillar comparison modules with the required fields and QA markers;
 - representative cases follow a cohort-level high/middle/low diagnosis and deep cases include content promise, headline, visual hierarchy, sharing logic, limitations, and a transferable rule;
+- nested case labels preserve the chapter/subpart hierarchy, evidence cards do not carry an unrelated sequence, and repeated interpretation has been consolidated;
 - the report defaults to English, the top-right `中 / ENG` switch changes the complete editorial layer, and both languages preserve evidence and action parity;
-- all images render fully, links work, and no external image dependency remains;
+- all images remain inside their media frames without covering metadata or interpretation, links work, and no external image dependency remains;
 - English and Chinese desktop/mobile views have no clipped text, accidental tiny analysis, or horizontal page overflow;
 - unresolved template tokens, credentials, commenter identities, and private collection URLs are absent;
 - previous reports remain unchanged.

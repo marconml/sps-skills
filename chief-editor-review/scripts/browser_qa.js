@@ -47,12 +47,32 @@ async function main() {
         height: image.naturalHeight,
         objectFit: getComputedStyle(image).objectFit,
       }));
+      const evidenceLayout = [...document.querySelectorAll(".surgery-card,.evidence,.case-post")].map((card) => {
+        const image = card.querySelector("img");
+        const media = image?.closest("a,.evidence-media,.case-image");
+        const content = card.querySelector(".surgery-body,.evidence-body,.case-post-body");
+        if (!image || !media) return { hasImage: false, imageInsideMedia: true, mediaClearOfContent: true };
+        const imageBox = image.getBoundingClientRect();
+        const mediaBox = media.getBoundingClientRect();
+        const contentBox = content?.getBoundingClientRect();
+        const tolerance = 1;
+        return {
+          hasImage: true,
+          imageInsideMedia: imageBox.left >= mediaBox.left - tolerance
+            && imageBox.right <= mediaBox.right + tolerance
+            && imageBox.top >= mediaBox.top - tolerance
+            && imageBox.bottom <= mediaBox.bottom + tolerance,
+          mediaClearOfContent: !contentBox || mediaBox.bottom <= contentBox.top + tolerance
+            || mediaBox.right <= contentBox.left + tolerance,
+        };
+      });
       const bodySizes = [...document.querySelectorAll(".section-lead,.card p,.evidence-body p,.action p")]
         .map((element) => parseFloat(getComputedStyle(element).fontSize));
       return {
         documentWidth: [document.documentElement.clientWidth, document.documentElement.scrollWidth],
         overflow,
         images,
+        evidenceLayout,
         bodySizes,
         languageState: {
           documentLanguage: document.documentElement.lang,
@@ -78,6 +98,7 @@ async function main() {
     && view.overflow.length === 0
     && view.errors.length === 0
     && view.images.every((image) => image.width > 0 && image.height > 0 && image.objectFit === "contain")
+    && view.evidenceLayout.every((item) => item.imageInsideMedia && item.mediaClearOfContent)
     && view.bodySizes.every((size) => size >= 13)
   )
     && desktopEnglish.languageState.defaultLanguage === "en"

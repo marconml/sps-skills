@@ -82,7 +82,9 @@ Start with evidence, then move from diagnosis to synthesis and action. The openi
 
 Place post-level evidence inside the diagnosis it supports rather than after the actions. Show original media uncropped, use the source-language first line as the linked title, and include competitor links wherever a comparison or opportunity depends on them. Diagnose the whole eligible high/middle/low cohort before choosing representative cases. High performers explain what to replicate; comparable low performers or negative examples explain what failed and carry the improvement tests. Each deep case should cover the content promise, headline architecture, visual hierarchy, likely sharing logic, counterevidence or limitation, and the transferable editorial rule.
 
-Make chapters and subparts visually unmistakable. Use strong numbered chapter bands and clearly labelled focal-page, competitor, and reader-signal subparts so a time-poor reader always knows whether they are looking at data, diagnosis, synthesis, or action.
+Make chapters and subparts visually unmistakable. Use strong numbered chapter bands and clearly labelled focal-page, competitor, and reader-signal subparts so a time-poor reader always knows whether they are looking at data, diagnosis, synthesis, or action. Nested cases inherit their parent label, such as `2A · Case study`; reserve standalone numbering for the four main chapters and the final action list.
+
+Keep each deep case economical: evidence cards identify the posts and metrics, followed by one integrated interpretation in at most three blocks—what differed, why it likely mattered plus the limitation, and the editorial response. Write the Chinese layer as natural Traditional Chinese editorial prose from the locked evidence and meaning, while preserving parity with the English layer.
 
 Unless the user explicitly opts out, deliver both English and Traditional Chinese in the same standalone file. English is the initial view; the language switch changes the complete management narrative while keeping evidence, metrics, images, links, and source-language examples shared.
 
