@@ -32,10 +32,10 @@ Check every bar/line length against its exact value. Make the strongest comparat
 
 ### Standard comparison modules
 
-Part 1 always includes two compact comparison modules, collapsed by default in standalone HTML and marked for QA with `data-module="page-scorecard"` and `data-module="core-pillar-comparison"`. When the output format cannot collapse content, use two equivalently labelled compact blocks.
+Part 1 always includes two compact comparison modules marked for QA with `data-module="page-scorecard"` and `data-module="core-pillar-comparison"`. Keep the page-level scorecard collapsed by default; open the Core-pillar comparison when it is the main diagnostic index. When the output format cannot collapse content, use two equivalently labelled compact blocks.
 
 1. **Page-level scorecard**: include every approved page, the decision-month organic analyzed post count, median primary KPI, total primary KPI, and one concise editorial read. Add breakout concentration only when it changes interpretation.
-2. **Core-pillar comparison**: include every focal-page Core pillar, decision-month output and median primary KPI, the prior-two-month baseline, and the strongest relevant decision-month comparator with its median and post count. Keep status calls out of this table; the evidence is interpreted in Part 2 and converted to action in Part 4.
+2. **Core-pillar comparison**: include every focal-page Core pillar, decision-month output and median primary KPI, the prior-two-month baseline, and the strongest relevant decision-month comparator with its median and post count. Show two separate directional signals: decision-month movement versus the prior-two-month baseline, and position versus the strongest comparator. Color the complete signal text green for positive, red for negative, and grey for flat, while retaining an arrow or Ahead/Behind label plus exact values; color is never the only encoding. Keep status calls out of this table; the evidence is interpreted in Part 2 and converted to action in Part 4. Open this module by default when it is the main diagnostic index; keep the page-level scorecard collapsed unless it is needed immediately.
 
 These modules are the reusable diagnostic index across business units and months. Keep the main narrative selective; place detailed rows inside the modules. If a required value is unavailable, keep the module and label the field unavailable with its coverage limitation.
 
@@ -55,7 +55,7 @@ For each material mechanism, show:
 
 A negative example should match pillar/topic, format, and period where possible. Do not treat an exact repost, confirmed ad, or materially different incident as a creative counterexample. Representative cases illustrate a cohort-level conclusion; they do not create it.
 
-Use one visible hierarchy inside Part 2: chapter `2` → subpart `2A` / `2B` / `2C` → labelled case or opportunity. Case labels inherit the parent subpart, such as `2A · Case study` or `2B · Same-event comparison`. Use independent numeric sequences only for the four main chapters and the final numbered action list.
+Use one visible hierarchy inside Part 2: chapter `2` → subpart `2A` / `2B` / `2C` → labelled case or opportunity. Child labels state their function—such as `Case study`, `Negative example`, `Same-event case study`, or `Competitor opportunity`—without repeating `2A`, `2B`, or `2C`. Use independent numeric sequences only for the four main chapters and the final numbered action list. When Part 2 is long, add a compact `2A` / `2B` / `2C` local index after the chapter header and collapse secondary cases that do not change the main diagnosis.
 
 Keep a deep case to one interpretation layer. The post cards contain identity, original media, hook, date, metrics, link, and evidence role such as higher-share or lower-share. Follow them with at most three non-overlapping blocks: **what differed**, **why it likely mattered plus counterevidence/limit**, and **editorial response**. Combine content promise, headline, visual hierarchy, sharing logic, and the test inside those blocks instead of repeating them as separate labels.
 
@@ -126,7 +126,9 @@ Preserve the approved business unit's broad typography, colors, hierarchy, evide
 
 Make every main chapter a visually distinct numbered band. Within Part 2, use clear `2A`, `2B`, and `2C` subpart headers or their equivalent. A reader scrolling quickly should always know whether the page contains performance data, editorial diagnosis, synthesis, or action.
 
-For more than two competitors, use a compact page scorecard followed by responsive or horizontally scrollable pillar/territory matrices. Remove optional charts that do not change a decision. Principal analysis stays at normal body-reading size; captions and metadata may be smaller.
+Use a strict typographic ladder: chapter title, then subpart title, then case/module title, then card title. A nested title must never appear larger or visually stronger than its parent. Apply a restrained semantic palette consistently: dark teal for structural navigation and chapter bands; green/red for positive/negative performance signals; amber for opportunities and tests; blue for evidence and cases; grey for context and methodology. Do not use semantic colors as alternating decoration.
+
+For more than two competitors, use a compact page scorecard followed by responsive pillar/territory matrices. The Core-pillar comparison becomes stacked pillar cards on narrow screens; other dense tables may scroll horizontally when the container clearly contains the overflow. Remove optional charts that do not change a decision. Principal analysis stays at normal body-reading size; captions and metadata may be smaller.
 
 ## Bilingual standalone output
 
@@ -159,7 +161,9 @@ Before delivery verify:
 - chart encodings, bar lengths, scales, legends, and exact values agree;
 - Part 1 contains the Page-level scorecard and Core-pillar comparison modules with the required fields and QA markers;
 - representative cases follow a cohort-level high/middle/low diagnosis and deep cases include content promise, headline, visual hierarchy, sharing logic, limitations, and a transferable rule;
-- nested case labels preserve the chapter/subpart hierarchy, evidence cards do not carry an unrelated sequence, and repeated interpretation has been consolidated;
+- nested case labels preserve the chapter/subpart hierarchy without repeating parent numbers, evidence cards do not carry an unrelated sequence, and repeated interpretation has been consolidated;
+- the Core-pillar comparison separates month movement from competitor position, directly colors the complete signal text, retains non-color labels and exact values, and becomes stacked cards on narrow screens;
+- chapter, subpart, case/module, and card titles follow a descending visual hierarchy; structural and semantic colors are used consistently;
 - the report defaults to English, the top-right `中 / ENG` switch changes the complete editorial layer, and both languages preserve evidence and action parity;
 - all images remain inside their media frames without covering metadata or interpretation, links work, and no external image dependency remains;
 - English and Chinese desktop/mobile views have no clipped text, accidental tiny analysis, or horizontal page overflow;
