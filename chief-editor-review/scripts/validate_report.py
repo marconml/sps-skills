@@ -12,6 +12,7 @@ from pathlib import Path
 
 REQUIRED_IDS = {"scope", "decisions", "movement", "drivers", "actions", "methodology"}
 REQUIRED_MODULES = {"page-scorecard", "core-pillar-comparison"}
+EXPECTED_READING_PATH = ["scope", "movement", "drivers", "decisions", "actions"]
 SECRET_PATTERNS = {
     "apify_token": re.compile(r"apify_api_[A-Za-z0-9_-]+", re.I),
     "bearer_token": re.compile(r"Bearer\s+[A-Za-z0-9._~-]{16,}", re.I),
@@ -26,6 +27,7 @@ class ReportParser(HTMLParser):
         self.images: list[dict[str, str]] = []
         self.links: list[str] = []
         self.modules: set[str] = set()
+        self.section_ids: list[str] = []
         self.title_depth = 0
         self.title_text: list[str] = []
         self.h1_count = 0
@@ -39,6 +41,8 @@ class ReportParser(HTMLParser):
         keys = {key for key, _ in attrs}
         if values.get("id"):
             self.ids.add(values["id"])
+            if tag == "section":
+                self.section_ids.append(values["id"])
         if values.get("data-module"):
             self.modules.add(values["data-module"])
         if tag == "body":
@@ -80,7 +84,16 @@ def main() -> int:
         "has_title": bool("".join(tree.title_text).strip()),
         "one_h1": tree.h1_count == 1,
         "required_sections": not (REQUIRED_IDS - tree.ids),
-        "standard_part2_modules": not (REQUIRED_MODULES - tree.modules),
+        "standard_performance_modules": not (REQUIRED_MODULES - tree.modules),
+        "data_first_reading_path": all(
+            section_id in tree.section_ids for section_id in EXPECTED_READING_PATH
+        )
+        and [
+            section_id
+            for section_id in tree.section_ids
+            if section_id in EXPECTED_READING_PATH
+        ]
+        == EXPECTED_READING_PATH,
         "bilingual_language_switch": (
             tree.default_language == "en"
             and tree.language_toggle
@@ -103,6 +116,7 @@ def main() -> int:
         "checks": checks,
         "missing_section_ids": sorted(REQUIRED_IDS - tree.ids),
         "missing_module_ids": sorted(REQUIRED_MODULES - tree.modules),
+        "section_order": tree.section_ids,
         "image_count": len(tree.images),
         "facebook_link_count": sum(
             link.startswith("https://www.facebook.com/") for link in tree.links

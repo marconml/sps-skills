@@ -84,8 +84,8 @@ def run_canary(output_dir: Path) -> None:
     values = {
         "REPORT_TITLE": "Canary Chief Editor Review",
         "REPORT_LABEL": "CANARY · AUGUST 2026 FACEBOOK REVIEW",
-        "DECISION_HEADLINE": "Protect the useful mechanism.",
-        "EXECUTIVE_DECK": "Synthetic content validates the reusable report path.",
+        "MONTH_STATUS_HEADLINE": "August improved, but one mechanism did most of the work.",
+        "MONTH_STATUS_DECK": "Synthetic content validates the data-to-diagnosis-to-action path.",
         "HERO_EVIDENCE_ANCHOR": "Median shares and post counts remain visible.",
         "DECISION_MONTH": "Decision month · August 2026",
         "CONTEXT_MONTHS": "June–July · context",
@@ -106,12 +106,24 @@ def run_canary(output_dir: Path) -> None:
         "POST_DATE": "12 Aug 2026",
         "FORMAT": "Image",
         "MONTHLY_CHART_SVG": '<svg viewBox="0 0 600 160" role="img" aria-label="Canary monthly median shares"><polyline points="30,120 300,90 570,55" fill="none" stroke="#087f83" stroke-width="5"/></svg>',
+        "MOVEMENT_HEADLINE": "Start with what changed.",
+        "MOVEMENT_TAKEAWAY": "August is the decision month; June and July provide context.",
+        "FOCAL_MOVEMENT_TITLE": "The typical post improved.",
+        "FOCAL_MOVEMENT": "Median shares rose while output remained visible.",
+        "MARKET_MOVEMENT_TITLE": "The comparator also moved.",
+        "MARKET_MOVEMENT": "The shared movement keeps the news cycle in view.",
+        "DRIVERS_HEADLINE": "Diagnose the editorial choices behind the movement.",
+        "DRIVERS_TAKEAWAY": "The case illustrates a complete synthetic cohort finding.",
+        "TAKEAWAYS_HEADLINE": "Three conclusions to retain.",
+        "TAKEAWAYS_DECK": "Synthesis follows the evidence and diagnosis.",
+        "ACTIONS_HEADLINE": "Turn the diagnosis into one action layer.",
+        "ACTIONS_TAKEAWAY": "Every Scale, Improve, Stop, or Test call belongs here.",
         "METHODOLOGY": "Synthetic evidence only. No credentials or identities.",
         "ZH_TRANSLATION_JSON": json.dumps(
             {
                 "Canary Chief Editor Review": "Canary Chief Editor 中文檢討",
-                "Protect the useful mechanism.": "保護真正有用的內容機制。",
-                "Synthetic content validates the reusable report path.": "合成內容用於驗證可重用報告流程。",
+                "August improved, but one mechanism did most of the work.": "八月有改善，但主要由一個內容機制帶動。",
+                "Synthetic content validates the data-to-diagnosis-to-action path.": "合成內容用於驗證由數據、診斷到行動的閱讀流程。",
             },
             ensure_ascii=False,
         ),
@@ -143,7 +155,8 @@ def run_canary(output_dir: Path) -> None:
     )
     assert report_receipt["status"] == "PASS"
     assert report_receipt["image_count"] == 1
-    assert report_receipt["checks"]["standard_part2_modules"] is True
+    assert report_receipt["checks"]["standard_performance_modules"] is True
+    assert report_receipt["checks"]["data_first_reading_path"] is True
     assert report_receipt["checks"]["bilingual_language_switch"] is True
 
 

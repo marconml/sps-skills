@@ -12,29 +12,11 @@ Keep process notes, agent instructions, selection mechanics, causal disclaimers,
 
 Use a compact scope band for the exact period/timezone, focal and competitor set, audience, primary KPI, and current-month comparison basis. Named competitor omissions, ad counts, and collection receipts belong in Methodology / Caveats unless they materially change the headline conclusion.
 
-The hero should communicate the principal performance decision, business implication, and one evidence anchor in roughly 30 seconds.
+The hero should orient the reader to the decision month, the most important performance movement, and one evidence anchor in roughly 30 seconds. Keep calls and recommendations in Part 4.
 
-## 1. Executive Summary / Editorial Calls
+## 1. Current-Month Performance
 
-Give two to four calls for the next cycle. Each card contains:
-
-- the commissioning, mix, or packaging decision;
-- why it matters in editorial language;
-- one compact evidence anchor or a Hypothesis / Test label;
-- an unambiguous action status.
-
-Define the complete status set once. Default meanings:
-
-- **Scale**: increase allocation behind a supported mechanism.
-- **Improve**: retain the editorial product but redesign its selection or package.
-- **Stop**: cease a content, creative, or distribution practice when evidence supports doing so.
-- **Test**: run a bounded experiment where evidence is promising but incomplete.
-
-Do not use Stop for analytical warnings such as calling engagement reach or treating medians as causal.
-
-## 2. Current-Month Movement & Diagnosis
-
-Make the current month the narrative subject. Use the prior two months to classify its movement as continuation, reversal, or break. Explain what carried it, what dragged it, and whether competitor movement suggests an internal editorial issue or a broader market/news-cycle signal.
+Make the decision month the narrative subject. Use the prior two months to classify its movement as continuation, reversal, or break. Explain what carried it, what dragged it, and whether competitor movement suggests an internal editorial issue or a broader market/news-cycle signal.
 
 Use median primary-KPI performance to represent the typical post. Show total performance separately as an output/scale signal and always show post count. Average may appear only when it adds a distinct explanation and is labelled as breakout-sensitive.
 
@@ -50,22 +32,28 @@ Check every bar/line length against its exact value. Make the strongest comparat
 
 ### Standard comparison modules
 
-Part 2 always includes two compact comparison modules, collapsed by default in standalone HTML and marked for QA with `data-module="page-scorecard"` and `data-module="core-pillar-comparison"`. When the output format cannot collapse content, use two equivalently labelled compact blocks.
+Part 1 always includes two compact comparison modules, collapsed by default in standalone HTML and marked for QA with `data-module="page-scorecard"` and `data-module="core-pillar-comparison"`. When the output format cannot collapse content, use two equivalently labelled compact blocks.
 
-1. **Page-level scorecard**: include every approved page, the stated comparison period, organic analyzed post count, median primary KPI, total primary KPI, and one concise editorial read. Add breakout concentration only when it changes interpretation.
-2. **Core-pillar comparison and Chief Editor calls**: include every focal-page Core pillar, decision-month output and median primary KPI, the prior-two-month baseline, the strongest relevant comparator with its median and post count, and a Scale / Improve / Stop / Test call with a short editorial reason.
+1. **Page-level scorecard**: include every approved page, the decision-month organic analyzed post count, median primary KPI, total primary KPI, and one concise editorial read. Add breakout concentration only when it changes interpretation.
+2. **Core-pillar comparison**: include every focal-page Core pillar, decision-month output and median primary KPI, the prior-two-month baseline, and the strongest relevant decision-month comparator with its median and post count. Keep status calls out of this table; the evidence is interpreted in Part 2 and converted to action in Part 4.
 
 These modules are the reusable diagnostic index across business units and months. Keep the main narrative selective; place detailed rows inside the modules. If a required value is unavailable, keep the module and label the field unavailable with its coverage limitation.
 
-## 3. Why Readers Shared — and What They Asked For
+## 2. Editorial Diagnosis
 
-This is the main analytical section. Organize it around up to three editorial mechanisms or opportunities, not around a list of charts.
+Organize this section into clearly labelled subparts when evidence exists:
 
-For each mechanism:
+1. **Focal page — what carried and dragged the month.** Diagnose topic selection, content promise, headline structure, visual hierarchy, format, and distribution pattern across the complete eligible high/middle/low cohort.
+2. **Competitors — what management should notice.** Explain the most material competitor movement and reusable mechanism, using reliable same-topic or territory comparisons when available.
+3. **Reader signal — what useful non-PM comments add.** Distil up to three newsroom insights after excluding PM-CTA posts.
 
-1. **Observation**: show the cohort or matched-case evidence, including post count and counterexamples.
-2. **Inference**: explain the topic, headline, visual, format, or distribution logic that likely carried or dragged performance.
-3. **Editorial response**: state what to replicate or what bounded test should change.
+For each material mechanism, show:
+
+1. **Cohort observation**: the pattern across comparable high, middle, and low posts, with post count.
+2. **Deep evidence**: at least one strong example and, when reliable, one comparable weak or negative example.
+3. **Editorial explanation**: content promise, headline architecture, visual hierarchy, likely sharing logic, counterevidence or limitation, and a transferable rule.
+
+A negative example should match pillar/topic, format, and period where possible. Do not treat an exact repost, confirmed ad, or materially different incident as a creative counterexample. Representative cases illustrate a cohort-level conclusion; they do not create it.
 
 ### Post evidence
 
@@ -89,7 +77,13 @@ Pair every material opportunity with at least one successful linked execution re
 
 Promote up to three supported newsroom insights from non-PM-CTA posts. Each insight includes the reader signal, editorial meaning, coverage response, and linked example posts. Add a packaging response only when independently supported by comparable performance evidence. Do not present chatbot trigger volume as reader conversation. Keep sampling mechanics and excluded trigger volume in Methodology / Caveats.
 
-## 4. Next-Month Commissioning Plan
+## 3. CEO Takeaways
+
+Compress the diagnosis into no more than three conclusions a CEO can retain: what changed in the decision month, the focal page's most important editorial development, and the competitor or market development that matters most. Each conclusion should name the editorial meaning and its strongest evidence anchor in concise prose.
+
+This is synthesis, not a second action list. Do not introduce new analysis, examples, or Scale / Improve / Stop / Test statuses here.
+
+## 4. Next-Month Actions
 
 Translate established findings into numbered briefs an editor can assign. Each item states:
 
@@ -100,6 +94,15 @@ Translate established findings into numbered briefs an editor can assign. Each i
 - how the next monthly review will judge it.
 
 Refer back to evidence already shown rather than introducing a new metric dump after the recommendations. Do not place a separate post-evidence section after the action plan.
+
+Define the complete status set once in this section:
+
+- **Scale**: increase allocation behind a supported mechanism.
+- **Improve**: retain the editorial product but redesign its selection or package.
+- **Stop**: cease a content, creative, or distribution practice when evidence supports doing so.
+- **Test**: run a bounded experiment where evidence is promising but incomplete.
+
+Do not use Stop for analytical warnings such as calling engagement reach or treating medians as causal.
 
 ## Methodology / Caveats
 
@@ -117,6 +120,8 @@ Place methodology last or in a collapsed section. Name `chief-editor-review` and
 
 Preserve the approved business unit's broad typography, colors, hierarchy, evidence-card anatomy, responsive behavior, and section order. Reference reports control presentation only; never copy their old findings.
 
+Make every main chapter a visually distinct numbered band. Within Part 2, use clear `2A`, `2B`, and `2C` subpart headers or their equivalent. A reader scrolling quickly should always know whether the page contains performance data, editorial diagnosis, synthesis, or action.
+
 For more than two competitors, use a compact page scorecard followed by responsive or horizontally scrollable pillar/territory matrices. Remove optional charts that do not change a decision. Principal analysis stays at normal body-reading size; captions and metadata may be smaller.
 
 ## Bilingual standalone output
@@ -132,6 +137,7 @@ Use authored bilingual copy embedded in the file; the report must not depend on 
 Before delivery verify:
 
 - exact period, timezone, pages, KPI, and post counts;
+- report order is Performance → Diagnosis → CEO Takeaways → Actions, with no front-loaded executive action summary;
 - current month is the decision subject and earlier months are context;
 - every performance conclusion is an Observation or anchored Inference;
 - hypotheses/tests are labelled;
@@ -144,7 +150,8 @@ Before delivery verify:
 - comment findings exclude PM-CTA posts and are limited to supported newsroom insights;
 - action cards contain editorial decisions rather than agent instructions or methodology warnings;
 - chart encodings, bar lengths, scales, legends, and exact values agree;
-- Part 2 contains the Page-level scorecard and Core-pillar comparison modules with the required fields and QA markers;
+- Part 1 contains the Page-level scorecard and Core-pillar comparison modules with the required fields and QA markers;
+- representative cases follow a cohort-level high/middle/low diagnosis and deep cases include content promise, headline, visual hierarchy, sharing logic, limitations, and a transferable rule;
 - the report defaults to English, the top-right `中 / ENG` switch changes the complete editorial layer, and both languages preserve evidence and action parity;
 - all images render fully, links work, and no external image dependency remains;
 - English and Chinese desktop/mobile views have no clipped text, accidental tiny analysis, or horizontal page overflow;

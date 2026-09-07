@@ -71,12 +71,16 @@ Read and follow [the report contract](references/report-contract.md). Use [the n
 
 Keep the stable four-part reading path:
 
-1. Executive Summary / Editorial Calls
-2. Current-Month Movement & Diagnosis
-3. Why Readers Shared — and What They Asked For
-4. Next-Month Commissioning Plan
+1. Current-Month Performance
+2. Editorial Diagnosis
+3. CEO Takeaways
+4. Next-Month Actions
 
-Place post-level evidence with the finding it supports. Show original media uncropped, use the source-language first line as the linked title, and include competitor links wherever a comparison or opportunity depends on them. High performers explain what to replicate; low performers carry the improvement tests.
+Start with evidence, then move from diagnosis to synthesis and action. The opening hero and basis band give a factual current-month orientation; they do not front-load an action summary. Part 1 shows what changed in the decision month and keeps the Page-level scorecard and Core-pillar comparison as standard modules. Part 2 explains what carried and dragged the focal page, what competitors changed, and what non-PM reader feedback adds. Part 3 compresses the evidence into no more than three CEO-level conclusions. Part 4 contains every Scale / Improve / Stop / Test decision so the report has one action layer.
+
+Place post-level evidence inside the diagnosis it supports rather than after the actions. Show original media uncropped, use the source-language first line as the linked title, and include competitor links wherever a comparison or opportunity depends on them. Diagnose the whole eligible high/middle/low cohort before choosing representative cases. High performers explain what to replicate; comparable low performers or negative examples explain what failed and carry the improvement tests. Each deep case should cover the content promise, headline architecture, visual hierarchy, likely sharing logic, counterevidence or limitation, and the transferable editorial rule.
+
+Make chapters and subparts visually unmistakable. Use strong numbered chapter bands and clearly labelled focal-page, competitor, and reader-signal subparts so a time-poor reader always knows whether they are looking at data, diagnosis, synthesis, or action.
 
 Unless the user explicitly opts out, deliver both English and Traditional Chinese in the same standalone file. English is the initial view; the language switch changes the complete management narrative while keeping evidence, metrics, images, links, and source-language examples shared.
 
