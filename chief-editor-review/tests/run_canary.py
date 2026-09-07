@@ -106,6 +106,7 @@ def run_canary(output_dir: Path) -> None:
         "POST_DATE": "12 Aug 2026",
         "FORMAT": "Image",
         "MONTHLY_CHART_SVG": '<svg viewBox="0 0 600 160" role="img" aria-label="Canary monthly median shares"><polyline points="30,120 300,90 570,55" fill="none" stroke="#087f83" stroke-width="5"/></svg>',
+        "CORE_PILLAR_COMPARISON_HTML": "<table><tr><th>Core pillar</th></tr><tr><td>三高管理</td></tr></table>",
         "MOVEMENT_HEADLINE": "Start with what changed.",
         "MOVEMENT_TAKEAWAY": "August is the decision month; June and July provide context.",
         "FOCAL_MOVEMENT_TITLE": "The typical post improved.",
@@ -158,6 +159,9 @@ def run_canary(output_dir: Path) -> None:
     assert report_receipt["checks"]["standard_performance_modules"] is True
     assert report_receipt["checks"]["data_first_reading_path"] is True
     assert report_receipt["checks"]["bilingual_language_switch"] is True
+    report_text = report_path.read_text(encoding="utf-8")
+    assert "三高管理" in report_text
+    assert "Blood Pressure, Glucose &amp; Lipids" not in report_text
 
 
 def main() -> int:

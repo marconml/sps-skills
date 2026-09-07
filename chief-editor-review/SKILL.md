@@ -32,6 +32,8 @@ Unless the user specifies otherwise, propose:
 
 State the exact dates. If pillars are unknown, propose a working classification from approved data before drawing pillar conclusions. Present a short plan and wait for approval.
 
+Treat approved content-pillar names as business taxonomy identifiers. Record their exact spelling and language in the brief, then render those labels verbatim in every report language; translate the surrounding analysis, not the taxonomy label.
+
 ## Decide whether collection is needed
 
 Read [the collection contract](references/collection-contract.md).

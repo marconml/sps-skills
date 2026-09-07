@@ -130,6 +130,8 @@ Unless the user explicitly requests a single language, deliver one standalone HT
 
 Translate the hero, navigation, scope, section headings, editorial analysis, chart and table labels, calls, recommendations, and methodology. Keep original post hooks, quoted wording, links, metrics, and media shared rather than duplicating the evidence layer. Source-language editorial examples remain in that language; familiar newsroom terms such as shares, median, hook, visual, Core pillar, Scale, Improve, Stop, and Test may remain in English when that is clearer.
 
+Approved business-unit content-pillar names are taxonomy identifiers, not prose translations. Render each approved label verbatim in the English and Chinese views wherever the pillar is named, including tables, chart labels, diagnosis, takeaways, actions, and evidence metadata. For example, if the approved labels are `三高管理` and `長者照顧`, both language views use those exact labels while translating the surrounding sentence.
+
 Use authored bilingual copy embedded in the file; the report must not depend on a browser translation feature, network request, or external translation service at runtime. English and Chinese must communicate the same finding, evidence status, numbers, and action—translation may adapt phrasing for natural reading but must not introduce a new claim.
 
 ## QA gate
@@ -137,6 +139,7 @@ Use authored bilingual copy embedded in the file; the report must not depend on 
 Before delivery verify:
 
 - exact period, timezone, pages, KPI, and post counts;
+- every approved content-pillar label matches the brief verbatim in both language views;
 - report order is Performance → Diagnosis → CEO Takeaways → Actions, with no front-loaded executive action summary;
 - current month is the decision subject and earlier months are context;
 - every performance conclusion is an Observation or anchored Inference;
