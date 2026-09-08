@@ -43,6 +43,15 @@ Resolve duplicate/repost identity first. Within pillar and format where possible
 
 Inspect the whole eligible cohort before choosing the three most decision-useful drivers. A driver must survive low-performing counterexamples; a feature seen only in winners is a hypothesis, not a proven mechanism. High performers primarily show what to replicate. Low performers carry diagnosis and improvement tests.
 
+### Hybrid short-video review
+
+When the brief requires actual Reel or short-video diagnosis, build two evidence layers before selecting cases:
+
+1. Review every eligible video's caption, cover, first three seconds, full audio/script where available, and fixed keyframes spanning the complete timeline.
+2. Deep-review a page-balanced, high/middle/low sample through its complete script and visual sequence, preserving pillar or native-territory coverage where the sample permits.
+
+Compare what the opening promises with what the sequence proves: decision or tension, information order, visual evidence, presenter function, pacing, duration, and payoff. Test surface features against counterexamples. A short duration, fast cuts, presenter, scenic footage, question hook, or static card becomes a mechanism only when it separates stronger and weaker comparable cohorts. Record silent, unavailable, or low-confidence transcript coverage; use speech recognition for structural understanding rather than verbatim quotation.
+
 ## Deriving hooks and visual tests
 
 Build every Suggested Hook or Visual Test from three distinct evidence roles:

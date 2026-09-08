@@ -30,7 +30,7 @@ The user confirms business scope in plain language. Actor IDs and provider-speci
 
 Check existing approved access without revealing secrets. Never ask anyone to paste credentials in chat or request competitors' credentials. When access is unavailable, give the user this forwarding message:
 
-> Please arrange approved access for a three-month Facebook review of our page and selected competitors, or provide exported posts, metrics, downloaded images, and our page's comments and replies. Configure access securely for Codex and confirm collection costs.
+> Please arrange approved access for a three-month Facebook or Instagram review of our page and selected competitors, or provide exported posts, metrics, downloaded media, and available audience-response data. Configure access securely for Codex and confirm collection costs.
 
 Test access with the smallest useful canary. For paid collection, record the approved ceiling and pass it to the provider as an enforceable charge limit when available.
 
@@ -49,6 +49,8 @@ For every page and eligible publication in the exact period, seek:
 - source and field-level coverage flags.
 
 Public engagement is not reach or an engagement rate. Do not infer an unavailable denominator.
+
+For short video, record duration and audio availability with the downloaded media. When actual-video diagnosis is approved, derive first-three-second frames, fixed full-timeline keyframes, and a local transcript where speech exists. Keep transcription models, caches, videos, frames, and transcripts inside the run directory; never place them in Git.
 
 ## Ads and reposts
 

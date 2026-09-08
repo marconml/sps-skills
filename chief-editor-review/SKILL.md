@@ -1,11 +1,11 @@
 ---
 name: chief-editor-review
-description: "Create recurring evidence-backed Facebook editorial reviews for Chief Editors and management. Use to compare a focal page with approved competitors, diagnose the current month's performance, inspect posts and media, extract non-PM comment insights, and deliver a verified standalone HTML report. Report-only: no SPS prompt changes or publishing."
+description: "Create recurring evidence-backed Facebook or Instagram editorial reviews for Chief Editors and management. Use to compare a focal page with approved competitors, diagnose the current month's performance, inspect posts and actual media, extract usable audience signals, and deliver a verified standalone HTML report. Report-only: no SPS prompt changes or publishing."
 ---
 
 # Chief Editor Review
 
-Turn approved Facebook evidence into a concise, critical, actionable editorial review. The report should help a Chief Editor decide what to commission, scale, improve, stop, or test; metrics are the evidence base, not the story.
+Turn approved Facebook or Instagram evidence into a concise, critical, actionable editorial review. The report should help a Chief Editor decide what to commission, scale, improve, stop, or test; metrics are the evidence base, not the story.
 
 This is an end-to-end report skill. It may reuse an existing evidence package, import approved exports, or perform approved bounded collection. It never changes SPS prompts, publishes, schedules, replies, or moderates.
 
@@ -15,7 +15,7 @@ Guide non-technical colleagues in plain language. Ask for business information, 
 
 Ask only for missing information:
 
-1. Focal Facebook page and approved competitors.
+1. Platform, focal page, and approved competitors.
 2. Audience, performance objective, existing content pillars, and usable pillar tags.
 3. Available posts, metrics, images, comments, previous reports, and approved data access.
 4. Editorial rules and exclusions to preserve.
@@ -66,6 +66,8 @@ Run `scripts/analyze_performance.py` to produce the reusable quantitative base: 
 Make the current month the subject. Use the earlier two months to explain whether the movement is a continuation, reversal, or new break. Diagnose what editorial choices carried or dragged the month; do not merely restate the chart.
 
 Treat every decision-material Page or Core-pillar gap in Part 1 as a diagnostic question. Resolve it in Part 2 through like-for-like cohorts, performance distribution, content and packaging choices, and counterevidence; when the approved evidence cannot explain the residual gap, label it unresolved rather than leaving the scorecard to imply a cause.
+
+For Reels or other short video, use a hybrid media review when the brief requires actual-video diagnosis: inspect every eligible video's caption, cover, first three seconds, full audio/script where available, and fixed keyframes across the full timeline; then deep-review a page-balanced, high/middle/low sample through its complete script and visual sequence. Record silent or unavailable media explicitly. Use local transcription for structure, cross-check it against on-screen text and frames, and do not quote speech-recognition wording as verbatim evidence. Diagnose whether the opening establishes a decision, tension, or payoff and whether the sequence keeps proving it; do not reduce video analysis to caption or cover review.
 
 Use two complementary competitor views: map comparable posts into the focal Page's approved pillars, and independently group each competitor's remaining output into its own recurring content territories. `Other` is an intake queue for discovery, not the final editorial explanation.
 
@@ -133,4 +135,4 @@ When maintenance is warranted:
 5. Commit only validated skill-source changes, push to `origin/dev`, verify the remote commit, and refresh this machine's installed copy from that exact source.
 6. Report the diagnosis, files, validation, commit, remote verification, and installed-copy status.
 
-Stop without pushing when validation, conflicts, access, or remote verification fails. Never force-push, push to `main`, or commit run data, reports, real comments, credentials, or downloaded Facebook media.
+Stop without pushing when validation, conflicts, access, or remote verification fails. Never force-push, push to `main`, or commit run data, reports, real comments, credentials, or downloaded social media.

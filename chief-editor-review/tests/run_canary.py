@@ -95,7 +95,7 @@ def run_canary(output_dir: Path) -> None:
         "AUDIENCE": "Synthetic test audience.",
         "REVIEW_BASIS": "August decision; June and July context.",
         "DECISION_USE": "Commissioning and packaging.",
-        "FACEBOOK_POST_URL": "https://www.facebook.com/example.health/posts/example-1",
+        "SOCIAL_POST_URL": "https://www.facebook.com/example.health/posts/example-1",
         "LOCAL_IMAGE_PATH": str(FIXTURES / "evidence.svg"),
         "IMAGE_ALT": "Synthetic canary evidence",
         "SOURCE_LANGUAGE": "en",
@@ -179,6 +179,23 @@ def run_canary(output_dir: Path) -> None:
     assert report_text.index("A cohort-level editorial difference comes before its references.") < report_text.index(
         "Reference one"
     ) < report_text.index("Synthetic cohort evidence anchor.")
+
+    instagram_path = output_dir / "instagram-report.html"
+    instagram_path.write_text(
+        report_text.replace("https://www.facebook.com/", "https://www.instagram.com/"),
+        encoding="utf-8",
+    )
+    run(
+        str(ROOT / "scripts" / "validate_report.py"),
+        str(instagram_path),
+        "--receipt",
+        str(output_dir / "instagram-report-receipt.json"),
+    )
+    instagram_receipt = json.loads(
+        (output_dir / "instagram-report-receipt.json").read_text(encoding="utf-8")
+    )
+    assert instagram_receipt["status"] == "PASS"
+    assert instagram_receipt["checks"]["social_evidence_links"] is True
 
 
 def main() -> int:

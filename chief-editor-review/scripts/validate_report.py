@@ -106,8 +106,9 @@ def main() -> int:
         "no_unresolved_template_tokens": not re.search(r"\{\{[^{}]+\}\}", text),
         "images_embedded": all(item["src"].startswith("data:image/") for item in tree.images),
         "images_have_alt": all(bool(item["alt"].strip()) for item in tree.images),
-        "facebook_evidence_links": any(
-            link.startswith("https://www.facebook.com/") for link in tree.links
+        "social_evidence_links": any(
+            link.startswith(("https://www.facebook.com/", "https://www.instagram.com/"))
+            for link in tree.links
         ),
         "no_secrets": not any(pattern.search(text) for pattern in SECRET_PATTERNS.values()),
         "no_agent_instructions": not re.search(
@@ -121,8 +122,9 @@ def main() -> int:
         "missing_module_ids": sorted(REQUIRED_MODULES - tree.modules),
         "section_order": tree.section_ids,
         "image_count": len(tree.images),
-        "facebook_link_count": sum(
-            link.startswith("https://www.facebook.com/") for link in tree.links
+        "social_link_count": sum(
+            link.startswith(("https://www.facebook.com/", "https://www.instagram.com/"))
+            for link in tree.links
         ),
         "report_bytes": args.report.stat().st_size,
         "note": "Run rendered desktop/mobile inspection separately; this script checks portable structure only.",

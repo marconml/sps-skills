@@ -66,7 +66,9 @@ Keep a deep case to one interpretation layer. The post cards contain identity, o
 
 ### Post evidence
 
-Name each example with the source-language first-line caption or most recognizable on-image headline. Make it link directly to the original Facebook post. Show page, date, pillar/territory, format, primary KPI, reactions, comments, shares, and original media.
+Name each example with the source-language first-line caption or most recognizable on-image headline. Make it link directly to the original platform post. Show page, date, pillar/territory, format, primary KPI, available component metrics, and original media.
+
+For hybrid Reel evidence, show a compact opening storyboard or equivalent first-three-second sequence beside the diagnosis, plus duration and audio/transcript coverage. Use the complete script and full-timeline review to explain sequence and payoff, but keep raw transcripts and exhaustive frames in the evidence package rather than the management report.
 
 Use a bounded media frame with `object-fit: contain` or equivalent letterboxing so original images are fully visible. Keep metrics and interpretation in a separate content region below or beside that frame. When media is unavailable or a post is text-only, label the state rather than substituting unrelated imagery.
 
