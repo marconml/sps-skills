@@ -115,8 +115,12 @@ def run_canary(output_dir: Path) -> None:
         "MARKET_MOVEMENT": "The shared movement keeps the news cycle in view.",
         "DRIVERS_HEADLINE": "Diagnose the editorial choices behind the movement.",
         "DRIVERS_TAKEAWAY": "The case illustrates a complete synthetic cohort finding.",
-        "TAKEAWAYS_HEADLINE": "Three conclusions to retain.",
-        "TAKEAWAYS_DECK": "Synthesis follows the evidence and diagnosis.",
+        "FOCAL_OVERVIEW_TITLE": "One mechanism carried the month.",
+        "FOCAL_OVERVIEW": "The complete focal-page set identifies the largest driver and drag before the case evidence.",
+        "FOCAL_OVERVIEW_EVIDENCE": "Synthetic high, middle, and low cohorts.",
+        "COMPETITOR_OVERVIEW_TITLE": "The material comparison gap is diagnosed.",
+        "COMPETITOR_OVERVIEW": "Like-for-like cohorts and Page-native territories explain what management should notice.",
+        "COMPETITOR_OVERVIEW_EVIDENCE": "The unresolved residual remains labelled.",
         "ACTIONS_HEADLINE": "Turn the diagnosis into one action layer.",
         "ACTIONS_TAKEAWAY": "Every Scale, Improve, Stop, or Test call belongs here.",
         "METHODOLOGY": "Synthetic evidence only. No credentials or identities.",
@@ -159,9 +163,16 @@ def run_canary(output_dir: Path) -> None:
     assert report_receipt["checks"]["standard_performance_modules"] is True
     assert report_receipt["checks"]["data_first_reading_path"] is True
     assert report_receipt["checks"]["bilingual_language_switch"] is True
+    assert "decisions" not in report_receipt["section_order"]
     report_text = report_path.read_text(encoding="utf-8")
     assert "三高管理" in report_text
     assert "Blood Pressure, Glucose &amp; Lipids" not in report_text
+    assert report_text.index("One mechanism carried the month.") < report_text.index(
+        "A practical choice readers can use"
+    )
+    assert report_text.index("The material comparison gap is diagnosed.") < report_text.index(
+        "Competitor Diagnosis Title"
+    )
 
 
 def main() -> int:

@@ -18,6 +18,18 @@ Explain three things, in this order:
 
 Trace movement through the full post set: pillar and topic mix, headline construction, visual thesis, format, posting volume, breakout concentration, and comparable cohort shifts. A conclusion should name the actual editorial mechanism and representative evidence, not restate that the line rose or fell.
 
+## Material comparison gaps
+
+Use the Page-level scorecard and Core-pillar comparison as a diagnostic index. Select the gaps that would most change commissioning or allocation, then carry each one into the editorial diagnosis. Decompose a gap with the strongest available evidence from:
+
+- content and native-territory mix;
+- format mix and like-for-like format cohorts;
+- high, middle, and low performance distributions;
+- headline promise and visual packaging;
+- posting volume, breakout concentration, and known distribution context.
+
+State what the evidence explains, the counterevidence, and the residual uncertainty. A large median or total difference is an observation, not its own explanation. If the approved evidence cannot distinguish editorial choices from promotion, reach, audience size, or other distribution factors, preserve the gap as unresolved and specify the next evidence needed.
+
 ## High, middle, and low analysis
 
 Resolve duplicate/repost identity first. Within pillar and format where possible, select comparable posts before revealing performance. Then compare high, middle, and low cohorts across:
@@ -49,9 +61,14 @@ For reliable cases, compare headline, angle, visual thesis, format, timing, CTA,
 
 ## Competitor learning and discovery
 
-Compare existing pillars without assuming a universal winning formula. Derive content and creative mechanisms from the current evidence.
+Use two complementary taxonomies:
 
-Also group competitor posts outside the existing pillars into plain-language territories. Show contributing pages, organic post count, primary-KPI distribution, period, and counterexamples. Treat a territory as an Opportunity / Test only when sustained investment and a performance signal coexist. Pair every material opportunity with a linked successful example and explain the transferable mechanism plus one focal-brand adaptation.
+1. **Focal taxonomy:** map genuinely comparable competitor posts into the focal Page's approved pillars for like-for-like comparison.
+2. **Page-native taxonomy:** independently group each competitor's recurring output into plain-language content territories, including subjects the focal taxonomy does not cover.
+
+Treat `Other` as an intake queue. Review its posts for coherent recurring territories and leave only an explicitly unresolved residual after that pass. Show how each territory was defined so the report does not hide a competitor strength inside a catch-all label.
+
+Compare existing pillars without assuming a universal winning formula. For native territories, show contributing pages, organic post count, primary-KPI distribution, period, and counterexamples. Treat a territory as an Opportunity / Test only when sustained investment and a performance signal coexist. Pair every material opportunity with a linked successful example and explain the transferable mechanism plus one focal-brand adaptation.
 
 ## Performance-blind review
 

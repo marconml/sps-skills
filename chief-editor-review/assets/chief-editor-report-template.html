@@ -22,7 +22,7 @@
       <div class="meta"><span>{{DECISION_MONTH}}</span><span>{{CONTEXT_MONTHS}}</span><span>{{PRIMARY_KPI}}</span><span>{{PAGE_SCOPE}}</span></div>
     </div>
   </header>
-  <nav class="report-nav" aria-label="Report sections"><a href="#scope">Basis</a><a href="#movement">Performance</a><a href="#drivers">Diagnosis</a><a href="#decisions">Takeaways</a><a href="#actions">Actions</a><a href="#methodology">Method</a></nav>
+  <nav class="report-nav" aria-label="Report sections"><a href="#scope">Basis</a><a href="#movement">Performance</a><a href="#drivers">Diagnosis</a><a href="#actions">Actions</a><a href="#methodology">Method</a></nav>
   <main>
     <section id="scope" aria-label="Review basis">
       <div class="scope-grid">
@@ -45,27 +45,20 @@
       <div class="chapter-head"><div class="section-kicker"><span class="section-no">2</span>Editorial Diagnosis</div><h2>{{DRIVERS_HEADLINE}}</h2><p class="section-lead">{{DRIVERS_TAKEAWAY}}</p></div>
       <nav class="part-map" aria-label="Part 2 reading map"><a href="#part-2a"><b>2A · Focal page</b><span>What carried and dragged the month</span></a><a href="#part-2b"><b>2B · Competitors</b><span>What management should notice</span></a><a href="#part-2c"><b>2C · Reader signal</b><span>What useful non-PM comments add</span></a></nav>
       <div id="part-2a" class="subpart-head"><b>2A · Focal page</b><span>What carried and dragged the month</span></div>
+      <article class="card"><span class="badge">Month overview</span><h3>{{FOCAL_OVERVIEW_TITLE}}</h3><p>{{FOCAL_OVERVIEW}}</p><div class="proof">{{FOCAL_OVERVIEW_EVIDENCE}}</div></article>
       <div class="evidence-grid">
         <article class="evidence"><a class="evidence-media" href="{{FACEBOOK_POST_URL}}" target="_blank" rel="noopener"><img data-embed-src="{{LOCAL_IMAGE_PATH}}" alt="{{IMAGE_ALT}}"></a><div class="evidence-body"><span class="badge">{{EVIDENCE_STATUS}}</span><a class="evidence-title" href="{{FACEBOOK_POST_URL}}" target="_blank" rel="noopener" lang="{{SOURCE_LANGUAGE}}">{{SOURCE_HOOK}}</a><div class="metrics"><b>{{SHARES}} shares</b><span>{{REACTIONS}} reactions</span><span>{{COMMENTS}} comments</span><span>{{POST_DATE}}</span><span>{{FORMAT}}</span></div><p class="analysis-block"><b>What the evidence shows.</b> {{EVIDENCE_SENTENCE}}</p><p class="analysis-block"><b>{{EDITORIAL_RESPONSE_LABEL}}</b> {{EDITORIAL_RESPONSE}}</p></div></article>
         <article class="card"><span class="badge">{{MECHANISM_STATUS}}</span><h3>{{MECHANISM_TITLE}}</h3><p>{{MECHANISM_ANALYSIS}}</p><div class="proof">{{MECHANISM_EVIDENCE_ANCHOR}}</div></article>
       </div>
       <div id="part-2b" class="subpart-head"><b>2B · Competitors</b><span>What management should notice</span></div>
+      <article class="card"><span class="badge">Market overview</span><h3>{{COMPETITOR_OVERVIEW_TITLE}}</h3><p>{{COMPETITOR_OVERVIEW}}</p><div class="proof">{{COMPETITOR_OVERVIEW_EVIDENCE}}</div></article>
       <article class="card"><h3>{{COMPETITOR_DIAGNOSIS_TITLE}}</h3><p>{{COMPETITOR_DIAGNOSIS}}</p><div class="proof">{{COMPETITOR_EVIDENCE_ANCHOR}}</div></article>
       <div id="part-2c" class="subpart-head"><b>2C · Reader signal</b><span>What useful non-PM comments add</span></div>
       <article class="card"><h3>{{READER_SIGNAL_TITLE}}</h3><p>{{READER_SIGNAL}}</p><div class="proof">{{READER_SIGNAL_EVIDENCE}}</div></article>
     </section>
 
-    <section id="decisions" class="report-section" data-report-part="takeaways">
-      <div class="chapter-head"><div class="section-kicker"><span class="section-no">3</span>CEO Takeaways</div><h2>{{TAKEAWAYS_HEADLINE}}</h2><p class="section-lead">{{TAKEAWAYS_DECK}}</p></div>
-      <div class="calls">
-        <article class="card"><span class="badge">August</span><h3>{{TAKEAWAY_1_TITLE}}</h3><p>{{TAKEAWAY_1_JUDGEMENT}}</p><div class="proof">{{TAKEAWAY_1_EVIDENCE}}</div></article>
-        <article class="card"><span class="badge">Our page</span><h3>{{TAKEAWAY_2_TITLE}}</h3><p>{{TAKEAWAY_2_JUDGEMENT}}</p><div class="proof">{{TAKEAWAY_2_EVIDENCE}}</div></article>
-        <article class="card"><span class="badge">Competitors</span><h3>{{TAKEAWAY_3_TITLE}}</h3><p>{{TAKEAWAY_3_JUDGEMENT}}</p><div class="proof">{{TAKEAWAY_3_EVIDENCE}}</div></article>
-      </div>
-    </section>
-
     <section id="actions" class="report-section" data-report-part="actions">
-      <div class="chapter-head"><div class="section-kicker"><span class="section-no">4</span>Next-Month Actions</div><h2>{{ACTIONS_HEADLINE}}</h2><p class="section-lead">{{ACTIONS_TAKEAWAY}}</p></div>
+      <div class="chapter-head"><div class="section-kicker"><span class="section-no">3</span>Next-Month Actions</div><h2>{{ACTIONS_HEADLINE}}</h2><p class="section-lead">{{ACTIONS_TAKEAWAY}}</p></div>
       <div class="legend"><span>Scale · increase a supported mechanism</span><span>Improve · redesign a working product</span><span>Stop · cease a supported weak practice</span><span>Test · bounded experiment</span></div>
       <div class="action-grid"><article class="action"><div class="action-index">1</div><div><span class="badge">{{ACTION_STATUS}}</span><h3>{{ACTION_TITLE}}</h3><p>{{ACTION_BRIEF}}</p><div class="proof">{{ACTION_REVIEW_METHOD}}</div></div></article></div>
     </section>

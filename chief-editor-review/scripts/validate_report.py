@@ -10,9 +10,9 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 
-REQUIRED_IDS = {"scope", "decisions", "movement", "drivers", "actions", "methodology"}
+REQUIRED_IDS = {"scope", "movement", "drivers", "actions", "methodology"}
 REQUIRED_MODULES = {"page-scorecard", "core-pillar-comparison"}
-EXPECTED_READING_PATH = ["scope", "movement", "drivers", "decisions", "actions"]
+REQUIRED_READING_PATH = ["scope", "movement", "drivers", "actions"]
 SECRET_PATTERNS = {
     "apify_token": re.compile(r"apify_api_[A-Za-z0-9_-]+", re.I),
     "bearer_token": re.compile(r"Bearer\s+[A-Za-z0-9._~-]{16,}", re.I),
@@ -85,15 +85,18 @@ def main() -> int:
         "one_h1": tree.h1_count == 1,
         "required_sections": not (REQUIRED_IDS - tree.ids),
         "standard_performance_modules": not (REQUIRED_MODULES - tree.modules),
-        "data_first_reading_path": all(
-            section_id in tree.section_ids for section_id in EXPECTED_READING_PATH
-        )
-        and [
+        "data_first_reading_path": [
             section_id
             for section_id in tree.section_ids
-            if section_id in EXPECTED_READING_PATH
+            if section_id in REQUIRED_READING_PATH
         ]
-        == EXPECTED_READING_PATH,
+        == REQUIRED_READING_PATH
+        and (
+            "decisions" not in tree.section_ids
+            or tree.section_ids.index("drivers")
+            < tree.section_ids.index("decisions")
+            < tree.section_ids.index("actions")
+        ),
         "bilingual_language_switch": (
             tree.default_language == "en"
             and tree.language_toggle

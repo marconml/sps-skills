@@ -12,7 +12,7 @@ Keep process notes, agent instructions, selection mechanics, causal disclaimers,
 
 Use a compact scope band for the exact period/timezone, focal and competitor set, audience, primary KPI, and current-month comparison basis. Named competitor omissions, ad counts, and collection receipts belong in Methodology / Caveats unless they materially change the headline conclusion.
 
-The hero should orient the reader to the decision month, the most important performance movement, and one evidence anchor in roughly 30 seconds. Keep calls and recommendations in Part 4.
+The hero should orient the reader to the decision month, the most important performance movement, and one evidence anchor in roughly 30 seconds. Keep calls and recommendations in the final Actions chapter.
 
 ## 1. Current-Month Performance
 
@@ -35,9 +35,11 @@ Check every bar/line length against its exact value. Make the strongest comparat
 Part 1 always includes two compact comparison modules marked for QA with `data-module="page-scorecard"` and `data-module="core-pillar-comparison"`. Keep the page-level scorecard collapsed by default; open the Core-pillar comparison when it is the main diagnostic index. When the output format cannot collapse content, use two equivalently labelled compact blocks.
 
 1. **Page-level scorecard**: include every approved page, the decision-month organic analyzed post count, median primary KPI, total primary KPI, and one concise editorial read. Add breakout concentration only when it changes interpretation.
-2. **Core-pillar comparison**: include every focal-page Core pillar, decision-month output and median primary KPI, the prior-two-month baseline, and the strongest relevant decision-month comparator with its median and post count. Show two separate directional signals: decision-month movement versus the prior-two-month baseline, and position versus the strongest comparator. Color the complete signal text green for positive, red for negative, and grey for flat, while retaining an arrow or Ahead/Behind label plus exact values; color is never the only encoding. Keep status calls out of this table; the evidence is interpreted in Part 2 and converted to action in Part 4. Open this module by default when it is the main diagnostic index; keep the page-level scorecard collapsed unless it is needed immediately.
+2. **Core-pillar comparison**: include every focal-page Core pillar, decision-month output and median primary KPI, the prior-two-month baseline, and the strongest relevant decision-month comparator with its median and post count. Show two separate directional signals: decision-month movement versus the prior-two-month baseline, and position versus the strongest comparator. Color the complete signal text green for positive, red for negative, and grey for flat, while retaining an arrow or Ahead/Behind label plus exact values; color is never the only encoding. Keep status calls out of this table; the evidence is interpreted in Part 2 and converted to action in the final chapter. Open this module by default when it is the main diagnostic index; keep the page-level scorecard collapsed unless it is needed immediately.
 
 These modules are the reusable diagnostic index across business units and months. Keep the main narrative selective; place detailed rows inside the modules. If a required value is unavailable, keep the module and label the field unavailable with its coverage limitation.
+
+Highlight the one or two gaps that most affect an editorial decision and link each one to its explanation in Part 2. The comparison module remains descriptive; a gap becomes an editorial conclusion only after the diagnostic decomposition in Part 2.
 
 ## 2. Editorial Diagnosis
 
@@ -47,6 +49,8 @@ Organize this section into clearly labelled subparts when evidence exists:
 2. **Competitors — what management should notice.** Explain the most material competitor movement and reusable mechanism, using reliable same-topic or territory comparisons when available.
 3. **Reader signal — what useful non-PM comments add.** Distil up to three newsroom insights after excluding PM-CTA posts.
 
+Start `2A` with a concise focal-page overview that identifies the month's largest positive driver, largest drag, concentration risk, and net editorial meaning across the complete post set. Start `2B` with a competitor overview that identifies the most important movement, diagnoses every material Part 1 comparison gap, and summarizes Page-native territories before the selected cases. These overviews tell management what changed and why; the cases that follow provide proof and execution detail.
+
 For each material mechanism, show:
 
 1. **Cohort observation**: the pattern across comparable high, middle, and low posts, with post count.
@@ -55,7 +59,7 @@ For each material mechanism, show:
 
 A negative example should match pillar/topic, format, and period where possible. Do not treat an exact repost, confirmed ad, or materially different incident as a creative counterexample. Representative cases illustrate a cohort-level conclusion; they do not create it.
 
-Use one visible hierarchy inside Part 2: chapter `2` → subpart `2A` / `2B` / `2C` → labelled case or opportunity. Child labels state their function—such as `Case study`, `Negative example`, `Same-event case study`, or `Competitor opportunity`—without repeating `2A`, `2B`, or `2C`. Use independent numeric sequences only for the four main chapters and the final numbered action list. When Part 2 is long, add a compact `2A` / `2B` / `2C` local index after the chapter header and collapse secondary cases that do not change the main diagnosis.
+Use one visible hierarchy inside Part 2: chapter `2` → subpart `2A` / `2B` / `2C` → labelled case or opportunity. Child labels state their function—such as `Case study`, `Negative example`, `Same-event case study`, or `Competitor opportunity`—without repeating `2A`, `2B`, or `2C`. Use independent numeric sequences only for the main chapters and the final numbered action list. When Part 2 is long, add a compact `2A` / `2B` / `2C` local index after the chapter header and collapse secondary cases that do not change the main diagnosis.
 
 Keep a deep case to one interpretation layer. The post cards contain identity, original media, hook, date, metrics, link, and evidence role such as higher-share or lower-share. Follow them with at most three non-overlapping blocks: **what differed**, **why it likely mattered plus counterevidence/limit**, and **editorial response**. Combine content promise, headline, visual hierarchy, sharing logic, and the test inside those blocks instead of repeating them as separate labels.
 
@@ -77,17 +81,19 @@ Present every reliable case as a compact side-by-side comparison. Include every 
 
 Pair every material opportunity with at least one successful linked execution reference and one lower-performing counterexample when approved media is available. Show original media and metrics, identify the transferable mechanism from the relevant high–middle–low cohort, and provide one source-language adaptation for the focal brand. The opportunity itself must rest on sustained territory volume, performance distribution, and counterexamples—not the single winner or its surface wording.
 
+Use a dual taxonomy in the competitor overview: the focal Page's Core pillars for like-for-like comparison, plus Page-native territories for competitor discovery. `Other` is an intake queue to split into coherent recurring territories; keep only a labelled unresolved residual after review. Surface territories with sustained volume and a performance signal, and distinguish an Opportunity / Test from a proven Core pillar.
+
 ### Comments
 
 Promote up to three supported newsroom insights from non-PM-CTA posts. Each insight includes the reader signal, editorial meaning, coverage response, and linked example posts. Add a packaging response only when independently supported by comparable performance evidence. Do not present chatbot trigger volume as reader conversation. Keep sampling mechanics and excluded trigger volume in Methodology / Caveats.
 
-## 3. CEO Takeaways
+## Management synthesis
 
-Compress the diagnosis into no more than three conclusions a CEO can retain: what changed in the decision month, the focal page's most important editorial development, and the competitor or market development that matters most. Each conclusion should name the editorial meaning and its strongest evidence anchor in concise prose.
+The default three-part report ends Part 2 with a compact management read that connects what changed in the decision month, the focal Page's most important editorial development, and the competitor or market development that matters most. Each conclusion names the editorial meaning and its strongest evidence anchor in concise prose.
 
-This is synthesis, not a second action list. Do not introduce new analysis, examples, or Scale / Improve / Stop / Test statuses here.
+Use a separate CEO Takeaways chapter only when it adds distinct synthesis that the `2A` and `2B` overviews cannot carry economically. This is synthesis, not a second action list; it introduces no new analysis, examples, or Scale / Improve / Stop / Test statuses.
 
-## 4. Next-Month Actions
+## 3. Next-Month Actions
 
 Translate established findings into numbered briefs an editor can assign. Each item states:
 
@@ -124,7 +130,7 @@ Place methodology last or in a collapsed section. Name `chief-editor-review` and
 
 Preserve the approved business unit's broad typography, colors, hierarchy, evidence-card anatomy, responsive behavior, and section order. Reference reports control presentation only; never copy their old findings.
 
-Make every main chapter a visually distinct numbered band. Within Part 2, use clear `2A`, `2B`, and `2C` subpart headers or their equivalent. A reader scrolling quickly should always know whether the page contains performance data, editorial diagnosis, synthesis, or action.
+Make every main chapter a visually distinct numbered band. Within Part 2, use clear `2A`, `2B`, and `2C` subpart headers or their equivalent. A reader scrolling quickly should always know whether the page contains performance data, editorial diagnosis, synthesis, or action. Keep the default reading path to three numbered chapters; a separate CEO Takeaways chapter is the exception defined above.
 
 Use a strict typographic ladder: chapter title, then subpart title, then case/module title, then card title. A nested title must never appear larger or visually stronger than its parent. Apply a restrained semantic palette consistently: dark teal for structural navigation and chapter bands; green/red for positive/negative performance signals; amber for opportunities and tests; blue for evidence and cases; grey for context and methodology. Do not use semantic colors as alternating decoration.
 
@@ -146,8 +152,10 @@ Before delivery verify:
 
 - exact period, timezone, pages, KPI, and post counts;
 - every approved content-pillar label matches the brief verbatim in both language views;
-- report order is Performance → Diagnosis → CEO Takeaways → Actions, with no front-loaded executive action summary;
+- report order is Performance → Diagnosis → Actions, with an optional non-duplicative CEO Takeaways chapter between Diagnosis and Actions;
 - current month is the decision subject and earlier months are context;
+- `2A` and `2B` open with month-level overviews before cases, and every decision-material Part 1 gap is diagnosed or explicitly unresolved in Part 2;
+- competitor analysis uses both the focal taxonomy and Page-native territories; `Other` has been reviewed as an intake queue rather than accepted as the final explanation;
 - every performance conclusion is an Observation or anchored Inference;
 - hypotheses/tests are labelled;
 - the whole eligible cohort informed the high/middle/low conclusions;

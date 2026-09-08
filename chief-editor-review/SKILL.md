@@ -65,24 +65,27 @@ Run `scripts/analyze_performance.py` to produce the reusable quantitative base: 
 
 Make the current month the subject. Use the earlier two months to explain whether the movement is a continuation, reversal, or new break. Diagnose what editorial choices carried or dragged the month; do not merely restate the chart.
 
+Treat every decision-material Page or Core-pillar gap in Part 1 as a diagnostic question. Resolve it in Part 2 through like-for-like cohorts, performance distribution, content and packaging choices, and counterevidence; when the approved evidence cannot explain the residual gap, label it unresolved rather than leaving the scorecard to imply a cause.
+
+Use two complementary competitor views: map comparable posts into the focal Page's approved pillars, and independently group each competitor's remaining output into its own recurring content territories. `Other` is an intake queue for discovery, not the final editorial explanation.
+
 Separate **Observation**, **Inference**, and **Hypothesis / Test**. Every performance conclusion needs an evidence anchor. Suggestions unsupported by performance evidence remain tests.
 
 ## Build the report
 
 Read and follow [the report contract](references/report-contract.md). Use [the neutral HTML template](assets/chief-editor-report-template.html) as a presentation baseline, adapting it to the approved business-unit reference without carrying over old findings.
 
-Keep the stable four-part reading path:
+Keep the stable evidence-to-action reading path:
 
 1. Current-Month Performance
 2. Editorial Diagnosis
-3. CEO Takeaways
-4. Next-Month Actions
+3. Next-Month Actions
 
-Start with evidence, then move from diagnosis to synthesis and action. The opening hero and basis band give a factual current-month orientation; they do not front-load an action summary. Part 1 shows what changed in the decision month and keeps the Page-level scorecard and Core-pillar comparison as standard modules. Part 2 explains what carried and dragged the focal page, what competitors changed, and what non-PM reader feedback adds. Part 3 compresses the evidence into no more than three CEO-level conclusions. Part 4 contains every Scale / Improve / Stop / Test decision so the report has one action layer.
+Start with evidence, then move from diagnosis to action. The opening hero and basis band give a factual current-month orientation; they do not front-load an action summary. Part 1 shows what changed in the decision month and keeps the Page-level scorecard and Core-pillar comparison as standard modules. Part 2 opens its focal-page and competitor subparts with concise month-level overviews before presenting the deeper cohort and case evidence. End Part 2 with a short management synthesis only when it improves retention; use a separate CEO Takeaways chapter only when it adds meaning not already delivered by those overviews. Part 3 contains every Scale / Improve / Stop / Test decision so the report has one action layer.
 
 Place post-level evidence inside the diagnosis it supports rather than after the actions. Show original media uncropped, use the source-language first line as the linked title, and include competitor links wherever a comparison or opportunity depends on them. Diagnose the whole eligible high/middle/low cohort before choosing representative cases. High performers explain what to replicate; comparable low performers or negative examples explain what failed and carry the improvement tests. Each deep case should cover the content promise, headline architecture, visual hierarchy, likely sharing logic, counterevidence or limitation, and the transferable editorial rule.
 
-Make chapters and subparts visually unmistakable. Use strong numbered chapter bands and clearly labelled focal-page, competitor, and reader-signal subparts so a time-poor reader always knows whether they are looking at data, diagnosis, synthesis, or action. Label nested items by function—such as `Case study`, `Negative example`, or `Competitor opportunity`—without repeating the parent number; reserve numbering for the four main chapters, the `2A` / `2B` / `2C` subparts, and the final action list. When Part 2 is long, add a compact local index and collapse secondary evidence.
+Make chapters and subparts visually unmistakable. Use strong numbered chapter bands and clearly labelled focal-page, competitor, and reader-signal subparts so a time-poor reader always knows whether they are looking at data, diagnosis, synthesis, or action. Label nested items by function—such as `Case study`, `Negative example`, or `Competitor opportunity`—without repeating the parent number; reserve numbering for the main chapters, the `2A` / `2B` / `2C` subparts, and the final action list. When Part 2 is long, add a compact local index and collapse secondary evidence.
 
 Use color as semantic reinforcement, not decoration: dark teal for report structure, green for positive movement or advantage, red for negative movement or disadvantage, amber for opportunities/tests, blue for evidence/cases, and grey for context. In the Core-pillar comparison, color the complete rise/fall and Ahead/Behind text while retaining arrows, words, and exact values so meaning never depends on color alone. Render this matrix as stacked pillar cards on narrow screens.
 
