@@ -91,7 +91,9 @@ Make chapters and subparts visually unmistakable. Use strong numbered chapter ba
 
 Use color as semantic reinforcement, not decoration: dark teal for report structure, green for positive movement or advantage, red for negative movement or disadvantage, amber for opportunities/tests, blue for evidence/cases, and grey for context. In the Core-pillar comparison, color the complete rise/fall and Ahead/Behind text while retaining arrows, words, and exact values so meaning never depends on color alone. Render this matrix as stacked pillar cards on narrow screens.
 
-Keep each deep case economical: evidence cards identify the posts and metrics, followed by one integrated interpretation in at most three blocks—what differed, why it likely mattered plus the limitation, and the editorial response. Write the Chinese layer as natural Traditional Chinese editorial prose from the locked evidence and meaning, while preserving parity with the English layer.
+Keep each deep case economical: evidence cards identify the posts and metrics, followed by one integrated interpretation in at most three blocks—what differed, why it likely mattered plus the limitation, and the editorial response.
+
+For bilingual copy, first lock a language-neutral finding ledger containing each claim, evidence anchor, status, limitation, and action. Draft the English management narrative from that ledger, then author the Traditional Chinese narrative independently for a Hong Kong editorial reader. Use natural Chinese sentence order and keep only familiar newsroom terms that are clearer in English. Finally audit both layers against the ledger so their numbers, evidence status, meaning, and actions match without requiring sentence-by-sentence translation.
 
 Unless the user explicitly opts out, deliver both English and Traditional Chinese in the same standalone file. English is the initial view; the language switch changes the complete management narrative while keeping evidence, metrics, images, links, and source-language examples shared.
 

@@ -145,7 +145,14 @@ Translate the hero, navigation, scope, section headings, editorial analysis, cha
 
 Approved business-unit content-pillar names are taxonomy identifiers, not prose translations. Render each approved label verbatim in the English and Chinese views wherever the pillar is named, including tables, chart labels, diagnosis, takeaways, actions, and evidence metadata. For example, if the approved labels are `三高管理` and `長者照顧`, both language views use those exact labels while translating the surrounding sentence.
 
-Use authored bilingual copy embedded in the file; the report must not depend on a browser translation feature, network request, or external translation service at runtime. Build both layers from the same locked evidence and meaning. Write the Traditional Chinese layer as idiomatic editorial Chinese with natural sentence order and concise newsroom phrasing, not as a literal sentence-by-sentence rendering. English and Chinese must communicate the same finding, evidence status, numbers, and action without introducing a new claim. Final reports use production labels in both views; preview or test wording belongs only in QA receipts.
+Use authored bilingual copy embedded in the file; the report must not depend on a browser translation feature, network request, or external translation service at runtime. Build the two layers through one shared meaning ledger:
+
+1. Lock every report-level and case-level claim with its evidence anchor, status, limitation, and action.
+2. Draft the English layer directly from that ledger in concise management and editorial language.
+3. Author the Traditional Chinese layer independently from the same ledger for a Hong Kong editorial reader. Prefer natural verb-led sentences and newsroom phrasing; retain only familiar English terms that are genuinely clearer than their Chinese equivalent.
+4. Audit both layers against the ledger. They must preserve the same numbers, evidence status, meaning, and action without introducing a new claim.
+
+This is semantic parity, not sentence-by-sentence translation. Final reports use production labels in both views; preview or test wording belongs only in QA receipts.
 
 ## QA gate
 
@@ -175,6 +182,7 @@ Before delivery verify:
 - the Core-pillar comparison separates month movement from competitor position, directly colors the complete signal text, retains non-color labels and exact values, and becomes stacked cards on narrow screens;
 - chapter, subpart, case/module, and card titles follow a descending visual hierarchy; structural and semantic colors are used consistently;
 - the report defaults to English, the top-right `中 / ENG` switch changes the complete editorial layer, and both languages preserve evidence and action parity;
+- a bilingual parity audit confirms every material claim, number, evidence status, limitation, and action against the shared meaning ledger, while the Chinese layer reads as independently authored Hong Kong editorial prose;
 - all images remain inside their media frames without covering metadata or interpretation, links work, and no external image dependency remains;
 - English and Chinese desktop/mobile views have no clipped text, accidental tiny analysis, or horizontal page overflow;
 - unresolved template tokens, credentials, commenter identities, and private collection URLs are absent;
