@@ -30,6 +30,8 @@ Use the Page-level scorecard and Core-pillar comparison as a diagnostic index. S
 
 State what the evidence explains, the counterevidence, and the residual uncertainty. A large median or total difference is an observation, not its own explanation. If the approved evidence cannot distinguish editorial choices from promotion, reach, audience size, or other distribution factors, preserve the gap as unresolved and specify the next evidence needed.
 
+For every reported editorial difference, retain one or two representative post IDs and permalinks selected after the cohort diagnosis. Prefer a matched focal/competitor pair when reliable; otherwise use the smallest set that makes the mechanism concrete. These examples illustrate the cohort conclusion and never substitute for it.
+
 ## High, middle, and low analysis
 
 Resolve duplicate/repost identity first. Within pillar and format where possible, select comparable posts before revealing performance. Then compare high, middle, and low cohorts across:

@@ -54,8 +54,9 @@ Start `2A` with a concise focal-page overview that identifies the month's larges
 For each material mechanism, show:
 
 1. **Cohort observation**: the pattern across comparable high, middle, and low posts, with post count.
-2. **Deep evidence**: at least one strong example and, when reliable, one comparable weak or negative example.
-3. **Editorial explanation**: content promise, headline architecture, visual hierarchy, likely sharing logic, counterevidence or limitation, and a transferable rule.
+2. **Inspectable reference**: immediately after the editorial judgement, show one or two compact linked post examples that let an editor see the execution. Use both sides for a reliable direct comparison; use one side when that is the strongest honest evidence. Full linked evidence cards directly beside the judgement fulfil this step without a duplicate reference strip.
+3. **Deep evidence**: at least one strong example and, when reliable, one comparable weak or negative example.
+4. **Editorial explanation**: content promise, headline architecture, visual hierarchy, likely sharing logic, counterevidence or limitation, and a transferable rule.
 
 A negative example should match pillar/topic, format, and period where possible. Do not treat an exact repost, confirmed ad, or materially different incident as a creative counterexample. Representative cases illustrate a cohort-level conclusion; they do not create it.
 
@@ -169,6 +170,7 @@ Before delivery verify:
 - chart encodings, bar lengths, scales, legends, and exact values agree;
 - Part 1 contains the Page-level scorecard and Core-pillar comparison modules with the required fields and QA markers;
 - representative cases follow a cohort-level high/middle/low diagnosis and deep cases include content promise, headline, visual hierarchy, sharing logic, limitations, and a transferable rule;
+- every material editorial difference has an immediately adjacent clickable representative example from one or both sides, selected after the cohort diagnosis;
 - nested case labels preserve the chapter/subpart hierarchy without repeating parent numbers, evidence cards do not carry an unrelated sequence, and repeated interpretation has been consolidated;
 - the Core-pillar comparison separates month movement from competitor position, directly colors the complete signal text, retains non-color labels and exact values, and becomes stacked cards on narrow screens;
 - chapter, subpart, case/module, and card titles follow a descending visual hierarchy; structural and semantic colors are used consistently;
