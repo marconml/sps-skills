@@ -12,7 +12,7 @@ Keep process notes, agent instructions, selection mechanics, causal disclaimers,
 
 Use a compact scope band for the exact period/timezone, focal and competitor set, audience, primary KPI, and current-month comparison basis. Named competitor omissions, ad counts, and collection receipts belong in Methodology / Caveats unless they materially change the headline conclusion.
 
-The hero should orient the reader to the decision month, the most important performance movement, and one evidence anchor in roughly 30 seconds. Keep calls and recommendations in the final Actions chapter.
+The hero is a roughly 30-second management synopsis of the whole report. State what happened in the decision month, the strongest editorial explanation, and the most important operating implication, anchored by the minimum metrics needed to make those points credible. Keep detailed briefs and Scale / Improve / Stop / Test calls in the final Actions chapter. Move analytical process, coverage notes, selection mechanics, and causal caveats to the relevant case limitation or Methodology rather than making them the hero narrative.
 
 ## 1. Current-Month Performance
 
@@ -62,9 +62,9 @@ A negative example should match pillar/topic, format, and period where possible.
 
 Use one visible hierarchy inside Part 2: chapter `2` → subpart `2A` / `2B` / `2C` → labelled case or opportunity. Child labels state their function—such as `Case study`, `Negative example`, `Same-event case study`, or `Competitor opportunity`—without repeating `2A`, `2B`, or `2C`. Use independent numeric sequences only for the main chapters and the final numbered action list. When Part 2 is long, add a compact `2A` / `2B` / `2C` local index after the chapter header and collapse secondary cases that do not change the main diagnosis.
 
-Keep a deep case to one interpretation layer. The post cards contain identity, original media, hook, date, metrics, link, and evidence role such as higher-share or lower-share. Follow them with at most three non-overlapping blocks: **what differed**, **why it likely mattered plus counterevidence/limit**, and **editorial response**. Combine content promise, headline, visual hierarchy, sharing logic, and the test inside those blocks instead of repeating them as separate labels.
+Keep a deep case to one interpretation layer. The post cards contain identity, original media, hook, date, metrics, link, and evidence role such as higher-share or lower-share. Put each post's complete editorial read directly beneath that evidence, replacing any short descriptive caption. A following synthesis may contain at most three non-overlapping blocks—**what differed**, **why it likely mattered plus counterevidence/limit**, and **editorial response**—and is reserved for cross-post comparison and the transferable rule. One post has one analytical home.
 
-Give those blocks enough editorial substance to reconstruct the execution. For a photo or carousel, cover image selection and proof, headline and wording, caption-image division, content density, card order, swipe logic, and payoff where relevant. For a Reel, cover the opening, spoken and on-screen script, headline, shot choice, visual proof, wording, pacing, sequence, and payoff. Omit dimensions that do not apply, but do not replace this inspection with metric narration.
+Give every management-visible case enough editorial substance to reconstruct the execution. For a photo or carousel, cover image selection and proof, headline and wording, caption-image division, content density, card order, swipe logic, and payoff where relevant. For a Reel, cover the opening, spoken and on-screen script, headline, shot choice, visual proof, wording, pacing, sequence, and payoff. Omit dimensions that do not apply or cannot be supported, but apply this standard consistently rather than reserving it for a showcase sample.
 
 ### Post evidence
 
@@ -135,7 +135,7 @@ Place methodology last or in a collapsed section. Name `chief-editor-review` and
 
 ## Stable presentation
 
-Preserve the approved business unit's broad typography, colors, hierarchy, evidence-card anatomy, responsive behavior, and section order. Reference reports control presentation only; never copy their old findings.
+Preserve the approved business unit's broad typography, colors, hierarchy, evidence-card anatomy, responsive behavior, section order, report-brand wording, and language-control labels. Once a business-unit header is approved, keep that exact line fixed across its recurring versions unless the user changes it. Reference reports control presentation only; never copy their old findings.
 
 Make every main chapter a visually distinct numbered band. Within Part 2, use clear `2A`, `2B`, and `2C` subpart headers or their equivalent. A reader scrolling quickly should always know whether the page contains performance data, editorial diagnosis, synthesis, or action. Keep the default reading path to three numbered chapters; a separate CEO Takeaways chapter is the exception defined above.
 
@@ -171,6 +171,7 @@ Before delivery verify:
 - `2A` and `2B` open with month-level overviews before cases, and every decision-material Part 1 gap is diagnosed or explicitly unresolved in Part 2;
 - competitor analysis uses both the focal taxonomy and Page-native territories; `Other` has been reviewed as an intake queue rather than accepted as the final explanation;
 - every performance conclusion is an Observation or anchored Inference;
+- the hero summarizes the report's performance change, editorial explanation, and operating implication without exposing analysis workflow or coverage mechanics;
 - approved content plans are used as strategic context rather than performance proof, and fixed planned products receive execution redesigns instead of unsupported abandonment calls;
 - hypotheses/tests are labelled;
 - the whole eligible cohort informed the high/middle/low conclusions;
@@ -185,11 +186,13 @@ Before delivery verify:
 - Part 1 contains the Page-level scorecard and Core-pillar comparison modules with the required fields and QA markers;
 - representative cases follow a cohort-level high/middle/low diagnosis and deep cases include content promise, headline, visual hierarchy, sharing logic, limitations, and a transferable rule;
 - representative photo/carousel cases inspect the full image sequence and representative Reel cases inspect opening, script, visual sequence, wording, pacing, and payoff at decision-useful editorial depth;
+- every management-visible case with sufficient evidence receives the same editorial depth, each post has one analytical home directly beneath its evidence, and no separate panel repeats that post analysis;
 - same-topic comparisons show publication dates and address event-cycle timing when it could materially explain the performance gap;
 - every material editorial difference has an immediately adjacent clickable representative example from one or both sides, selected after the cohort diagnosis;
 - nested case labels preserve the chapter/subpart hierarchy without repeating parent numbers, evidence cards do not carry an unrelated sequence, and repeated interpretation has been consolidated;
 - the Core-pillar comparison separates month movement from competitor position, directly colors the complete signal text, retains non-color labels and exact values, and becomes stacked cards on narrow screens;
 - chapter, subpart, case/module, and card titles follow a descending visual hierarchy; structural and semantic colors are used consistently;
+- the approved business-unit report header and language-control labels match their locked wording exactly;
 - the report defaults to English, the top-right `中 / ENG` switch changes the complete editorial layer, and both languages preserve evidence and action parity;
 - a bilingual parity audit confirms every material claim, number, evidence status, limitation, and action against the shared meaning ledger, while the Chinese layer reads as independently authored Hong Kong editorial prose;
 - all images remain inside their media frames without covering metadata or interpretation, links work, and no external image dependency remains;
