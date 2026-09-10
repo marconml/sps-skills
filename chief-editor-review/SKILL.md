@@ -19,7 +19,8 @@ Ask only for missing information:
 2. Audience, performance objective, existing content pillars, and usable pillar tags.
 3. Available posts, metrics, images, comments, previous reports, and approved data access.
 4. Editorial rules and exclusions to preserve.
-5. Any language override and any presentation-only reference report.
+5. Any approved current-period or next-period content plan, fixed product priorities, and known commissioning commitments.
+6. Any language override and any presentation-only reference report.
 
 Unless the user specifies otherwise, propose:
 
@@ -33,6 +34,8 @@ Unless the user specifies otherwise, propose:
 State the exact dates. If pillars are unknown, propose a working classification from approved data before drawing pillar conclusions. Present a short plan and wait for approval.
 
 Treat approved content-pillar names as business taxonomy identifiers. Record their exact spelling and language in the brief, then render those labels verbatim in every report language; translate the surrounding analysis, not the taxonomy label.
+
+Treat an approved content plan as strategic context, not performance evidence. Use it to define the decision space—what the newsroom intends to build, retain, or explore—while performance evidence determines how the execution should change. Import only directions relevant to the confirmed review; do not turn commercial or unrelated planning material into findings.
 
 ## Decide whether collection is needed
 
@@ -68,6 +71,8 @@ Make the current month the subject. Use the earlier two months to explain whethe
 Treat every decision-material Page or Core-pillar gap in Part 1 as a diagnostic question. Resolve it in Part 2 through like-for-like cohorts, performance distribution, content and packaging choices, and counterevidence; when the approved evidence cannot explain the residual gap, label it unresolved rather than leaving the scorecard to imply a cause.
 
 For Reels or other short video, use a hybrid media review when the brief requires actual-video diagnosis: inspect every eligible video's caption, cover, first three seconds, full audio/script where available, and fixed keyframes across the full timeline; then deep-review a page-balanced, high/middle/low sample through its complete script and visual sequence. Record silent or unavailable media explicitly. Use local transcription for structure, cross-check it against on-screen text and frames, and do not quote speech-recognition wording as verbatim evidence. Diagnose whether the opening establishes a decision, tension, or payoff and whether the sequence keeps proving it; do not reduce video analysis to caption or cover review.
+
+For photo posts and carousels, inspect the actual image set rather than treating the caption or cover as the post. Deep-review representative cases for image choice and proof, cover promise, on-image headline and wording, caption-image division, information density, card-by-card progression, swipe reason, and final payoff or action. The diagnosis should identify the editorial decision to preserve or change, not merely describe the asset.
 
 Use two complementary competitor views: map comparable posts into the focal Page's approved pillars, and independently group each competitor's remaining output into its own recurring content territories. `Other` is an intake queue for discovery, not the final editorial explanation.
 

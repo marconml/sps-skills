@@ -64,6 +64,8 @@ Use one visible hierarchy inside Part 2: chapter `2` → subpart `2A` / `2B` / `
 
 Keep a deep case to one interpretation layer. The post cards contain identity, original media, hook, date, metrics, link, and evidence role such as higher-share or lower-share. Follow them with at most three non-overlapping blocks: **what differed**, **why it likely mattered plus counterevidence/limit**, and **editorial response**. Combine content promise, headline, visual hierarchy, sharing logic, and the test inside those blocks instead of repeating them as separate labels.
 
+Give those blocks enough editorial substance to reconstruct the execution. For a photo or carousel, cover image selection and proof, headline and wording, caption-image division, content density, card order, swipe logic, and payoff where relevant. For a Reel, cover the opening, spoken and on-screen script, headline, shot choice, visual proof, wording, pacing, sequence, and payoff. Omit dimensions that do not apply, but do not replace this inspection with metric narration.
+
 ### Post evidence
 
 Name each example with the source-language first-line caption or most recognizable on-image headline. Make it link directly to the original platform post. Show page, date, pillar/territory, format, primary KPI, available component metrics, and original media.
@@ -78,7 +80,7 @@ For every Suggested Hook or Visual Test, make the evidence trail auditable in ne
 
 ### Same-topic cases
 
-Present every reliable case as a compact side-by-side comparison. Include every page's original image, source-language hook, direct link, date, format, selected KPI, and supporting metrics. Explain the shared incident/source briefly, then focus on angle and execution differences. Do not compare materially different incidents or unchanged reposts as creative variants.
+Present every reliable case as a compact side-by-side comparison. Include every page's original image, source-language hook, direct link, date, format, selected KPI, and supporting metrics. Explain the shared incident/source briefly, then focus on angle and execution differences. Make the publication gap and relevant event timing visible; treat first-mover novelty or later-cycle fatigue as an alternative explanation when applicable. Do not compare materially different incidents or unchanged reposts as creative variants.
 
 ### Competitor opportunities
 
@@ -105,6 +107,8 @@ Translate established findings into numbered briefs an editor can assign. Each i
 - the successful topic/headline/visual/content contract;
 - a linked model when it materially clarifies execution;
 - how the next monthly review will judge it.
+
+Align the status with approved plans. A fixed strategic product or planned pillar is normally an **Improve** or **Test** brief: retain the intended territory while redesigning selection, packaging, sequence, or format. Use **Stop** only for a weak repeatable practice or when the user is genuinely deciding whether the product itself should continue.
 
 Refer back to evidence already shown rather than introducing a new metric dump after the recommendations. Do not place a separate post-evidence section after the action plan.
 
@@ -167,6 +171,7 @@ Before delivery verify:
 - `2A` and `2B` open with month-level overviews before cases, and every decision-material Part 1 gap is diagnosed or explicitly unresolved in Part 2;
 - competitor analysis uses both the focal taxonomy and Page-native territories; `Other` has been reviewed as an intake queue rather than accepted as the final explanation;
 - every performance conclusion is an Observation or anchored Inference;
+- approved content plans are used as strategic context rather than performance proof, and fixed planned products receive execution redesigns instead of unsupported abandonment calls;
 - hypotheses/tests are labelled;
 - the whole eligible cohort informed the high/middle/low conclusions;
 - identical reposts are not treated as creative comparisons;
@@ -179,6 +184,8 @@ Before delivery verify:
 - chart encodings, bar lengths, scales, legends, and exact values agree;
 - Part 1 contains the Page-level scorecard and Core-pillar comparison modules with the required fields and QA markers;
 - representative cases follow a cohort-level high/middle/low diagnosis and deep cases include content promise, headline, visual hierarchy, sharing logic, limitations, and a transferable rule;
+- representative photo/carousel cases inspect the full image sequence and representative Reel cases inspect opening, script, visual sequence, wording, pacing, and payoff at decision-useful editorial depth;
+- same-topic comparisons show publication dates and address event-cycle timing when it could materially explain the performance gap;
 - every material editorial difference has an immediately adjacent clickable representative example from one or both sides, selected after the cohort diagnosis;
 - nested case labels preserve the chapter/subpart hierarchy without repeating parent numbers, evidence cards do not carry an unrelated sequence, and repeated interpretation has been consolidated;
 - the Core-pillar comparison separates month movement from competitor position, directly colors the complete signal text, retains non-color labels and exact values, and becomes stacked cards on narrow screens;

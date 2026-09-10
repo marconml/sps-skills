@@ -8,6 +8,8 @@ Use the user's selected KPI. When shares are primary, compare reactions, comment
 
 For recurring three-month reviews, analyze the latest completed month as the decision month. Use the prior two months only to explain whether the movement is a continuation, reversal, or break. Do not imply a long-run trend from three points or compare post ages as though they were equal when collection timing differs materially.
 
+Use approved content plans and commissioning commitments as strategic constraints, not as evidence that a format, pillar, or execution will perform. They establish what the newsroom intends to build; observed performance and editorial inspection determine how it should be designed, packaged, and tested. When a planned product is strategically fixed, diagnose the weak executions and propose a bounded redesign rather than treating those posts alone as a reason to abandon the product.
+
 ## Monthly diagnosis
 
 Explain three things, in this order:
@@ -43,6 +45,12 @@ Resolve duplicate/repost identity first. Within pillar and format where possible
 
 Inspect the whole eligible cohort before choosing the three most decision-useful drivers. A driver must survive low-performing counterexamples; a feature seen only in winners is a hypothesis, not a proven mechanism. High performers primarily show what to replicate. Low performers carry diagnosis and improvement tests.
 
+### Still-image and carousel review
+
+Review every image in a representative carousel, not only its cover. For a single photo, inspect subject choice, moment, crop, visual proof, on-image headline, legibility, caption-image division, and the order of information in the caption. For a carousel, additionally inspect the cover promise, reason to swipe, role of each card, information density, repetition, proof or comparison used on each card, progression toward a decision, and the final payoff or action.
+
+Compare those choices across high, middle, and low examples. A useful diagnosis names the commissioning or editing decision behind the asset—for example, whether the cover opens one decision, whether each card advances it, and whether the selected image proves the claim—instead of summarizing what the pictures contain.
+
 ### Hybrid short-video review
 
 When the brief requires actual Reel or short-video diagnosis, build two evidence layers before selecting cases:
@@ -50,7 +58,9 @@ When the brief requires actual Reel or short-video diagnosis, build two evidence
 1. Review every eligible video's caption, cover, first three seconds, full audio/script where available, and fixed keyframes spanning the complete timeline.
 2. Deep-review a page-balanced, high/middle/low sample through its complete script and visual sequence, preserving pillar or native-territory coverage where the sample permits.
 
-Compare what the opening promises with what the sequence proves: decision or tension, information order, visual evidence, presenter function, pacing, duration, and payoff. Test surface features against counterexamples. A short duration, fast cuts, presenter, scenic footage, question hook, or static card becomes a mechanism only when it separates stronger and weaker comparable cohorts. Record silent, unavailable, or low-confidence transcript coverage; use speech recognition for structural understanding rather than verbatim quotation.
+Compare what the opening promises with what the sequence proves: spoken and on-screen hook, headline, script logic, word choice, information order, shot selection, visual evidence, presenter function, pacing, transitions, duration, and payoff. Explain how the Reel moves from one editorial beat to the next and where attention, clarity, or proof strengthens or weakens. Test surface features against counterexamples. A short duration, fast cuts, presenter, scenic footage, question hook, or static card becomes a mechanism only when it separates stronger and weaker comparable cohorts. Record silent, unavailable, or low-confidence transcript coverage; use speech recognition for structural understanding rather than verbatim quotation.
+
+A deep-review case must be specific enough that an editor can identify what to retain, recut, rewrite, or resequence without reducing the diagnosis to performance numbers or generic labels such as “strong visuals” and “clear hook.”
 
 ## Deriving hooks and visual tests
 
@@ -68,7 +78,7 @@ When extracting a competitor formula, define the relevant content-and-format coh
 
 Actively search approved pages for the same named event, person, study, source article, product announcement, or materially identical topic. Establish the match from shared entities, dates, and incident/source details before revealing performance. Broad themes or adjacent controversies are not matches.
 
-For reliable cases, compare headline, angle, visual thesis, format, timing, CTA, primary KPI, and supporting metrics. Separate the observed performance gap from the inferred mechanism. Skip uncertain pairs.
+For reliable cases, compare headline, angle, visual thesis, format, CTA, primary KPI, and supporting metrics. Also compare publication date against the event, opening, announcement, or source release when that timing is known, plus the lag between Pages. State whether the posts were close enough in the news cycle to support a useful execution comparison. First-mover novelty, audience saturation, and later information availability remain alternative explanations when dates differ materially. Separate the observed performance gap from the inferred mechanism. Skip uncertain pairs.
 
 ## Competitor learning and discovery
 
