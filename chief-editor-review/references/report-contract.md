@@ -100,13 +100,11 @@ Use a separate CEO Takeaways chapter only when it adds distinct synthesis that t
 
 ## Optional Part 3. Next-Month Editorial Outlook
 
-Insert this chapter between Diagnosis and Actions when approved prior-year evidence or a forward content plan supports a decision-useful next-month view. Show the exact planning window and supplied historical coverage, then organize a short commissioning map around:
+Insert this chapter between Diagnosis and Actions when approved prior-year evidence or a forward content plan supports a decision-useful next-month view. Show the exact planning window and supplied historical coverage, then organize a short commissioning map around recurring seasonal, festival, observance, or service-cycle triggers that fall inside that window.
 
-- timely or seasonal service opportunities;
-- proven subjects worth reworking with a clearer content or creative mechanism;
-- interviews, rights, data, graphics, or newsroom workflows that need advance preparation.
+Every item must pass the recurrence gate in the analysis contract. State the verified current-year trigger, linked directly relevant historical high/middle/low evidence, the editorial mechanism, the proposed brief, and its evidence status. A following-month historical post may inform the current planning window only when the same trigger falls earlier this year or needs advance preparation. One-off people, incidents, generic evergreen material, and historical posts selected mainly because they performed well do not appear in this chapter.
 
-Each item states the timing window, linked historical high/middle/low or same-story evidence, the editorial mechanism, the proposed brief, and its evidence status. A following-month historical post may inform the current planning window when its topic or lead-time is relevant. Current official dates and live triggers are linked to authoritative sources. Historical performance remains a signal rather than a forecast.
+Prefer a short, selective Outlook. One or two qualified opportunities are stronger than a long calendar padded with weak matches; omit the chapter when none qualify. Current official dates and live triggers are linked to authoritative sources. Historical performance remains a signal rather than a forecast.
 
 Keep this chapter decision-useful and non-duplicative: evidence and reasoning live here; final ownership, Scale / Improve / Stop / Test status, and review metric live in Actions. When Outlook is present it is Part 3 and Actions becomes Part 4. Otherwise Actions remains Part 3.
 
@@ -200,7 +198,7 @@ Before delivery verify:
 - representative photo/carousel cases inspect the full image sequence and representative Reel cases inspect opening, script, visual sequence, wording, pacing, and payoff at decision-useful editorial depth;
 - every management-visible case with sufficient evidence receives the same editorial depth, each post has one analytical home directly beneath its evidence, and no separate panel repeats that post analysis;
 - same-topic comparisons show publication dates and address event-cycle timing when it could materially explain the performance gap;
-- an included Outlook names its exact planning window and supplied historical coverage, uses full historical high/middle/low or reliable same-story evidence, links current official triggers, labels future packages as Inference/Test, and leaves assignable status calls to Actions;
+- an included Outlook names its exact planning window and supplied historical coverage; every item passes the recurrence gate, uses directly relevant historical high/middle/low evidence, links its current official trigger, labels the future package as Inference/Test, and leaves assignable status calls to Actions;
 - every material editorial difference has an immediately adjacent clickable representative example from one or both sides, selected after the cohort diagnosis;
 - nested case labels preserve the chapter/subpart hierarchy without repeating parent numbers, evidence cards do not carry an unrelated sequence, and repeated interpretation has been consolidated;
 - the Core-pillar comparison separates month movement from competitor position, directly colors the complete signal text, retains non-color labels and exact values, and becomes stacked cards on narrow screens;
