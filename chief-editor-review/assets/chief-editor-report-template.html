@@ -22,7 +22,7 @@
       <div class="meta"><span>{{DECISION_MONTH}}</span><span>{{CONTEXT_MONTHS}}</span><span>{{PRIMARY_KPI}}</span><span>{{PAGE_SCOPE}}</span></div>
     </div>
   </header>
-  <nav class="report-nav" aria-label="Report sections"><a href="#scope">Basis</a><a href="#movement">Performance</a><a href="#drivers">Diagnosis</a><a href="#actions">Actions</a><a href="#methodology">Method</a></nav>
+  <nav class="report-nav" aria-label="Report sections"><a href="#scope">Basis</a><a href="#movement">Performance</a><a href="#drivers">Diagnosis</a>{{OPTIONAL_OUTLOOK_NAV_HTML}}<a href="#actions">Actions</a><a href="#methodology">Method</a></nav>
   <main>
     <section id="scope" aria-label="Review basis">
       <div class="scope-grid">
@@ -57,8 +57,10 @@
       <article class="card"><h3>{{READER_SIGNAL_TITLE}}</h3><p>{{READER_SIGNAL}}</p><div class="proof">{{READER_SIGNAL_EVIDENCE}}</div></article>
     </section>
 
+    {{OPTIONAL_OUTLOOK_SECTION_HTML}}
+
     <section id="actions" class="report-section" data-report-part="actions">
-      <div class="chapter-head"><div class="section-kicker"><span class="section-no">3</span>Next-Month Actions</div><h2>{{ACTIONS_HEADLINE}}</h2><p class="section-lead">{{ACTIONS_TAKEAWAY}}</p></div>
+      <div class="chapter-head"><div class="section-kicker"><span class="section-no">{{ACTIONS_PART_NUMBER}}</span>Next-Month Actions</div><h2>{{ACTIONS_HEADLINE}}</h2><p class="section-lead">{{ACTIONS_TAKEAWAY}}</p></div>
       <div class="legend"><span>Scale · increase a supported mechanism</span><span>Improve · redesign a working product</span><span>Stop · cease a supported weak practice</span><span>Test · bounded experiment</span></div>
       <div class="action-grid"><article class="action"><div class="action-index">1</div><div><span class="badge">{{ACTION_STATUS}}</span><h3>{{ACTION_TITLE}}</h3><p>{{ACTION_BRIEF}}</p><div class="proof">{{ACTION_REVIEW_METHOD}}</div></div></article></div>
     </section>

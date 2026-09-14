@@ -20,7 +20,8 @@ Ask only for missing information:
 3. Available posts, metrics, images, comments, previous reports, and approved data access.
 4. Editorial rules and exclusions to preserve.
 5. Any approved current-period or next-period content plan, fixed product priorities, and known commissioning commitments.
-6. Any language override and any presentation-only reference report.
+6. Whether prior-year same-period post data is available for an optional next-month editorial outlook. Use only the pages and months supplied; missing historical comparators do not block the review.
+7. Any language override and any presentation-only reference report.
 
 Unless the user specifies otherwise, propose:
 
@@ -88,7 +89,9 @@ Keep the stable evidence-to-action reading path:
 2. Editorial Diagnosis
 3. Next-Month Actions
 
-Start with evidence, then move from diagnosis to action. The opening hero is a compact management synopsis of the whole review: what happened in the decision month, the strongest editorial explanation, and the most important operating implication. Keep detailed briefs and status calls in the final action layer. Part 1 shows what changed in the decision month and keeps the Page-level scorecard and Core-pillar comparison as standard modules. Part 2 opens its focal-page and competitor subparts with concise month-level overviews before presenting the deeper cohort and case evidence. End Part 2 with a short management synthesis only when it improves retention; use a separate CEO Takeaways chapter only when it adds meaning not already delivered by those overviews. Part 3 contains every Scale / Improve / Stop / Test decision so the report has one action layer.
+Start with evidence, then move from diagnosis to action. The opening hero is a compact management synopsis of the whole review: what happened in the decision month, the strongest editorial explanation, and the most important operating implication. Keep detailed briefs and status calls in the final action layer. Part 1 shows what changed in the decision month and keeps the Page-level scorecard and Core-pillar comparison as standard modules. Part 2 opens its focal-page and competitor subparts with concise month-level overviews before presenting the deeper cohort and case evidence. End Part 2 with a short management synthesis only when it improves retention; use a separate CEO Takeaways chapter only when it adds meaning not already delivered by those overviews.
+
+When the user supplies relevant prior-year data and wants forward planning, insert **Next-Month Editorial Outlook** between Diagnosis and Actions. Use the supplied historical coverage as one opportunity pool: a following-month post may inform earlier commissioning when its topic or production lead-time is relevant. Combine full high/middle/low historical cohorts, reliable same-topic timing evidence, the current diagnosis, and approved current official dates to identify what is seasonal, worth reworking, or needs preparation. Label every item as a historical signal, Inference, or Test rather than a forecast. Keep detailed evidence in the Outlook and keep the final Actions chapter as the single assignable action layer.
 
 Place post-level evidence inside the diagnosis it supports rather than after the actions. Show original media uncropped, use the source-language first line as the linked title, and include competitor links wherever a comparison or opportunity depends on them. Diagnose the whole eligible high/middle/low cohort before choosing representative cases. High performers explain what to replicate; comparable low performers or negative examples explain what failed and carry the improvement tests. Each deep case should cover the content promise, headline architecture, visual hierarchy, likely sharing logic, counterevidence or limitation, and the transferable editorial rule.
 

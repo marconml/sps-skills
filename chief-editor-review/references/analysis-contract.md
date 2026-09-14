@@ -116,6 +116,20 @@ Use only focal-page pillar-and-format groups containing at least five posts. For
 
 Compare median scores by hour, weekday, and daily posting volume. Explain the percentile-like score plainly and show post counts and timezone. Treat timing/frequency recommendations as tests and disclose reach, promotion, audience-size, post-age, and content-mix limitations. Omit the section when it does not change an editorial decision.
 
+## Optional next-month editorial outlook
+
+Build this layer only when the user supplies relevant prior-year posts, an approved forward content plan, or both and wants forward planning. Keep the supplied historical pages and months as the coverage boundary; missing historical competitors do not trigger recollection.
+
+Treat the historical period as one opportunity pool rather than a rigid date lookup. A following-month post may inform earlier commissioning when the subject is seasonally relevant or needs lead time. For each candidate opportunity:
+
+1. inspect the full within-page high, middle, and low historical cohort before selecting examples;
+2. distinguish seasonal relevance from the content, headline, visual, format, and timing mechanism that likely affected performance;
+3. use reliable same-story cross-Page publication gaps when they reveal a newsroom-readiness issue;
+4. verify current dates and live planning triggers with approved authoritative sources;
+5. state what to commission, what needs preparation, and how the next review will judge the test.
+
+Organize the output around the next commissioning window: timely service, topics worth reworking, and preparation that should start now. Historical performance is an Observation about the supplied period; the proposed future package remains an Inference or Test. Keep the final Actions chapter as the single place for assignable status calls.
+
 ## Evidence status
 
 - **Observation**: directly reported or computed from approved data.

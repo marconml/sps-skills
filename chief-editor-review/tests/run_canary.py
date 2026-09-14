@@ -124,6 +124,9 @@ def run_canary(output_dir: Path) -> None:
         "COMPETITOR_OVERVIEW_TITLE": "The material comparison gap is diagnosed.",
         "COMPETITOR_OVERVIEW": "Like-for-like cohorts and Page-native territories explain what management should notice.",
         "COMPETITOR_OVERVIEW_EVIDENCE": "The unresolved residual remains labelled.",
+        "OPTIONAL_OUTLOOK_NAV_HTML": '<a href="#outlook">Outlook</a>',
+        "OPTIONAL_OUTLOOK_SECTION_HTML": '<section id="outlook" class="report-section" data-report-part="outlook"><div class="chapter-head"><div class="section-kicker"><span class="section-no">3</span>Next-Month Editorial Outlook</div><h2>Prepare the next commissioning window.</h2><p class="section-lead">Historical signal, not a forecast.</p></div><article class="card"><span class="badge">Hypothesis / Test</span><h3>Prepare one seasonal service package.</h3><p>Full synthetic high, middle, and low historical cohorts support the packaging test; supplied coverage is 12 focal and 8 comparator posts.</p><div class="proof">One linked historical example and one current official trigger.</div></article></section>',
+        "ACTIONS_PART_NUMBER": "4",
         "ACTIONS_HEADLINE": "Turn the diagnosis into one action layer.",
         "ACTIONS_TAKEAWAY": "Every Scale, Improve, Stop, or Test call belongs here.",
         "METHODOLOGY": "Synthetic evidence only. No credentials or identities.",
@@ -167,6 +170,7 @@ def run_canary(output_dir: Path) -> None:
     assert report_receipt["checks"]["data_first_reading_path"] is True
     assert report_receipt["checks"]["bilingual_language_switch"] is True
     assert "decisions" not in report_receipt["section_order"]
+    assert report_receipt["section_order"].index("drivers") < report_receipt["section_order"].index("outlook") < report_receipt["section_order"].index("actions")
     report_text = report_path.read_text(encoding="utf-8")
     assert "三高管理" in report_text
     assert "Blood Pressure, Glucose &amp; Lipids" not in report_text
@@ -179,6 +183,8 @@ def run_canary(output_dir: Path) -> None:
     assert report_text.index("A cohort-level editorial difference comes before its references.") < report_text.index(
         "Reference one"
     ) < report_text.index("Synthetic cohort evidence anchor.")
+    assert "Historical signal, not a forecast." in report_text
+    assert "supplied coverage is 12 focal and 8 comparator posts" in report_text
 
     instagram_path = output_dir / "instagram-report.html"
     instagram_path.write_text(

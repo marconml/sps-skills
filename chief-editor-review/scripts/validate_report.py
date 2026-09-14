@@ -96,6 +96,12 @@ def main() -> int:
             or tree.section_ids.index("drivers")
             < tree.section_ids.index("decisions")
             < tree.section_ids.index("actions")
+        )
+        and (
+            "outlook" not in tree.section_ids
+            or tree.section_ids.index("drivers")
+            < tree.section_ids.index("outlook")
+            < tree.section_ids.index("actions")
         ),
         "bilingual_language_switch": (
             tree.default_language == "en"
