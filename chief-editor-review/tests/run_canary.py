@@ -115,7 +115,7 @@ def run_canary(output_dir: Path) -> None:
         "MARKET_MOVEMENT": "The shared movement keeps the news cycle in view.",
         "DRIVERS_HEADLINE": "Diagnose the editorial choices behind the movement.",
         "DRIVERS_TAKEAWAY": "The case illustrates a complete synthetic cohort finding.",
-        "MECHANISM_ANALYSIS": "A cohort-level editorial difference comes before its references.",
+        "MECHANISM_ANALYSIS": "A cohort-level editorial difference comes before its references. Directional test: retain the original story and display structure; change only the evidenced weak mechanism. Original and proposed line breaks, focal same-pillar reference, source fidelity, available assets, and template fit remain visible before production-ready status.",
         "MECHANISM_REFERENCE_LINKS_HTML": '<div class="reference-links"><a href="https://www.facebook.com/example.health/posts/reference-1">Reference one</a><a href="https://www.facebook.com/comparator.health/posts/reference-2">Reference two</a></div>',
         "MECHANISM_EVIDENCE_ANCHOR": "Synthetic cohort evidence anchor.",
         "FOCAL_OVERVIEW_TITLE": "One mechanism carried the month.",
@@ -183,6 +183,8 @@ def run_canary(output_dir: Path) -> None:
     assert report_text.index("A cohort-level editorial difference comes before its references.") < report_text.index(
         "Reference one"
     ) < report_text.index("Synthetic cohort evidence anchor.")
+    assert "retain the original story and display structure" in report_text
+    assert "before production-ready status" in report_text
     assert "Historical signal, not a forecast." in report_text
     assert "supplied coverage is 12 focal and 8 comparator posts" in report_text
     assert "The same verified festival falls inside the current planning window" in report_text

@@ -79,6 +79,8 @@ Use two complementary competitor views: map comparable posts into the focal Page
 
 Separate **Observation**, **Inference**, and **Hypothesis / Test**. Every performance conclusion needs an evidence anchor. Suggestions unsupported by performance evidence remain tests.
 
+Derive exact Suggested Hooks and Visual Tests from the original on-image package plus the focal Page's successful same-pillar, same-format high/middle/low evidence. Default to a minimum-change rewrite: preserve the story, house voice, familiar wording, approximate display load, line structure, and usable visual assets; change only the mechanism the evidence identifies as weak. Competitor executions may inform the mechanism but do not replace the focal Page's production grammar. Treat a suggestion as directional until its source fidelity and fit have been checked in the actual format or template.
+
 ## Build the report
 
 Read and follow [the report contract](references/report-contract.md). Use [the neutral HTML template](assets/chief-editor-report-template.html) as a presentation baseline, adapting it to the approved business-unit reference without carrying over old findings.

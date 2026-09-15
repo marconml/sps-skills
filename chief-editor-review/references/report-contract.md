@@ -76,7 +76,9 @@ Use a bounded media frame with `object-fit: contain` or equivalent letterboxing 
 
 Place evidence beside the mechanism it supports. High performers lead with **What to replicate** and need no forced rewrite. Low performers lead with the likely issue, then an evidence-based suggested hook and visual improvement labelled as a test. Editorial examples follow the source language, even when the report narrative is English.
 
-For every Suggested Hook or Visual Test, make the evidence trail auditable in nearby prose: reader feedback may identify the content question; comparable performance evidence determines the packaging mechanism; approved sources support the claims. If the performance evidence supports only a content opportunity, do not manufacture a data-backed hook—defer it until the source and packaging basis are available.
+For every Suggested Hook or Visual Test, make the evidence trail auditable in nearby prose: reader feedback may identify the content question; comparable performance evidence determines the packaging mechanism; approved sources support the claims. Present an exact rewrite as a compact before/test package: original on-image copy with its hierarchy, the focal Page's relevant same-pillar/formula reference, proposed copy with intended line breaks and hierarchy, and the minimum visual edits using available assets. Keep its display load and house voice close to the original unless the evidence supports a larger redesign. If the performance evidence supports only a content opportunity, do not manufacture a data-backed hook—defer it until the source and packaging basis are available.
+
+Label an unrendered proposal **Directional test**. Use **Production-ready test** only when it has been fitted in the actual canvas/template and checked for source fidelity, line count, hierarchy, mobile legibility/crop, safe areas, image clearance, and asset availability. Keep layout mechanics compact or collapsed so they help the editor without turning the management report into a design manual.
 
 ### Same-topic cases
 
@@ -188,7 +190,7 @@ Before delivery verify:
 - identical reposts are not treated as creative comparisons;
 - reliable same-topic matches have match receipts, every comparator link, and available original media;
 - competitor opportunities have sustained evidence plus a successful execution reference;
-- every Suggested Hook and Visual Test identifies comparable packaging evidence; comments are used only for content needs unless an independent performance anchor is present;
+- every Suggested Hook and Visual Test identifies comparable packaging evidence; exact rewrites preserve source fidelity and the focal Page's same-pillar production grammar, show intended hierarchy/line breaks, stay close to the original display load unless evidence supports a redesign, and are labelled directional until actual-template fit is verified; comments are used only for content needs unless an independent performance anchor is present;
 - editorial examples preserve source language and introduce no unsupported claim;
 - comment findings exclude PM-CTA posts and are limited to supported newsroom insights;
 - action cards contain editorial decisions rather than agent instructions or methodology warnings;
