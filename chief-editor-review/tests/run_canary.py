@@ -125,7 +125,7 @@ def run_canary(output_dir: Path) -> None:
         "COMPETITOR_OVERVIEW": "Like-for-like cohorts and Page-native territories explain what management should notice.",
         "COMPETITOR_OVERVIEW_EVIDENCE": "The unresolved residual remains labelled.",
         "OPTIONAL_OUTLOOK_NAV_HTML": '<a href="#outlook">Outlook</a>',
-        "OPTIONAL_OUTLOOK_SECTION_HTML": '<section id="outlook" class="report-section" data-report-part="outlook"><div class="chapter-head"><div class="section-kicker"><span class="section-no">3</span>Next-Month Editorial Outlook</div><h2>Prepare the next commissioning window.</h2><p class="section-lead">Historical signal, not a forecast.</p></div><article class="card"><span class="badge">Hypothesis / Test</span><h3>Prepare one recurring festival service package.</h3><p>The same verified festival falls inside the current planning window, and directly relevant synthetic high, middle, and low historical cohorts support the packaging test; supplied coverage is 12 focal and 8 comparator posts.</p><div class="proof">One linked historical festival example and one current official trigger.</div></article></section>',
+        "OPTIONAL_OUTLOOK_SECTION_HTML": '<section id="outlook" class="report-section" data-report-part="outlook"><div class="chapter-head"><div class="section-kicker"><span class="section-no">3</span>Next-Month Editorial Outlook</div><h2>Three editorial opportunities for the next four weeks.</h2><p class="section-lead">Planning window: 16 September–15 October 2026. Historical signal, not a forecast; supplied coverage is 12 focal and 8 comparator posts.</p></div><div class="outlook-grid"><article class="card outlook-point"><b>1</b><h3>Prepare one recurring festival service package.</h3><p>The same verified festival falls inside the current planning window, and directly relevant synthetic high, middle, and low historical cohorts support the packaging test.</p><a class="title-example" href="https://www.facebook.com/example.health/posts/outlook-1">Clickable source-language title example one</a><div class="proof">Editor next step · Hypothesis / Test</div></article><article class="card outlook-point"><b>2</b><h3>Update one annual school-choice tool.</h3><p>The recurring service cycle requires advance preparation.</p><a class="title-example" href="https://www.facebook.com/example.health/posts/outlook-2">Clickable source-language title example two</a><div class="proof">Editor next step · Historical signal</div></article><article class="card outlook-point"><b>3</b><h3>Commission one seasonal family utility.</h3><p>The exact hook follows the approved source.</p><a class="title-example" href="https://www.facebook.com/example.health/posts/outlook-3">Clickable source-language title example three</a><div class="proof">Editor next step · Inference / Test</div></article></div><details class="historical-examples"><summary>Open historical high–low examples</summary><p>Historical high and low examples follow the three editorial points.</p></details></section>',
         "ACTIONS_PART_NUMBER": "4",
         "ACTIONS_HEADLINE": "Turn the diagnosis into one action layer.",
         "ACTIONS_TAKEAWAY": "Every Scale, Improve, Stop, or Test call belongs here.",
@@ -185,9 +185,14 @@ def run_canary(output_dir: Path) -> None:
     ) < report_text.index("Synthetic cohort evidence anchor.")
     assert "retain the original story and display structure" in report_text
     assert "before production-ready status" in report_text
-    assert "Historical signal, not a forecast." in report_text
+    assert "Historical signal, not a forecast" in report_text
     assert "supplied coverage is 12 focal and 8 comparator posts" in report_text
     assert "The same verified festival falls inside the current planning window" in report_text
+    assert report_text.count('class="card outlook-point"') == 3
+    assert report_text.index("Clickable source-language title example one") < report_text.index(
+        "Open historical high–low examples"
+    )
+    assert "Editor next step · Hypothesis / Test" in report_text
     assert "one-off profile" not in report_text.lower()
 
     instagram_path = output_dir / "instagram-report.html"
