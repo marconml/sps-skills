@@ -14,7 +14,9 @@ REQUIRED_IDS = {"scope", "movement", "drivers", "actions", "methodology"}
 REQUIRED_MODULES = {"page-scorecard", "core-pillar-comparison"}
 REQUIRED_READING_PATH = ["scope", "movement", "drivers", "actions"]
 SECRET_PATTERNS = {
-    "apify_token": re.compile(r"apify_api_[A-Za-z0-9_-]+", re.I),
+    "token_assignment": re.compile(
+        r"(?:api|access|auth)[_-]?token\s*[:=]\s*[\"']?[A-Za-z0-9._~-]{16,}", re.I
+    ),
     "bearer_token": re.compile(r"Bearer\s+[A-Za-z0-9._~-]{16,}", re.I),
     "private_key": re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----"),
 }

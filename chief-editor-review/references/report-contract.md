@@ -10,7 +10,7 @@ Keep process notes, agent instructions, selection mechanics, causal disclaimers,
 
 ## Opening basis
 
-Use a compact scope band for the exact period/timezone, focal and competitor set, audience, primary KPI, and current-month comparison basis. Named competitor omissions, ad counts, and collection receipts belong in Methodology / Caveats unless they materially change the headline conclusion.
+Use a compact scope band for the exact period/timezone, focal and competitor set, audience, primary KPI, and current-month comparison basis. Named competitor omissions, ad counts, and export/coverage details belong in Methodology / Caveats unless they materially change the headline conclusion.
 
 The hero is a roughly 30-second management synopsis of the whole report. State what happened in the decision month, the strongest editorial explanation, and the most important operating implication, anchored by the minimum metrics needed to make those points credible. Keep detailed briefs and Scale / Improve / Stop / Test calls in the final Actions chapter. Move analytical process, coverage notes, selection mechanics, and causal caveats to the relevant case limitation or Methodology rather than making them the hero narrative.
 
@@ -140,7 +140,7 @@ Do not use Stop for analytical warnings such as calling engagement reach or trea
 Place methodology last or in a collapsed section. Name `chief-editor-review` and the four methods. Include only the detail needed to audit:
 
 - dates, timezone, source, and metric meanings;
-- collected, confirmed-ad-excluded, and analyzed counts by page;
+- exported, confirmed-ad-excluded, and analyzed counts by page;
 - missing values, unknown promotion status, unequal post age, and unavailable reach;
 - comparable-set and same-topic matching;
 - duplicate/repost handling;
@@ -212,5 +212,5 @@ Before delivery verify:
 - a bilingual parity audit confirms every material claim, number, evidence status, limitation, and action against the shared meaning ledger, while the Chinese layer reads as independently authored Hong Kong editorial prose;
 - all images remain inside their media frames without covering metadata or interpretation, links work, and no external image dependency remains;
 - English and Chinese desktop/mobile views have no clipped text, accidental tiny analysis, or horizontal page overflow;
-- unresolved template tokens, credentials, commenter identities, and private collection URLs are absent;
+- unresolved template tokens, credentials, commenter identities, and private source URLs are absent;
 - previous reports remain unchanged.

@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Exercise evidence validation, image embedding, and report validation offline."""
+"""Exercise portable skill guidance, image embedding, and report validation offline."""
 
 from __future__ import annotations
 
 import argparse
-import importlib.util
 import json
 import re
 import subprocess
@@ -22,50 +21,24 @@ def run(*args: str) -> None:
 
 
 def run_canary(output_dir: Path) -> None:
-    spec = importlib.util.spec_from_file_location(
-        "chief_editor_review_analysis", ROOT / "scripts" / "analyze_performance.py"
+    skill_text = (ROOT / "SKILL.md").read_text(encoding="utf-8")
+    collection_text = (ROOT / "references" / "collection-contract.md").read_text(
+        encoding="utf-8"
     )
-    assert spec and spec.loader
-    analysis = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(analysis)
-    assert analysis.percentile_score(2, [1, 2, 2, 3]) == 50
-    assert analysis.number(None) is None
+    analysis_text = (ROOT / "references" / "analysis-contract.md").read_text(
+        encoding="utf-8"
+    )
+    agent_text = (ROOT / "agents" / "openai.yaml").read_text(encoding="utf-8")
+    portable_guidance = "\n".join(
+        (skill_text, collection_text, analysis_text, agent_text)
+    ).casefold()
+    assert "fanpage karma" in portable_guidance
+    assert "coverage checkpoint" in portable_guidance
+    assert "recommend" in portable_guidance and "primary kpi" in portable_guidance
+    assert "tags" in portable_guidance and "pillar definition" in portable_guidance
+    assert "every image" in portable_guidance and "selected frames" in portable_guidance
+    assert "source-exports" in portable_guidance and "working" in portable_guidance
     output_dir.mkdir(parents=True, exist_ok=True)
-    run(
-        str(ROOT / "scripts" / "validate_evidence.py"),
-        "--manifest",
-        str(FIXTURES / "manifest.json"),
-        "--posts",
-        str(FIXTURES / "posts.json"),
-        "--comments",
-        str(FIXTURES / "comments.json"),
-        "--receipt",
-        str(output_dir / "evidence-receipt.json"),
-    )
-    evidence_receipt = json.loads(
-        (output_dir / "evidence-receipt.json").read_text(encoding="utf-8")
-    )
-    assert evidence_receipt["status"] == "ready"
-    assert (
-        evidence_receipt["coverage_by_page"]["Example Health"]["confirmed_ads_excluded"]
-        == 1
-    )
-    assert evidence_receipt["comments"]["pm_cta_rows_remaining"] == 0
-    run(
-        str(ROOT / "scripts" / "analyze_performance.py"),
-        "--manifest",
-        str(FIXTURES / "manifest.json"),
-        "--posts",
-        str(FIXTURES / "posts.json"),
-        "--output",
-        str(output_dir / "performance.json"),
-    )
-    performance = json.loads(
-        (output_dir / "performance.json").read_text(encoding="utf-8")
-    )
-    assert performance["organic_post_count"] == 2
-    assert performance["confirmed_ads_excluded_by_page"]["Example Health"] == 1
-
     hook_case = json.loads(
         (FIXTURES / "hook-evidence-case.json").read_text(encoding="utf-8")
     )

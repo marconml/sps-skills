@@ -1,93 +1,106 @@
-# Collection Contract
+# Fanpage Karma Export and Coverage Contract
 
-Read this reference whenever evidence must be checked, imported, refreshed, or collected.
+Read this reference whenever evidence must be checked, imported, or refreshed. Codex leads the process in plain language; the user should not need to understand schemas, scripts, or APIs.
 
-## Collection request
+## Confirm the export request
 
-Record a credential-free run manifest before collection:
+Write a short, credential-free brief containing:
 
-```json
-{
-  "focal_page": "Page name and URL",
-  "competitors": ["Approved page names and URLs"],
-  "excluded_pages": [],
-  "date_start": "YYYY-MM-DD",
-  "date_end": "YYYY-MM-DD",
-  "timezone": "Asia/Hong_Kong",
-  "decision_month": "YYYY-MM",
-  "primary_kpi": "shares",
-  "pillars": [{"name": "Pillar", "tags": []}],
-  "report_language": "English",
-  "comments": {"enabled": true, "max_ranked_top_level_per_post": 20, "exclude_pm_cta_posts": true},
-  "ad_rule": "Authoritative field or approved classification rule",
-  "maximum_approved_cost_usd": 0
-}
-```
+- focal page and approved competitor page names or URLs;
+- exact start date, end date, and timezone;
+- platform and complete-post scope;
+- audience and editorial objective;
+- selected primary KPI and the reason it fits the objective;
+- approved pillar names, definitions, and Fanpage Karma tags when available;
+- known exclusions, promotion rule, report language, and available comments/media.
 
-The user confirms business scope in plain language. Actor IDs and provider-specific inputs belong in a separate local collection plan, never in the report.
+Ask the user to choose the primary KPI after explaining a recommendation. For a Facebook objective centred on useful redistribution, recommend shares per post when the export exposes shares. If the objective or available fields point elsewhere, recommend the closest direct and comparable measure. Confirm whether Fanpage Karma reports a raw count, an interaction total, or a rate and record any denominator. Do not assume that public engagement equals reach or an engagement rate.
 
-## Access
+## Guide the Fanpage Karma export
 
-Check existing approved access without revealing secrets. Never ask anyone to paste credentials in chat or request competitors' credentials. When access is unavailable, give the user this forwarding message:
+First inspect any workbook or CSV the user already supplied. Reuse it when it contains the complete post population for every approved page over the same exact dates. Do not require a new export only because the column names or workbook layout differ from a previous run.
 
-> Please arrange approved access for a three-month Facebook or Instagram review of our page and selected competitors, or provide exported posts, metrics, downloaded media, and available audience-response data. Configure access securely for Codex and confirm collection costs.
+When a new export is needed, guide the user through these outcomes in Fanpage Karma:
 
-Test access with the smallest useful canary. For paid collection, record the approved ceiling and pass it to the provider as an enforceable charge limit when available.
+1. Open the dashboard or analysis containing the focal page and all approved competitors.
+2. Set the exact shared reporting period and confirm the timezone used for publication timestamps.
+3. Open the Posts or Content view, select the requested key figures/KPIs, and show all posts rather than only top posts or a dashboard summary.
+4. Export the complete post-detail table to Excel or CSV. If the account splits pages or metrics across exports, export each necessary table and retain the page names and period in the filenames.
+5. If comments are in scope and available through an approved export, export them separately. Absence of comments does not become zero comments; it becomes a coverage limitation.
 
-## Required post evidence
+Ask the user to provide the exported files, not credentials. Never request Fanpage Karma login details, Facebook Page tokens, or competitor credentials in chat.
 
-For every page and eligible publication in the exact period, seek:
+## Inspect dynamically
+
+Open the supplied files and identify the actual sheets, headers, metric labels, formulas or notes, row grain, date range, page identities, and post population. Build a run-specific field map. Never demand fixed worksheet names or normalize the export into a permanent universal schema.
+
+For every eligible publication, seek the strongest available equivalents of:
 
 - stable post ID and direct permalink;
 - page identity;
 - full caption and first-line hook;
-- publication timestamp and confirmed timezone;
+- publication timestamp and timezone;
 - content format;
-- original media URL and downloaded local media when accessible;
-- reactions, comments, shares, and the selected KPI;
-- authoritative promotion/ad status or `unknown`;
-- source and field-level coverage flags.
+- media URL or post URL from which approved media can be downloaded;
+- raw reactions, comments, shares, and the selected primary KPI;
+- approved tags or another pillar-classification input;
+- authoritative promotion/ad status or `unknown`.
 
-Public engagement is not reach or an engagement rate. Do not infer an unavailable denominator.
+Preserve missing values as missing. Keep the original metric label and definition. If a metric is available for some pages but not others, do not use it as a cross-page KPI without explicit qualification.
 
-For short video, record duration and audio availability with the downloaded media. When actual-video diagnosis is approved, derive first-three-second frames, fixed full-timeline keyframes, and a local transcript where speech exists. Keep transcription models, caches, videos, frames, and transcripts inside the run directory; never place them in Git.
+## Dynamic pillar handling
 
-## Ads and reposts
+Use one of these routes, in order:
 
-Record every collected occurrence. Exclude confirmed ads and paid partnerships from organic performance analysis while retaining numeric counts by page. Unknown ad status remains visible as a limitation.
+1. Use approved Fanpage Karma tags when they consistently represent the newsroom's content pillars.
+2. Apply user-supplied pillar definitions, documenting ambiguous assignments.
+3. If neither is available, inspect topics and formats in the approved exports, propose a small working taxonomy with definitions and examples, and wait for confirmation before pillar analysis.
 
-Preserve exact and materially identical reposts for page-level totals. Flag caption-and-media identity so the analysis can avoid treating unchanged creative as a creative contrast.
+Keep an `Unresolved` intake group for genuinely ambiguous posts. Do not hide a large share of output inside `Other`; revisit it for coherent recurring territories.
 
-## Comments
+## Media and comments
 
-Comments are collected only from the focal page unless the user approves another lawful scope. Identify PM-CTA posts from the post/caption/Page-reply pattern before collecting comments where possible; exclude those posts from newsroom comment insight.
+Codex downloads original media from approved post or media links into the run folder when accessible. Do not make the user install a downloader. Record inaccessible, expired, or absent media rather than replacing it with unrelated imagery.
 
-For each remaining post, retain at most the approved number of ranked top-level comments, default 20. Keep comment text, likes/rank where available, post ID, and Page-authored status. Remove commenter name, username, profile URL, avatar, user ID, and other identity fields. Preserve missing rank/like values as missing.
+For every eligible carousel with available media, download and inspect every image in order. For each Reel or short video selected for media analysis, inspect selected frames: the cover, multiple frames from the opening three seconds, evenly spaced or scene-change frames across the body, and the closing payoff. Record the frame-selection rule; do not imply frame-by-frame inspection. Use audio or a local transcript where available, with speech recognition treated as structural assistance rather than a verbatim source.
 
-## Run layout and receipt
+Comments are analyzed only when lawfully supplied. Identify intentional comment-to-private-message posts from the caption/Page-reply pattern and exclude them from newsroom comment insight. Remove commenter names, usernames, profile URLs, avatars, IDs, and other identity fields. Keep Page-authored replies separate. Missing comment exports limit the Corresponding method and must be disclosed.
 
-Use a new directory so previous reports and evidence remain intact:
+## Working folder discipline
+
+Create a new folder for each review and preserve previous runs:
 
 ```text
-runs/<run-id>/
-  manifest.json
-  collection-plan.json
-  raw/posts.json
-  raw/comments.json
-  normalized/posts.json
-  normalized/comments-deidentified.json
-  media/
-  receipts/posts.json
-  receipts/comments.json
-  coverage.json
+<review-name>-<YYYY-MM-DD>/
+  source-exports/   # untouched Fanpage Karma Excel/CSV files
+  working/          # run-specific field map, calculations, classifications, extracts
+  media/            # downloaded originals, carousel images, selected video frames
+  qa/               # coverage receipt, validation output, desktop/mobile screenshots
+  report.html       # new standalone deliverable
 ```
 
-Receipts may contain run ID, actor ID, terminal status, start/finish time, cost, dataset ID, item count, and output path. Exclude tokens, request headers, signed URLs, and user identities.
+Never edit files in `source-exports/`. Temporary scripts and transformed tables belong in `working/`; they are run-specific aids, not a fixed end-to-end runner. Exclude credentials, private URLs, commenter identities, and source media from Git.
+
+## Coverage checkpoint
+
+Before analysis, present a compact table with one row per page and show:
+
+- exact exported date range and timezone;
+- exported post count;
+- post ID/link, caption, timestamp, format, tag/pillar, and primary-KPI coverage;
+- supporting metric coverage;
+- promotion-status coverage;
+- media and carousel completeness;
+- Reel availability and selected-frame feasibility;
+- comment availability for the focal page;
+- exclusions, duplicates/reposts, and material limitations.
+
+Reconcile the export's earliest/latest timestamps and row counts against the requested scope. Flag filters, truncated top-post exports, duplicated rows, summary-only files, mismatched periods, missing competitors, and unequal KPI definitions.
 
 Return one status:
 
-- `ready`: required coverage passed and analysis may begin.
-- `partial`: usable evidence exists but named gaps constrain findings.
-- `blocked`: required access, approval, budget, or evidence is absent.
+- `ready`: the evidence supports the confirmed decisions;
+- `partial`: useful evidence exists, every gap and affected conclusion is named, and the user accepts proceeding;
+- `blocked`: the post population, period, page identity, or chosen KPI is too incomplete for the requested comparison.
 
-Exports may proceed as `partial` when the user accepts their stated missing coverage. Never silently supplement them with unapproved external services.
+Do not begin performance conclusions until the checkpoint is resolved. Never silently supplement Fanpage Karma exports with an outside collection service.

@@ -4,7 +4,7 @@ Read this reference after the evidence package passes its gate.
 
 ## Objective and comparison basis
 
-Use the user's selected KPI. When shares are primary, compare reactions, comments, and shares separately and combined only as supporting context. Show post counts and medians. Total shares indicate scale and output contribution; median shares describe the typical post. Average is secondary because a few breakout posts can dominate it.
+Use the user's confirmed primary KPI. Before confirmation, inspect the exported metric labels and definitions, connect the recommendation to the stated objective, explain the tradeoff in plain language, and ask the user to choose. For a Facebook sharing objective, recommend raw shares per post when available because it directly represents redistribution; do not recommend it automatically for a different objective or when pages expose non-comparable definitions. When shares are primary, compare reactions, comments, and shares separately and combined only as supporting context. For any KPI, show post counts and medians, retain the original metric label and denominator, and show relevant raw component counts beside rates. Totals indicate scale and output contribution; medians describe the typical post. Average is secondary because a few breakout posts can dominate it.
 
 For recurring three-month reviews, analyze the latest completed month as the decision month. Use the prior two months only to explain whether the movement is a continuation, reversal, or break. Do not imply a long-run trend from three points or compare post ages as though they were equal when collection timing differs materially.
 
@@ -47,15 +47,15 @@ Inspect the whole eligible cohort before choosing the three most decision-useful
 
 ### Still-image and carousel review
 
-Review every image in a representative carousel, not only its cover. For a single photo, inspect subject choice, moment, crop, visual proof, on-image headline, legibility, caption-image division, and the order of information in the caption. For a carousel, additionally inspect the cover promise, reason to swipe, role of each card, information density, repetition, proof or comparison used on each card, progression toward a decision, and the final payoff or action.
+Review every image in every eligible carousel with available media, not only its cover or a representative slide. For a single photo, inspect subject choice, moment, crop, visual proof, on-image headline, legibility, caption-image division, and the order of information in the caption. For a carousel, additionally inspect the cover promise, reason to swipe, role of each card, information density, repetition, proof or comparison used on each card, progression toward a decision, and the final payoff or action. If a carousel is incomplete, record the missing cards and constrain the conclusion.
 
 Compare those choices across high, middle, and low examples. A useful diagnosis names the commissioning or editing decision behind the asset—for example, whether the cover opens one decision, whether each card advances it, and whether the selected image proves the claim—instead of summarizing what the pictures contain.
 
 ### Hybrid short-video review
 
-When the brief requires actual Reel or short-video diagnosis, build two evidence layers before selecting cases:
+When the brief requires actual Reel or short-video diagnosis, use a bounded, repeatable frame sample rather than claiming frame-by-frame review. Build two evidence layers before selecting cases:
 
-1. Review every eligible video's caption, cover, first three seconds, full audio/script where available, and fixed keyframes spanning the complete timeline.
+1. Review every eligible video's caption and cover, selected frames from the first three seconds, selected evenly spaced or scene-change frames spanning the timeline, the closing payoff, and audio/script where available. Record the frame timestamps or selection rule.
 2. Deep-review a page-balanced, high/middle/low sample through its complete script and visual sequence, preserving pillar or native-territory coverage where the sample permits.
 
 Compare what the opening promises with what the sequence proves: spoken and on-screen hook, headline, script logic, word choice, information order, shot selection, visual evidence, presenter function, pacing, transitions, duration, and payoff. Explain how the Reel moves from one editorial beat to the next and where attention, clarity, or proof strengthens or weakens. Test surface features against counterexamples. A short duration, fast cuts, presenter, scenic footage, question hook, or static card becomes a mechanism only when it separates stronger and weaker comparable cohorts. Record silent, unavailable, or low-confidence transcript coverage; use speech recognition for structural understanding rather than verbatim quotation.
@@ -118,11 +118,11 @@ When a headline or visual response is also proposed, cite its independent high�
 
 ## Timing and frequency
 
-Use only focal-page pillar-and-format groups containing at least five posts. For each post calculate:
+Use only focal-page pillar-and-format groups containing at least five posts. For each post calculate a within-group percentile-like score from the confirmed primary KPI:
 
-`100 × (posts with fewer shares + half the tied posts) ÷ group size`
+`100 × (posts with a lower KPI value + half the tied posts) ÷ group size`
 
-Compare median scores by hour, weekday, and daily posting volume. Explain the percentile-like score plainly and show post counts and timezone. Treat timing/frequency recommendations as tests and disclose reach, promotion, audience-size, post-age, and content-mix limitations. Omit the section when it does not change an editorial decision.
+Compare median scores by hour, weekday, and daily posting volume. State the KPI used, explain the percentile-like score plainly, and show post counts and timezone. Use a rate only when its denominator is known and comparable; otherwise choose an approved raw KPI or omit the test. Treat timing/frequency recommendations as tests and disclose reach, promotion, audience-size, post-age, and content-mix limitations. Omit the section when it does not change an editorial decision.
 
 ## Optional next-month editorial outlook
 
