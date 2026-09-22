@@ -79,7 +79,7 @@ def run_canary(output_dir: Path) -> None:
         "POST_DATE": "12 Aug 2026",
         "FORMAT": "Image",
         "MONTHLY_CHART_SVG": '<svg viewBox="0 0 600 160" role="img" aria-label="Canary monthly median shares"><polyline points="30,120 300,90 570,55" fill="none" stroke="#087f83" stroke-width="5"/></svg>',
-        "CORE_PILLAR_COMPARISON_HTML": "<table><tr><th>Core pillar</th></tr><tr><td>三高管理</td></tr></table>",
+        "CORE_PILLAR_COMPARISON_HTML": '<table><thead><tr><th>Core pillar</th><th>August posts</th><th>August median shares</th><th>June–July median shares</th><th>Movement</th><th>Strongest comparator</th><th>Position</th></tr></thead><tbody><tr><td data-label="Core pillar">三高管理</td><td data-label="August posts">8</td><td data-label="August median shares"><strong>42</strong></td><td data-label="June–July median shares"><strong>35</strong><br>16 posts</td><td data-label="Movement" class="positive">↑ +20.0%</td><td data-label="Strongest comparator">Example Comparator<br><strong>50</strong><br>10 posts</td><td data-label="Position" class="negative">Behind by 8</td></tr></tbody></table>',
         "MOVEMENT_HEADLINE": "Start with what changed.",
         "MOVEMENT_TAKEAWAY": "August is the decision month; June and July provide context.",
         "FOCAL_MOVEMENT_TITLE": "The typical post improved.",
