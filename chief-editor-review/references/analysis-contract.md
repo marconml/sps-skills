@@ -43,7 +43,7 @@ Resolve duplicate/repost identity first. Within pillar and format where possible
 - visual subject, proof, legibility, action, and caption-image division;
 - format and known distribution context.
 
-Inspect the whole eligible cohort before choosing the three most decision-useful drivers. A driver must survive low-performing counterexamples; a feature seen only in winners is a hypothesis, not a proven mechanism. High performers primarily show what to replicate. Low performers carry diagnosis and improvement tests.
+Inspect the whole eligible cohort before choosing the three most decision-useful drivers. A driver must survive low-performing counterexamples; a feature seen only in winners is a hypothesis, not a proven mechanism. High performers primarily show what to replicate. Low performers carry diagnosis; improvement tests depend on the recommendation gate below.
 
 ### Still-image and carousel review
 
@@ -62,6 +62,19 @@ Compare what the opening promises with what the sequence proves: spoken and on-s
 
 A deep-review case must be specific enough that an editor can identify what to retain, recut, rewrite, or resequence without reducing the diagnosis to performance numbers or generic labels such as “strong visuals” and “clear hook.”
 
+## Recommendation gate
+
+Choose the editorial response before drafting copy:
+
+- **Retain / replicate:** identify a supported practice and where it applies; a strong case can end with that learning.
+- **Improve within the source:** propose a concrete change supported by comparable high/middle/low or reliable same-topic packaging evidence, with the unchanged source fully delivering the revised promise.
+- **Separate commission:** recommend a new story only when the content opportunity itself has sufficient evidence and editorial value. Treat any additional research, comparison or changed angle as part of that commission, rather than a rewrite of the original post.
+- **Diagnosis only:** when no worthwhile supported action follows, keep the observation and decision-relevant uncertainty and omit the recommendation block.
+
+Internally check full-source support, headline and visual evidence separately, counterexamples, and usable assets before selecting a response. Evidence for a comparison graphic does not by itself validate a question headline; a passing mention in the caption does not necessarily support a new main promise. Record rejected drafts and missing prerequisites in working notes. Surface a prerequisite only when it materially changes an otherwise justified editor action. A Test requires a specific action worth trying and an honest rationale; an uncertain diagnosis alone does not qualify.
+
+Boundary example: a low-performing ingredient-benefits post briefly mentions an alternative ingredient; stronger posts use several different headline styles. A proposed “which ingredient should you choose?” hook lacks both a demonstrated headline mechanism and a complete comparison in the source. The report retains the low-performance observation and unresolved explanation, with no recommendation panel. Only independent evidence of a worthwhile comparison opportunity could justify a separate commission. By contrast, if comparable high/middle/low covers support showing a documented action and the original story includes an approved action frame, a bounded visual-space test can qualify without inventing a new headline.
+
 ## Deriving hooks and visual tests
 
 Build every Suggested Hook or Visual Test from three distinct evidence roles:
@@ -78,7 +91,7 @@ Make visual recommendations executable within the current asset and template con
 
 Show intended line breaks and hierarchy for any exact cover copy. There is no universal character limit: compare the rendered display load with the original cover and successful same-pillar templates. Call the proposal **production-ready** only after checking the actual canvas, font, safe areas, mobile thumbnail/crop, legibility, image clearance, and source fidelity. Otherwise label it **directional test** and avoid implying that it can be handed straight to design.
 
-Comments can prioritize the question or point the coverage should answer. They are not evidence that placing that point in the headline or visual will increase performance. Choose that placement only from the packaging evidence; when no reliable packaging pattern exists, present the content opportunity and defer the hook, or label the draft as editorial judgement rather than a data-backed mechanism.
+Comments can prioritize the question or point the coverage should answer. They are not evidence that placing that point in the headline or visual will increase performance. Choose that placement from packaging evidence. When no reliable packaging pattern exists, apply the recommendation gate: a separately justified content opportunity may become a new commission; otherwise retain the reader signal without a replacement hook or recommendation block.
 
 When extracting a competitor formula, define the relevant content-and-format cohort, resolve duplicates and materially repeated creatives, reveal performance, then compare high, middle, and low packages. Retain only mechanisms that recur across stronger posts, are weaker or absent in lower posts, and survive counterexamples. Treat a repeated phrase such as “explained,” “mystery,” or a question mark as surface wording unless the wider package comparison supports it.
 
