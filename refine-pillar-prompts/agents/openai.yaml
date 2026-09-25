@@ -1,7 +1,7 @@
 interface:
   display_name: "Refine Pillar Prompts"
-  short_description: "Brief SPS learnings, then apply selected items"
-  default_prompt: "Use $refine-pillar-prompts to ask for required context, create a numbered Markdown learning brief, then apply only the item indexes I explicitly select."
+  short_description: "Evidence-led SPS prompt refinement"
+  default_prompt: "Use $refine-pillar-prompts to produce a numbered, evidence-backed pillar prompt-learning brief and apply only the item indexes I select."
 
 dependencies:
   tools:

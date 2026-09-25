@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chief Editor Review"
+  short_description: "Evidence-backed social editorial reviews"
+  default_prompt: "Use $chief-editor-review to guide my Fanpage Karma export, read back the selected pages and dates, recommend a primary KPI, and build a verified Chief Editor HTML review."

@@ -275,3 +275,17 @@ Report:
 - protected-pillar verification
 - setup brief path
 - remaining limitations and selectable improvement indexes
+
+## Skill-source maintenance
+
+This section applies only to user-requested edits to this skill's own reusable
+files, not ordinary skill use, generated outputs or live SPS prompt changes.
+Work in the `marconml/sps-skills` source checkout on `dev` and follow its root
+`AGENTS.md`. After each change, validate, commit only task-owned changes and
+push to `origin/dev`; verify the remote commit before reporting completion.
+An explicit user instruction not to commit or push overrides this default.
+Never force-push, publish unrelated commits or push to `main`.
+
+For an installed copy outside the source checkout, locate that checkout first;
+do not initialize Git here or use an unrelated project's remote. Report missing
+access, validation failures or conflicts instead of claiming publication.

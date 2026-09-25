@@ -1,0 +1,21 @@
+{
+  "case": "De-identified everyday-choice packaging review",
+  "duplicates_resolved": true,
+  "posts": [
+    {"id": "high-1", "tier": "high", "shares": 80, "package": ["familiar object", "single consequence", "visible proof", "next action"]},
+    {"id": "high-2", "tier": "high", "shares": 62, "package": ["familiar action", "single consequence", "visible proof", "next action"]},
+    {"id": "middle-1", "tier": "middle", "shares": 18, "package": ["familiar object", "single consequence"]},
+    {"id": "low-1", "tier": "low", "shares": 3, "package": ["generic category", "multiple symptoms"]},
+    {"id": "low-2", "tier": "low", "shares": 1, "package": ["generic advice"]}
+  ],
+  "comments": [
+    {"signal": "Readers ask which option is safest.", "allowed_role": "content_need"}
+  ],
+  "proposal_evidence": {
+    "content_need_basis": ["approved source", "reader comments"],
+    "packaging_basis": "comparable_high_middle_low",
+    "claim_basis": "approved source",
+    "transferable_mechanism": ["familiar object or action", "single consequence", "visible proof", "next action"],
+    "surface_phrase_is_formula": false
+  }
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="De-identified canary evidence image">
+  <rect width="800" height="600" fill="#e8f1ef"/>
+  <circle cx="400" cy="245" r="125" fill="#087f83"/>
+  <rect x="210" y="410" width="380" height="18" rx="9" fill="#d76932"/>
+  <text x="400" y="255" text-anchor="middle" fill="white" font-family="sans-serif" font-size="44" font-weight="700">CANARY</text>
+  <text x="400" y="485" text-anchor="middle" fill="#172326" font-family="sans-serif" font-size="24">Synthetic editorial evidence</text>
+</svg>
