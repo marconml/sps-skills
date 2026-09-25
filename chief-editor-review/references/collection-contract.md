@@ -2,9 +2,9 @@
 
 Read this reference whenever evidence must be checked, imported, or refreshed. Codex leads the process in plain language; the user should not need to understand schemas, scripts, or APIs.
 
-## Confirm the export request
+## Let Fanpage Karma carry the scope
 
-Write a short, credential-free brief containing:
+If an export is already available, inspect it first. Populate the credential-free brief from the file wherever possible:
 
 - focal page and approved competitor page names or URLs;
 - exact start date, end date, and timezone;
@@ -14,16 +14,22 @@ Write a short, credential-free brief containing:
 - approved pillar names, definitions, and Fanpage Karma tags when available;
 - known exclusions, promotion rule, report language, and available comments/media.
 
+Do not ask the user to repeat page names, competitors, or dates that are readable from the export. Ask which profile is the focal page only when the file does not make that clear. Ask other questions only when a missing answer changes the analysis.
+
 Ask the user to choose the primary KPI after explaining a recommendation. For a Facebook objective centred on useful redistribution, recommend shares per post when the export exposes shares. If the objective or available fields point elsewhere, recommend the closest direct and comparable measure. Confirm whether Fanpage Karma reports a raw count, an interaction total, or a rate and record any denominator. Do not assume that public engagement equals reach or an engagement rate.
 
 ## Guide the Fanpage Karma export
 
-First inspect any workbook or CSV the user already supplied. Reuse it when it contains the complete post population for every approved page over the same exact dates. Do not require a new export only because the column names or workbook layout differ from a previous run.
+First inspect any workbook or CSV the user already supplied. Reuse it when it contains the complete post population for the intended pages over the same exact dates. Do not require a new export only because the column names or workbook layout differ from a previous run.
 
-When a new export is needed, guide the user through these outcomes in Fanpage Karma:
+When a new export is needed, begin with this plain-language instruction:
+
+> In Fanpage Karma, select your own page, the competitors you want to compare, and the reporting period. Apply the same period to every selected page. Then open the complete Posts or Content table, export all posts to Excel or CSV, and upload the file here.
+
+Guide the user further only when needed:
 
 1. Open the dashboard or analysis containing the focal page and all approved competitors.
-2. Set the exact shared reporting period and confirm the timezone used for publication timestamps.
+2. Select the exact shared reporting period. If the user asks for a recommendation, propose exact start and end dates rather than saying only “three months.”
 3. Open the Posts or Content view, select the requested key figures/KPIs, and show all posts rather than only top posts or a dashboard summary.
 4. Export the complete post-detail table to Excel or CSV. If the account splits pages or metrics across exports, export each necessary table and retain the page names and period in the filenames.
 5. If comments are in scope and available through an approved export, export them separately. Absence of comments does not become zero comments; it becomes a coverage limitation.
@@ -33,6 +39,16 @@ Ask the user to provide the exported files, not credentials. Never request Fanpa
 ## Inspect dynamically
 
 Open the supplied files and identify the actual sheets, headers, metric labels, formulas or notes, row grain, date range, page identities, and post population. Build a run-specific field map. Never demand fixed worksheet names or normalize the export into a permanent universal schema.
+
+Derive and show a scope read-back before requesting business clarification:
+
+- every profile found and its exported post count;
+- the earliest and latest valid post timestamp for each profile;
+- whether all profiles cover the same period;
+- the timezone when present, or `unknown` when the export does not state it;
+- summary/average rows, empty profiles, or other non-post records that will be excluded.
+
+End with a direct question: “I found these pages covering these dates. Is this the intended comparison?” If the user confirms, keep the export as the source of truth. If not, explain exactly which Fanpage Karma selection to change and request a replacement export. Do not conduct a separate scope interview unless the export is absent or ambiguous.
 
 For every eligible publication, seek the strongest available equivalents of:
 
@@ -95,7 +111,7 @@ Before analysis, present a compact table with one row per page and show:
 - comment availability for the focal page;
 - exclusions, duplicates/reposts, and material limitations.
 
-Reconcile the export's earliest/latest timestamps and row counts against the requested scope. Flag filters, truncated top-post exports, duplicated rows, summary-only files, mismatched periods, missing competitors, and unequal KPI definitions.
+Reconcile the export's earliest and latest timestamps and row counts across the selected profiles. Flag filters, truncated top-post exports, duplicated rows, summary-only files, mismatched periods, missing competitors, and unequal KPI definitions.
 
 Return one status:
 

@@ -38,6 +38,12 @@ def run_canary(output_dir: Path) -> None:
     assert "tags" in portable_guidance and "pillar definition" in portable_guidance
     assert "every image" in portable_guidance and "selected frames" in portable_guidance
     assert "source-exports" in portable_guidance and "working" in portable_guidance
+    assert "select your own page" in portable_guidance
+    assert "competitors you want to compare" in portable_guidance
+    assert "reporting period" in portable_guidance
+    assert "do not ask the user to repeat" in portable_guidance
+    assert "earliest and latest" in portable_guidance
+    assert "is this the intended comparison" in portable_guidance
     output_dir.mkdir(parents=True, exist_ok=True)
     hook_case = json.loads(
         (FIXTURES / "hook-evidence-case.json").read_text(encoding="utf-8")

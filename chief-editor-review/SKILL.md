@@ -13,11 +13,13 @@ Guide non-technical colleagues in plain language. Ask for business information, 
 
 ## Confirm the brief
 
-Ask only for missing information:
+If the user already supplied a Fanpage Karma export, inspect it before asking scope questions. Treat the exported profile names and observed post dates as the provisional page, competitor, and period selection. Do not ask the user to repeat pages, competitors, or dates that are readable from the export.
 
-1. Platform, focal page, and approved competitors.
+Ask only for business information that is still missing:
+
+1. Which exported profile is the focal page when that is not obvious.
 2. Audience, performance objective, existing content pillars, pillar definitions, and usable Fanpage Karma tags.
-3. Available Fanpage Karma exports, post metrics, media, comments, and previous reports.
+3. Available media, comments, previous reports, and any additional exports.
 4. Editorial rules and exclusions to preserve.
 5. Any approved current-period or next-period content plan, fixed product priorities, and known commissioning commitments.
 6. Whether prior-year same-period post data is available for an optional next-month editorial outlook. Use only the pages and months supplied; missing historical comparators do not block the review.
@@ -25,16 +27,17 @@ Ask only for missing information:
 
 After learning the objective and inspecting the available metric names, ask the user to choose the primary KPI. Recommend one and explain why. For a Facebook sharing objective, recommend shares per post when shares are available; otherwise recommend the closest comparable metric that directly reflects the stated objective. Never silently substitute a KPI or assume that a similarly named rate uses the same denominator across pages.
 
+If the user wants a period recommendation before exporting, propose the latest completed calendar month as the decision month and the two preceding completed months as context, and state the exact start and end dates. Otherwise accept the period they select in Fanpage Karma and verify it from the export.
+
 Unless the user specifies otherwise, propose:
 
-- the latest completed calendar month as the decision month and the two preceding completed months as context;
 - Hong Kong time;
 - shares per post as the recommended Facebook KPI when the objective is useful redistribution and the export includes shares;
 - one bilingual English / Traditional Chinese report, defaulting to English with a top-right `中 / ENG` switch;
 - source-language hooks and editorial examples in their original language;
 - a new standalone HTML report with embedded images.
 
-State the exact dates. Use approved Fanpage Karma tags when they reliably represent the newsroom taxonomy. Otherwise use the user's pillar definitions to classify posts. If neither exists, inspect the approved exports, propose a working taxonomy with definitions and examples, and obtain confirmation before drawing pillar conclusions. Present a short plan and wait for approval.
+Read back the exact exported dates and profiles before analysis. Use approved Fanpage Karma tags when they reliably represent the newsroom taxonomy. Otherwise use the user's pillar definitions to classify posts. If neither exists, inspect the approved exports, propose a working taxonomy with definitions and examples, and obtain confirmation before drawing pillar conclusions. Present a short plan and wait for approval.
 
 Treat approved content-pillar names as business taxonomy identifiers. Record their exact spelling and language in the brief, then render those labels verbatim in every report language; translate the surrounding analysis, not the taxonomy label.
 
@@ -46,11 +49,15 @@ Read [the collection contract](references/collection-contract.md).
 
 Reuse an existing Fanpage Karma export when it covers the confirmed pages, dates, post population, fields, and selected KPI. Otherwise guide the user in plain language to export complete post details for every approved page over the same exact period. Do not ask the user to expose credentials or grant competitor access.
 
+Give this simple scope instruction before technical field guidance:
+
+> In Fanpage Karma, select your own page, the competitors you want to compare, and the reporting period. Apply the same period to every selected page, open the complete Posts or Content table, export all posts to Excel or CSV, and upload the file here.
+
 Inspect the workbook or CSV after export rather than assuming fixed column names, worksheets, formats, or metric formulas. Ask only for a corrected or additional export when a decision-critical field or population is missing.
 
 ## Run the coverage checkpoint
 
-Before analysis, show the user a short **Coverage checkpoint** with the exact dates and timezone, each page's exported post count, available KPI fields, date/link/caption/format/tag coverage, media availability, promotion-status coverage, and comment availability. Mark the package `ready`, `partial`, or `blocked`; explain how every gap limits the report and obtain confirmation before continuing with a partial package.
+Before analysis, show the user a short **Coverage checkpoint** with the profiles found, each profile's earliest and latest post timestamp, timezone status, exported post count, available KPI fields, date/link/caption/format/tag coverage, media availability, promotion-status coverage, and comment availability. End the scope read-back with a plain confirmation such as: “I found these pages covering these dates. Is this the intended comparison?” Ask for a corrected export only when the user says the scope is wrong or the evidence is decision-critically incomplete. Mark the package `ready`, `partial`, or `blocked`; explain how every gap limits the report and obtain confirmation before continuing with a partial package.
 
 Use the same dates and timezone across pages. Preserve the supplied Fanpage Karma exports unchanged. Preserve missing values as missing. Record post counts by page before exclusions, identified ad/paid-partnership counts, organic analyzed counts, metric coverage, unavailable media, unknown promotion status, and export limitations. Do not infer advertising from strong performance or commercial wording.
 
