@@ -51,13 +51,15 @@ Reuse an existing Fanpage Karma export when it covers the confirmed pages, dates
 
 Give this simple scope instruction before technical field guidance:
 
-> In Fanpage Karma, select your own page, the competitors you want to compare, and the reporting period. Apply the same period to every selected page, open the complete Posts or Content table, export all posts to Excel or CSV, and upload the file here.
+> In Fanpage Karma, select your own page by using `+ Profile`, then add all the competitors you want to compare to the same dashboard. Open the **Content** tab, select the reporting period, change the post table to **Top 5000**, and make **one combined export** containing all selected pages. Upload that single Excel or CSV file here.
+
+Do not tell the user to export each page separately. Before they begin, give the filled example from the collection contract so they can see every Fanpage Karma selection and every business answer Codex will need. Accept `Unknown`, `None`, or `Please propose` for information the user does not have.
 
 Inspect the workbook or CSV after export rather than assuming fixed column names, worksheets, formats, or metric formulas. Ask only for a corrected or additional export when a decision-critical field or population is missing.
 
 ## Run the coverage checkpoint
 
-Before analysis, show the user a short **Coverage checkpoint** with the profiles found, each profile's earliest and latest post timestamp, timezone status, exported post count, available KPI fields, date/link/caption/format/tag coverage, media availability, promotion-status coverage, and comment availability. End the scope read-back with a plain confirmation such as: “I found these pages covering these dates. Is this the intended comparison?” Ask for a corrected export only when the user says the scope is wrong or the evidence is decision-critically incomplete. Mark the package `ready`, `partial`, or `blocked`; explain how every gap limits the report and obtain confirmation before continuing with a partial package.
+Before analysis, show the user a short **Coverage checkpoint** with the profiles found, each profile's earliest and latest post timestamp, timezone status, exported post count, available KPI fields, date/link/caption/format/tag coverage, media availability, promotion-status coverage, and comment availability. Confirm that all intended profiles appear in the same export. If the valid post population is exactly 5,000, warn that the Top 5000 limit may have truncated the selected history and ask the user to shorten the period or accept the limitation. End the scope read-back with a plain confirmation such as: “I found these pages covering these dates. Is this the intended comparison?” Ask for a corrected export only when the user says the scope is wrong or the evidence is decision-critically incomplete. Mark the package `ready`, `partial`, or `blocked`; explain how every gap limits the report and obtain confirmation before continuing with a partial package.
 
 Use the same dates and timezone across pages. Preserve the supplied Fanpage Karma exports unchanged. Preserve missing values as missing. Record post counts by page before exclusions, identified ad/paid-partnership counts, organic analyzed counts, metric coverage, unavailable media, unknown promotion status, and export limitations. Do not infer advertising from strong performance or commercial wording.
 

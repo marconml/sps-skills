@@ -24,17 +24,57 @@ First inspect any workbook or CSV the user already supplied. Reuse it when it co
 
 When a new export is needed, begin with this plain-language instruction:
 
-> In Fanpage Karma, select your own page, the competitors you want to compare, and the reporting period. Apply the same period to every selected page. Then open the complete Posts or Content table, export all posts to Excel or CSV, and upload the file here.
+> In Fanpage Karma, select your own page by using `+ Profile`, then add all the competitors you want to compare to the same dashboard. Open the **Content** tab, select the reporting period, change the post table to **Top 5000**, and make **one combined export** containing all selected pages. Upload that single Excel or CSV file here.
 
 Guide the user further only when needed:
 
-1. Open the dashboard or analysis containing the focal page and all approved competitors.
-2. Select the exact shared reporting period. If the user asks for a recommendation, propose exact start and end dates rather than saying only “three months.”
-3. Open the Posts or Content view, select the requested key figures/KPIs, and show all posts rather than only top posts or a dashboard summary.
-4. Export the complete post-detail table to Excel or CSV. If the account splits pages or metrics across exports, export each necessary table and retain the page names and period in the filenames.
-5. If comments are in scope and available through an approved export, export them separately. Absence of comments does not become zero comments; it becomes a coverage limitation.
+1. In the profile list, click `+ Profile` and add the focal page plus every competitor to compare. Keep all intended profiles in the same dashboard selection.
+2. Open the **Content** tab for individual post data; do not export a Benchmarking summary or one page at a time.
+3. Select the exact shared reporting period. If the user asks for a recommendation, propose exact start and end dates rather than saying only “three months.”
+4. Change the result/table size to **Top 5000 Posts** and use `No filter` unless the user deliberately approved a narrower content filter. This maximizes post-history coverage but does not guarantee completeness when more than 5,000 posts fall inside the period.
+5. Select the available key figures/KPIs needed for the brief, then use the Content export control to download one combined Excel or CSV containing every selected profile.
+6. If comment text is unavailable in the combined post export, record that limitation and continue only at the approved coverage level. Do not ask the user to split or repeat the post export by profile.
 
 Ask the user to provide the exported files, not credentials. Never request Fanpage Karma login details, Facebook Page tokens, or competitor credentials in chat.
+
+## Filled example for a non-technical user
+
+Show an example like this before asking the user to export. Replace the example names and dates only when the user has already supplied real choices.
+
+```text
+Fanpage Karma selections
+Platform: Facebook
+Profiles in the same dashboard:
+- Our page: Example Health
+- Competitor 1: Competitor A
+- Competitor 2: Competitor B
+Content tab: Top 5000 Posts Overview
+Filter: No filter
+Period: 1 June 2026 to 31 August 2026
+Timezone: Hong Kong time, if Fanpage Karma asks
+Post columns: combined interactions, shares/reposts, likes, comments,
+impressions/views, reach, post date, profile, message, post ID, post link,
+and image/media link where available
+Export: One combined Excel or CSV for all three profiles
+
+Information to tell Codex after uploading
+Our page: Example Health
+Audience: Hong Kong adults interested in practical health information
+Objective: Increase useful sharing of service-led health content
+Primary KPI: Please recommend from the exported fields
+Existing pillars or tags: Three-high management; elder care; prevention
+Pillar definitions: Three-high management covers blood pressure, glucose,
+and blood lipids; elder care covers practical support for older adults
+Editorial rules/exclusions: Do not recommend stopping required service posts
+Available media and comment text: Only what is included in the export
+Previous reports: None
+Current or next-period content plan: None
+Prior-year data for an outlook: None
+Report language: English and Traditional Chinese
+Reference report: None
+```
+
+Tell the user that `Unknown`, `None`, and `Please propose` are valid answers. Do not make them invent pillars, KPI definitions, plans, or rules they do not have.
 
 ## Inspect dynamically
 
@@ -112,6 +152,8 @@ Before analysis, present a compact table with one row per page and show:
 - exclusions, duplicates/reposts, and material limitations.
 
 Reconcile the export's earliest and latest timestamps and row counts across the selected profiles. Flag filters, truncated top-post exports, duplicated rows, summary-only files, mismatched periods, missing competitors, and unequal KPI definitions.
+
+Count valid post records after removing summary/average rows. If the combined export contains exactly 5,000 valid posts, treat possible truncation as a material coverage warning. Recommend a shorter date range and a new one-export run when complete history is required; otherwise record the user's acceptance of the Top 5000 limit.
 
 Return one status:
 

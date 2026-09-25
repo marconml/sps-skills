@@ -44,6 +44,12 @@ def run_canary(output_dir: Path) -> None:
     assert "do not ask the user to repeat" in portable_guidance
     assert "earliest and latest" in portable_guidance
     assert "is this the intended comparison" in portable_guidance
+    assert "+ profile" in portable_guidance
+    assert "content tab" in portable_guidance
+    assert "top 5000" in portable_guidance
+    assert "one combined export" in portable_guidance
+    assert "filled example" in portable_guidance
+    assert "exactly 5,000" in portable_guidance
     output_dir.mkdir(parents=True, exist_ok=True)
     hook_case = json.loads(
         (FIXTURES / "hook-evidence-case.json").read_text(encoding="utf-8")
