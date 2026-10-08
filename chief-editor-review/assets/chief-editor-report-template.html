@@ -38,12 +38,13 @@
       <div class="chart">{{MONTHLY_CHART_SVG}}<p class="chart-note">{{CHART_NOTE}}</p></div>
       <div class="diagnosis"><article class="card"><span class="badge">Current month</span><h3>{{FOCAL_MOVEMENT_TITLE}}</h3><p>{{FOCAL_MOVEMENT}}</p></article><article class="card"><span class="badge">Market context</span><h3>{{MARKET_MOVEMENT_TITLE}}</h3><p>{{MARKET_MOVEMENT}}</p></article></div>
       <details class="standard-support" data-module="page-scorecard"><summary>Open the Page-level scorecard</summary><div class="standard-support-body">{{PAGE_LEVEL_SCORECARD_HTML}}</div></details>
-      <details class="standard-support" data-module="core-pillar-comparison" open><summary>Core-pillar comparison</summary><div class="standard-support-body">{{CORE_PILLAR_COMPARISON_HTML}}</div></details>
+      <details class="standard-support" data-module="core-pillar-comparison" open><summary>Core pillars · internal programme comparison</summary><div class="standard-support-body">{{CORE_PILLAR_COMPARISON_HTML}}</div></details>
+      <details class="standard-support" data-module="general-pillar-comparison"><summary>General pillars · cross-page subject comparison</summary><div class="standard-support-body">{{GENERAL_PILLAR_COMPARISON_HTML}}</div></details>
     </section>
 
     <section id="drivers" class="report-section" data-report-part="diagnosis">
       <div class="chapter-head"><div class="section-kicker"><span class="section-no">2</span>Editorial Diagnosis</div><h2>{{DRIVERS_HEADLINE}}</h2><p class="section-lead">{{DRIVERS_TAKEAWAY}}</p></div>
-      <nav class="part-map" aria-label="Part 2 reading map"><a href="#part-2a"><b>2A · Focal page</b><span>What carried and dragged the month</span></a><a href="#part-2b"><b>2B · Competitors</b><span>What management should notice</span></a><a href="#part-2c"><b>2C · Reader signal</b><span>What useful non-PM comments add</span></a></nav>
+      <nav class="part-map" aria-label="Part 2 reading map"><a href="#part-2a"><b>2A · Focal page</b><span>What carried and dragged the month</span></a><a href="#part-2b"><b>2B · Competitors</b><span>What management should notice</span></a>{{OPTIONAL_READER_NAV_HTML}}</nav>
       <div id="part-2a" class="subpart-head"><b>2A · Focal page</b><span>What carried and dragged the month</span></div>
       <article class="card"><span class="badge">Month overview</span><h3>{{FOCAL_OVERVIEW_TITLE}}</h3><p>{{FOCAL_OVERVIEW}}</p><div class="proof">{{FOCAL_OVERVIEW_EVIDENCE}}</div></article>
       <div class="evidence-grid">
@@ -53,8 +54,7 @@
       <div id="part-2b" class="subpart-head"><b>2B · Competitors</b><span>What management should notice</span></div>
       <article class="card"><span class="badge">Market overview</span><h3>{{COMPETITOR_OVERVIEW_TITLE}}</h3><p>{{COMPETITOR_OVERVIEW}}</p><div class="proof">{{COMPETITOR_OVERVIEW_EVIDENCE}}</div></article>
       <article class="card"><h3>{{COMPETITOR_DIAGNOSIS_TITLE}}</h3><p>{{COMPETITOR_DIAGNOSIS}}</p><div class="proof">{{COMPETITOR_EVIDENCE_ANCHOR}}</div></article>
-      <div id="part-2c" class="subpart-head"><b>2C · Reader signal</b><span>What useful non-PM comments add</span></div>
-      <article class="card"><h3>{{READER_SIGNAL_TITLE}}</h3><p>{{READER_SIGNAL}}</p><div class="proof">{{READER_SIGNAL_EVIDENCE}}</div></article>
+      {{OPTIONAL_READER_SECTION_HTML}}
     </section>
 
     {{OPTIONAL_OUTLOOK_SECTION_HTML}}

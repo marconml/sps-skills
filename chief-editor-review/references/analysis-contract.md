@@ -22,7 +22,7 @@ Trace movement through the full post set: pillar and topic mix, headline constru
 
 ## Material comparison gaps
 
-Use the Page-level scorecard and Core-pillar comparison as a diagnostic index. Select the gaps that would most change commissioning or allocation, then carry each one into the editorial diagnosis. Decompose a gap with the strongest available evidence from:
+Use the page scorecard, internal Core-pillar movement and cross-page general-pillar comparison as separate diagnostic indexes. Select the gaps that would most change commissioning or allocation, then carry each one into the editorial diagnosis. Decompose a gap with the strongest available evidence from:
 
 - content and native-territory mix;
 - format mix and like-for-like format cohorts;
@@ -55,12 +55,24 @@ Compare those choices across high, middle, and low examples. A useful diagnosis 
 
 When the brief requires actual Reel or short-video diagnosis, use a bounded, repeatable frame sample rather than claiming frame-by-frame review. Build two evidence layers before selecting cases:
 
-1. Review every eligible video's caption and cover, selected frames from the first three seconds, selected evenly spaced or scene-change frames spanning the timeline, the closing payoff, and audio/script where available. Record the frame timestamps or selection rule.
+1. Watch every eligible video using playback and selected frames from the first three seconds, selected evenly spaced or scene-change frames spanning the timeline, the closing payoff, and audio/script where available. Record the frame timestamps or selection rule.
 2. Deep-review a page-balanced, high/middle/low sample through its complete script and visual sequence, preserving pillar or native-territory coverage where the sample permits.
 
-Compare what the opening promises with what the sequence proves: spoken and on-screen hook, headline, script logic, word choice, information order, shot selection, visual evidence, presenter function, pacing, transitions, duration, and payoff. Explain how the Reel moves from one editorial beat to the next and where attention, clarity, or proof strengthens or weakens. Test surface features against counterexamples. A short duration, fast cuts, presenter, scenic footage, question hook, or static card becomes a mechanism only when it separates stronger and weaker comparable cohorts. Record silent, unavailable, or low-confidence transcript coverage; use speech recognition for structural understanding rather than verbatim quotation.
+Keep caption and static-cover information in identity/taxonomy/exclusion fields. Video performance judgments use the played sequence alone: spoken and on-screen hook, in-video headline, script logic, word choice, information order, shot selection, visual evidence, presenter function, pacing, transitions, duration, and payoff. Explain how the Reel moves from one editorial beat to the next and where attention, clarity, or proof strengthens or weakens. Test surface features against counterexamples. A short duration, fast cuts, presenter, scenic footage, question hook, or static card becomes a mechanism only when it separates stronger and weaker comparable cohorts. Record silent, unavailable, or low-confidence transcript coverage; use speech recognition for structural understanding rather than verbatim quotation.
 
-A deep-review case must be specific enough that an editor can identify what to retain, recut, rewrite, or resequence without reducing the diagnosis to performance numbers or generic labels such as “strong visuals” and “clear hook.”
+A deep-review case must be specific enough that an editor can identify what available source video to select and why; original production or recutting is a response only when explicitly in the brief. The analysis shows what to retain or improve without reducing the diagnosis to performance numbers or generic labels such as “strong visuals” and “clear hook.”
+
+## Case analysis success contract
+
+Each case delivers exactly three visibly separate insights. A strong case explains (1) the specific choice that worked, with actual-media evidence, (2) how the sequence sustained or completed the viewer's need, and (3) what the editor should repeat or look for in another source. A weak case explains (1) a concrete weakness with media evidence, (2) how it makes viewing, understanding or deciding harder, and (3) a targeted editorial response. General merits may inform the diagnosis but do not occupy a weak case's three diagnostic slots.
+
+Low KPI identifies candidates, not automatic creative failure. Inspect the media before assigning the strong/weak role. When no concrete weakness can be established, replace the weak-case candidate or retain it only as a low-performance observation outside that role. Keep causal certainty in the finding ledger and consolidate general limitations in Methodology; explain the plausible viewer consequence without presenting it as a proven cause of KPI.
+
+Each point links a short, specific media anchor to a judgment and its consequence. Across the three points, use at least two distinct moments/cards. Description supplies evidence rather than retelling the whole sequence. For a Reel, those anchors are played footage, in-video text/speech, timing, progression and payoff; caption and static cover are identity/exclusion inputs only. For repost-led video, the response helps the editor choose an existing source; match production advice to an approved original-production brief.
+
+Removing a workflow note triggers a fresh reading of the whole case. Rewrite the analysis if deletion leaves a synopsis, KPI or generic advice. A diagnosis-only case still delivers substantive analysis; the third point can specify what the editor should retain, select differently or set aside without inventing an unsupported test.
+
+Comparative case selection uses matching media formats. Photo/carousel and video/Reel have different reading and attention mechanics, so their KPI differences cannot support a packaging judgement against each other. Split a mixed pair into independent cases or find a same-format counterpart. Apply this boundary to same-event and competitor cases as well as internal cases.
 
 ## Recommendation gate
 
@@ -83,6 +95,8 @@ Build every Suggested Hook or Visual Test from three distinct evidence roles:
 2. **Packaging mechanism**: comparable high, middle, and low posts—or a reliable same-topic cross-Page match—show which headline order, promise, visual thesis, proof treatment, or format is worth testing.
 3. **Claim support**: the approved source determines every factual claim, number, authority, and boundary condition used in the proposed package.
 
+The exact-cover workflow below applies to photo/carousel cases. Reel responses use source-selection criteria by default; a specifically approved production/editing brief may justify changes to in-video wording or sequence, grounded in playback rather than caption/static-cover diagnosis.
+
 Apply the focal Page's production grammar before drafting the test. Transcribe the original on-image wording, hierarchy, line breaks, canvas/format, visual subject, logo reserve, badges, and other fixed template elements. Then inspect comparable focal-page high, middle, and low covers from the same pillar and format to establish the familiar headline rhythm, display load, proof treatment, and visual hierarchy. Use competitor work as secondary mechanism evidence, not as the default house style.
 
 Default to a minimum-change rewrite. Preserve the original story angle, source language, house voice, recognizable nouns, approximate visible character load, number of text levels, and line structure unless the comparable focal-page evidence supports a deliberate change. Every changed word or visual element should repair an evidenced weakness. Re-check the proposed wording against the full approved source so the rewrite does not invent an instruction, sequence, fact, or reader promise.
@@ -99,22 +113,24 @@ When extracting a competitor formula, define the relevant content-and-format coh
 
 Actively search approved pages for the same named event, person, study, source article, product announcement, or materially identical topic. Establish the match from shared entities, dates, and incident/source details before revealing performance. Broad themes or adjacent controversies are not matches.
 
-For reliable cases, compare headline, angle, visual thesis, format, CTA, primary KPI, and supporting metrics. Also compare publication date against the event, opening, announcement, or source release when that timing is known, plus the lag between Pages. State whether the posts were close enough in the news cycle to support a useful execution comparison. First-mover novelty, audience saturation, and later information availability remain alternative explanations when dates differ materially. Separate the observed performance gap from the inferred mechanism. Skip uncertain pairs.
+For reliable cases, compare angle, played in-video words/sequence for Reels or headline/card package for stills, visual choices, format, applicable CTA, primary KPI and supporting metrics. Also compare publication date against the event, opening, announcement, or source release when that timing is known, plus the lag between Pages. State whether the posts were close enough in the news cycle to support a useful execution comparison. First-mover novelty, audience saturation, and later information availability remain alternative explanations when dates differ materially. Separate the observed performance gap from the inferred mechanism. Skip uncertain pairs.
 
 ## Competitor learning and discovery
 
-Use two complementary taxonomies:
+Keep two independent classification fields:
 
-1. **Focal taxonomy:** map genuinely comparable competitor posts into the focal Page's approved pillars for like-for-like comparison.
-2. **Page-native taxonomy:** independently group each competitor's recurring output into plain-language content territories, including subjects the focal taxonomy does not cover.
+1. **Core pillar / programme:** the page-owned named editorial product, identified from approved programme labels or explicit programme membership. Compare the focal page's programme against its own prior months and formats. A competitor post keeps its actual native identity; focal programme names do not become competitor category labels.
+2. **General pillar / subject:** one of at most six report-level subjects derived from actual captions and media on every page. Group related subjects by reader purpose; keep narrower subtopics and geography as separate working fields. Use this field for cross-page cohorts. Record definitions, geography, format and counts; if tags overlap, make that overlap visible and keep their totals separate.
+
+For example, a GOtrip post can be Core `達人帶路` and general `飲食`; an OpenHolidays food post is general `飲食`, with no GOtrip Core identity. Core membership does not automatically determine general subject. Use competitor-native territories as an additional discovery view.
 
 Treat `Other` as an intake queue. Review its posts for coherent recurring territories and leave only an explicitly unresolved residual after that pass. Show how each territory was defined so the report does not hide a competitor strength inside a catch-all label.
 
-Compare existing pillars without assuming a universal winning formula. For native territories, show contributing pages, organic post count, primary-KPI distribution, period, and counterexamples. Treat a territory as an Opportunity / Test only when sustained investment and a performance signal coexist. Pair every material opportunity with a linked successful example and explain the transferable mechanism plus one focal-brand adaptation.
+Compare Core programmes internally and general subjects across pages as distinct analyses. For native territories, show contributing pages, organic post count, primary-KPI distribution, period, and counterexamples. Treat a territory as an Opportunity / Test only when sustained investment and a performance signal coexist. Pair every material opportunity with a linked successful example and explain the transferable mechanism plus one focal-brand adaptation.
 
 ## Performance-blind review
 
-Review selected captions and actual media in an isolated packet with performance, ranking, and data-led conclusions hidden. Use it to find possible clarity, credibility, visual, and information-order issues. Every resulting suggestion remains a Hypothesis / Test until the performance evidence supports it.
+Review actual media in an isolated packet with performance, ranking and data-led conclusions hidden. Still-image review includes its caption/card package; Reel review uses playback alone, with caption/static cover retained only as identification metadata. Use it to find possible clarity, credibility, visual, and information-order issues. Every resulting suggestion remains a Hypothesis / Test until the performance evidence supports it.
 
 ## Comment insight
 
@@ -149,7 +165,7 @@ Apply a recurrence gate before inspecting performance. A candidate enters the Ou
 
 Verify the current-year date or condition with an approved authoritative source. A following-month historical post may inform earlier commissioning only when the same recurring trigger moves earlier this year or needs production lead-time. One-off people, incidents, generic evergreen topics, and opportunistic news belong in Diagnosis or an editorial backlog, not in this Outlook.
 
-For each qualified opportunity, inspect the full relevant within-page high, middle, and low historical cohort before selecting examples. Distinguish the seasonal reason to commission from the content, headline, visual, format, and timing mechanism worth testing. A historically strong unrelated post may inform the general Diagnosis, but it cannot qualify or evidence a seasonal topic. State what to commission, what needs preparation, and how the next review will judge the test.
+For each qualified opportunity, inspect the full relevant within-page high, middle, and low historical cohort before selecting examples. Distinguish the seasonal reason to commission from the content, headline, visual, format, and timing mechanism worth testing. A historically strong unrelated post may inform the general Diagnosis, but it cannot qualify or evidence a seasonal topic. State the concrete commission and preparation. When proposing a test, name the alternatives and the editorial decision its result will settle.
 
 Organize the output around the qualified recurring triggers in the next commissioning window. It is valid to show only one or two opportunities—or omit the Outlook—when the historical period contains few genuine seasonal signals. Historical performance is an Observation about the supplied period; the proposed future package remains an Inference or Test. Keep the final Actions chapter as the single place for assignable status calls.
 
