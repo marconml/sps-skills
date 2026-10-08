@@ -30,7 +30,7 @@ Guide the user further only when needed:
 
 1. In the profile list, click `+ Profile` and add the focal page plus every competitor to compare. Keep all intended profiles in the same dashboard selection.
 2. Open the **Content** tab for individual post data; do not export a Benchmarking summary or one page at a time.
-3. Select the exact shared reporting period. If the user asks for a recommendation, propose exact start and end dates rather than saying only “three months.”
+3. Default to the 12 completed calendar months ending with the latest completed month and state exact dates. The report still diagnoses the latest month with a compact prior-two-month comparison; the remaining history supports next-month topic discovery. Reuse shorter supplied coverage with an explicit historical limit.
 4. Change the result/table size to **Top 5000 Posts** and use `No filter` unless the user deliberately approved a narrower content filter. This maximizes post-history coverage but does not guarantee completeness when more than 5,000 posts fall inside the period.
 5. Select the available key figures/KPIs needed for the brief, then use the Content export control to download one combined Excel or CSV containing every selected profile.
 6. If comment text is unavailable in the combined post export, record that limitation and continue only at the approved coverage level. Do not ask the user to split or repeat the post export by profile.
@@ -50,7 +50,7 @@ Profiles in the same dashboard:
 - Competitor 2: Competitor B
 Content tab: Top 5000 Posts Overview
 Filter: No filter
-Period: 1 June 2026 to 31 August 2026
+Period: 1 September 2025 to 31 August 2026
 Timezone: Hong Kong time, if Fanpage Karma asks
 Post columns: combined interactions, shares/reposts, likes, comments,
 impressions/views, reach, post date, profile, message, post ID, post link,
@@ -69,7 +69,7 @@ Editorial rules/exclusions: Do not recommend stopping required service posts
 Available media and comment text: Only what is included in the export
 Previous reports: None
 Current or next-period content plan: None
-Prior-year data for an outlook: None
+Historical coverage: 12 completed months; please check next-month recurring topics
 Report language: English and Traditional Chinese
 Reference report: None
 ```
@@ -153,7 +153,7 @@ Before analysis, present a compact table with one row per page and show:
 
 Reconcile the export's earliest and latest timestamps and row counts across the selected profiles. Flag filters, truncated top-post exports, duplicated rows, summary-only files, mismatched periods, missing competitors, and unequal KPI definitions.
 
-Count valid post records after removing summary/average rows. If the combined export contains exactly 5,000 valid posts, treat possible truncation as a material coverage warning. Recommend a shorter date range and a new one-export run when complete history is required; otherwise record the user's acceptance of the Top 5000 limit.
+Count valid post records after removing summary/average rows. If the combined export contains exactly 5,000 valid posts, treat possible truncation as a material coverage warning. For long-history reviews, preserve the intended 12-month window: split it into non-overlapping chronological batches, each containing all approved profiles, and reconcile IDs/counts after combining. Prefer monthly batches when coverage is uncertain. This is a cap-driven exception to the one-export default, not a request for separate page exports. A shorter scope requires the user’s choice; a truncated top-post sample cannot establish historical topic medians.
 
 Return one status:
 

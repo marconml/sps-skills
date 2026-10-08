@@ -155,7 +155,9 @@ Compare median scores by hour, weekday, and daily posting volume. State the KPI 
 
 ## Optional next-month editorial outlook
 
-Build this layer only when the user supplies relevant prior-year posts, an approved forward content plan, or both and wants forward planning. Keep the supplied historical pages and months as the coverage boundary; missing historical competitors do not trigger recollection.
+When at least 12 months of usable history are supplied, evaluate this layer by default for the next planning month. It can also use narrower relevant prior-year data or an approved forward plan. Current-month diagnosis remains separate from historical topic planning. Keep the supplied historical pages and months as the coverage boundary; missing historical competitors do not trigger recollection.
+
+Start with the equivalent planning month in prior years and a bounded lead-in where the topic required preparation. Use the rest of the supplied history to check recurrence, continuing investment and lower-performing counterexamples. Historical timestamps locate candidates; the reason to repeat must be a predictable trigger rather than merely publication in that month.
 
 Apply a recurrence gate before inspecting performance. A candidate enters the Outlook only when all three conditions hold:
 
@@ -164,6 +166,8 @@ Apply a recurrence gate before inspecting performance. A candidate enters the Ou
 3. the newsroom can commission, prepare, update, or publish something for that trigger now.
 
 Verify the current-year date or condition with an approved authoritative source. A following-month historical post may inform earlier commissioning only when the same recurring trigger moves earlier this year or needs production lead-time. One-off people, incidents, generic evergreen topics, and opportunistic news belong in Diagnosis or an editorial backlog, not in this Outlook.
+
+After recurrence qualification, group equivalent reader questions/topics within each page and format, resolve repeats and ads, and calculate eligible count, KPI median, distribution and breakout concentration. Compare against that page’s same-format baseline from the same historical month; use parent-pillar context when it actually clarifies the opportunity. Separate sustained topic response from a single winner. A thin cohort can support an illustrative historical signal, not a proven winning formula. Use comparable competitors only as additional context.
 
 For each qualified opportunity, inspect the full relevant within-page high, middle, and low historical cohort before selecting examples. Distinguish the seasonal reason to commission from the content, headline, visual, format, and timing mechanism worth testing. A historically strong unrelated post may inform the general Diagnosis, but it cannot qualify or evidence a seasonal topic. State the concrete commission and preparation. When proposing a test, name the alternatives and the editorial decision its result will settle.
 
