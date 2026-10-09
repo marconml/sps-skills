@@ -4,7 +4,7 @@ Read this reference after the evidence package passes its gate.
 
 ## Objective and comparison basis
 
-Use the user's confirmed primary KPI. Before confirmation, inspect the exported metric labels and definitions, connect the recommendation to the stated objective, explain the tradeoff in plain language, and ask the user to choose. For a Facebook sharing objective, recommend raw shares per post when available because it directly represents redistribution; do not recommend it automatically for a different objective or when pages expose non-comparable definitions. When shares are primary, compare reactions, comments, and shares separately and combined only as supporting context. For any KPI, show post counts and medians, retain the original metric label and denominator, and show relevant raw component counts beside rates. Totals indicate scale and output contribution; medians describe the typical post. Average is secondary because a few breakout posts can dominate it.
+Use total interactions per post as the default primary KPI, unless the user explicitly selects another metric. Inspect the exported field and record its exact definition/components and any cross-platform inclusion; use per-post medians for typical performance and monthly totals for scale. Apply this default without asking the user to choose a KPI again. If the required total is absent or definitions are not comparable across pages, explain the gap and ask only for the evidence or decision needed to resolve it; do not silently substitute reach or an engagement rate. For any KPI, show eligible counts and medians, retain the original metric label and denominator, and use raw components as supporting context. Average is secondary because a few breakout posts can dominate it.
 
 For recurring three-month reviews, analyze the latest completed month as the decision month. Use the prior two months only to explain whether the movement is a continuation, reversal, or break. Do not imply a long-run trend from three points or compare post ages as though they were equal when collection timing differs materially.
 
@@ -155,7 +155,7 @@ Compare median scores by hour, weekday, and daily posting volume. State the KPI 
 
 ## Optional next-month editorial outlook
 
-When at least 12 months of usable history are supplied, evaluate this layer by default for the next planning month. It can also use narrower relevant prior-year data or an approved forward plan. Current-month diagnosis remains separate from historical topic planning. Keep the supplied historical pages and months as the coverage boundary; missing historical competitors do not trigger recollection.
+Evaluate this layer using the supplied previous-year following-two-month window for next-month topics and preparation lead-time; longer supplied history or an approved forward plan can supplement it. Current-month diagnosis remains separate from historical topic planning. Keep the supplied historical pages and months as the coverage boundary; missing historical competitors do not trigger recollection.
 
 Start with the equivalent planning month in prior years and a bounded lead-in where the topic required preparation. Use the rest of the supplied history to check recurrence, continuing investment and lower-performing counterexamples. Historical timestamps locate candidates; the reason to repeat must be a predictable trigger rather than merely publication in that month.
 
