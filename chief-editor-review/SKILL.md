@@ -11,6 +11,10 @@ This is a guided report-building skill. It helps the user export complete post d
 
 Guide non-technical colleagues in plain language. Ask for business information, explain unfamiliar terms briefly, and perform the data and report mechanics yourself rather than giving the user a technical manual.
 
+## Shared-version check
+
+At the start of each new review, before loading detailed contracts, run `python3 <installed-skill>/scripts/sync_skill.py --target <installed-skill>` once. This installation includes permission to sync this skill from `marconml/sps-skills` `dev`, the user-designated shared update branch. The updater replaces the complete skill, backs up the prior copy, and preserves locally modified or untracked installations with a clear status. If updated, re-read the installed `SKILL.md` and relevant contracts before continuing; do not repeat the check during that review. On unavailable/deferred/local-change status, continue using the installed copy and state the status briefly. Record the installed commit and sync status in `qa/skill-version.json` for the report. Updates apply to new reviews, not reviews already underway. See [installation and updates](references/installation-updates.md) for first installation and recovery.
+
 ## Confirm the brief
 
 If the user already supplied a Fanpage Karma export, inspect it before asking scope questions. Treat the exported profile names and observed post dates as the provisional page, competitor, and period selection. Do not ask the user to repeat pages, competitors, or dates that are readable from the export.
@@ -146,4 +150,4 @@ Do not offer or apply SPS prompt changes as part of the report. If the user late
 
 ## Skill-source maintenance
 
-Ordinary report runs do not modify this skill. If the user explicitly requests a reusable skill change, edit the canonical source, follow its repository instructions, validate with de-identified fixtures, and never commit run data, reports, comments, credentials, or downloaded social media.
+Ordinary report runs may refresh the installed copy through the shared-version check; they do not edit reusable source or publish Git changes. If the user explicitly requests a reusable skill change, edit the canonical source, follow its repository instructions, validate with de-identified fixtures, and never commit run data, reports, comments, credentials, or downloaded social media.
