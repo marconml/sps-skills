@@ -50,6 +50,7 @@ def run_canary(output_dir: Path) -> None:
     assert "one combined export" in portable_guidance
     assert "filled example" in portable_guidance
     assert "exactly 5,000" in portable_guidance
+    run(str(ROOT / "tests" / "check_comparison.py"))
     output_dir.mkdir(parents=True, exist_ok=True)
     hook_case = json.loads(
         (FIXTURES / "hook-evidence-case.json").read_text(encoding="utf-8")
@@ -90,8 +91,8 @@ def run_canary(output_dir: Path) -> None:
         "COMMENTS": "9",
         "POST_DATE": "12 Aug 2026",
         "FORMAT": "Image",
-        "MONTHLY_CHART_SVG": '<svg viewBox="0 0 600 160" role="img" aria-label="Canary monthly median shares"><polyline points="30,120 300,90 570,55" fill="none" stroke="#087f83" stroke-width="5"/></svg>',
-        "CORE_PILLAR_COMPARISON_HTML": '<table><thead><tr><th>Core pillar</th><th>August posts</th><th>August median shares</th><th>June–July median shares</th><th>Movement</th><th>Strongest comparator</th><th>Position</th></tr></thead><tbody><tr><td data-label="Core pillar">三高管理</td><td data-label="August posts">8</td><td data-label="August median shares"><strong>42</strong></td><td data-label="June–July median shares"><strong>35</strong><br>16 posts</td><td data-label="Movement" class="positive">↑ +20.0%</td><td data-label="Strongest comparator">Example Comparator<br><strong>50</strong><br>10 posts</td><td data-label="Position" class="negative">Behind by 8</td></tr></tbody></table>',
+        "MONTHLY_COMPARISON_HTML": '<svg viewBox="0 0 600 160" role="img" aria-label="Canary monthly median shares"><polyline points="30,120 300,90 570,55" fill="none" stroke="#087f83" stroke-width="5"/></svg>',
+        "CORE_PILLAR_COMPARISON_HTML": '<table><tr><th>Core pillar</th><th>August median / count</th><th>June–July pooled median / count</th><th>Movement</th></tr><tr><td data-label="Core pillar">三高管理</td><td data-label="August median / count"><strong>42</strong><br>8 posts</td><td data-label="June–July pooled median / count"><strong>35</strong><br>16 posts across two months</td><td data-label="Movement" class="signal-up">↑ +20.0%</td></tr></table>',
         "MOVEMENT_HEADLINE": "Start with what changed.",
         "MOVEMENT_TAKEAWAY": "August is the decision month; June and July provide context.",
         "FOCAL_MOVEMENT_TITLE": "The typical post improved.",
@@ -129,6 +130,20 @@ def run_canary(output_dir: Path) -> None:
         key = match.group(1)
         return values.get(key, key.replace("_", " ").title())
 
+    values.update({
+        "FOCAL_PILLAR_ANALYSIS_HTML": '<article class="card"><h3>三高管理</h3><p>Visual monthly comparison precedes substantive pillar findings.</p></article>',
+        "CASE_INSIGHTS_HTML": '<li>The pictured choice shows the actual reader decision.</li><li>Two distinct illustrated options make the consequence inspectable.</li><li>Retain the specific choice and show its evidence early.</li>',
+        "STRONGEST_COMPETITOR_ANALYSIS_HTML": '<article class="card" data-module="strongest-competitor-analysis"><h3>Example Beta has the largest median increase</h3><p>40 to 72: +80%; total falls from 1,000 to 900, so this is improved typical response rather than increased total output.</p><ul><li>Compare multiple stronger and weaker packages.</li><li>Use actual images and headlines as evidence.</li><li>Explain a concrete reader consequence.</li><li>Adapt the supported method to the focal page.</li></ul></article>',
+        "ACTION_ITEMS_HTML": ''.join('<article class="action"><div class="action-index">'+str(i+1)+'</div><div><h3>'+title+'</h3><p>'+brief+'</p></div></article>' for i,(title,brief) in enumerate([
+            ('State the reader decision before terminology','Lead with the concrete need supported by the source.'),
+            ('Show the usable answer before the full inventory','Select an actual image that proves the promised action.'),
+            ('Refresh qualified recurring subjects','Use current verified timing and link the established model.')]))
+    })
+    values["OPTIONAL_OUTLOOK_SECTION_HTML"] = re.sub(
+        r'(<a class="title-example" href="([^"]+)">)',
+        lambda match: '<figure class="historical-reference"><a href="'+match.group(2)+'"><img data-embed-src="'+str(FIXTURES / "evidence.svg")+'" alt="Synthetic historical reference"></a><figcaption>Historical example · 42 shares</figcaption></figure>'+match.group(1),
+        values["OPTIONAL_OUTLOOK_SECTION_HTML"],
+    )
     draft = re.sub(r"\{\{([A-Z0-9_]+)\}\}", replace, template)
     draft_path = output_dir / "draft.html"
     draft_path.write_text(draft, encoding="utf-8")
@@ -150,7 +165,7 @@ def run_canary(output_dir: Path) -> None:
         (output_dir / "report-receipt.json").read_text(encoding="utf-8")
     )
     assert report_receipt["status"] == "PASS"
-    assert report_receipt["image_count"] == 1
+    assert report_receipt["image_count"] == 4
     assert report_receipt["checks"]["standard_performance_modules"] is True
     assert report_receipt["checks"]["data_first_reading_path"] is True
     assert report_receipt["checks"]["bilingual_language_switch"] is True

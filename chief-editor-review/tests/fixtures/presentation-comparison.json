@@ -1,0 +1,11 @@
+{
+  "focal": "Example Focal",
+  "previous": "2026-07",
+  "current": "2026-08",
+  "monthly": {
+    "Example Focal": {"2026-07": {"n": 10, "median": 100, "total": 800}, "2026-08": {"n": 9, "median": 80, "total": 700}},
+    "Example Beta": {"2026-07": {"n": 12, "median": 40, "total": 1000}, "2026-08": {"n": 8, "median": 72, "total": 900}},
+    "Example Gamma": {"2026-07": {"n": 8, "median": 80, "total": 1200}, "2026-08": {"n": 7, "median": 88, "total": 1100}},
+    "Example Delta": {"2026-07": {"n": 7, "median": 100, "total": 800}, "2026-08": {"n": 6, "median": 65, "total": 500}}
+  }
+}

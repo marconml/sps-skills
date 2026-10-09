@@ -7,7 +7,9 @@ Load only for the Sunday Kiss / SundayKiss Facebook newsroom. Shared writing, me
 - Focal page: https://www.facebook.com/SundayKiss
 - Competitors: https://www.facebook.com/mamidaily.hk ; https://www.facebook.com/shem0m ; https://www.facebook.com/ohpamahk
 - Audience: Hong Kong parents.
-- Exact Core labels: #KISS熱話、#KISS家事、#KISS教養、#Kiss娛樂、#KISS玩樂、其他.
+- Exact Core labels, in report order: #KISS教養、#KISS玩樂、#KISS家事、#KISS熱話、#Kiss娛樂、其他.
+- Overall synopsis, aggregate totals and trend charts cover #KISS教養、#KISS玩樂、#KISS家事、其他. Retain #KISS熱話 and #Kiss娛樂 only in independent Core analyses/cases, outside that aggregate. Competitors keep their own approved non-ad populations; state the scope difference as descriptive context.
+- Historical next-month Outlook: at least four actionable recurring directions when supplied evidence qualifies; combine past performance, current-year timing and adjacent historical post images. If fewer qualify, report the evidence gap and request a narrower count or further history rather than invent a fourth.
 - Exclude advertising from editorial performance and historical topic learning. No dedicated ad tag exists.
 - Primary KPI and performance objective require run confirmation. Recommend shares per post for a useful-redistribution objective when comparable shares are exported; otherwise recommend from actual fields.
 
