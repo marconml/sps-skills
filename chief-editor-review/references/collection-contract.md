@@ -106,15 +106,17 @@ For every eligible publication, seek the strongest available equivalents of:
 
 Preserve missing values as missing. Keep the original metric label and definition. If a metric is available for some pages but not others, do not use it as a cross-page KPI without explicit qualification.
 
-## Dynamic pillar handling
+## Classification intake: topic and programme
 
-Use one of these routes, in order:
+Collect the newsroom's topic pillars and/or program／欄目／節目. Reuse confirmed profiles and export tags before asking; accept either lens alone or `Please propose`. Record each lens's exact labels, definitions, order, membership rules and aliases independently. One topic can span multiple programmes; a programme can cover multiple topics. Approved tags drive membership only in the lens they identify. Infer missing topic membership from the actual post, and confirm a proposed taxonomy before conclusions.
 
-1. Use approved Fanpage Karma tags when they consistently represent the newsroom's content pillars.
-2. Apply user-supplied pillar definitions, documenting ambiguous assignments.
-3. If neither is available, inspect topics and formats in the approved exports, propose a small working taxonomy with definitions and examples, and wait for confirmation before pillar analysis.
+With both lenses, prepare an internal report switch labelled `主題 / 欄目` and `Topics / Programmes`. Topic names remain verbatim across languages. Programme names also remain verbatim. Preserve all approved labels in the working taxonomy; show only programmes with eligible decision-month posts in the default report. Keep inactive programmes and prior-only posts in expandable coverage detail so hiding rows does not hide discontinued output or distort totals. An approved BU profile can explicitly require all programmes to remain visible.
 
-Keep an `Unresolved` intake group for genuinely ambiguous posts. Do not hide a large share of output inside `Other`; revisit it for coherent recurring territories.
+Use at most six shared general subjects for cross-page comparison, mapping approved newsroom topics where semantically comparable. Keep branded programmes page-native. Record overlap, unclassified coverage and distinct-post denominators; review `Other` as an intake queue.
+
+In the filled business brief, offer two separate answers:
+- Topic pillars and definitions: supplied list, None, or Please propose.
+- Program／欄目／節目, tags and aliases: supplied list, None, or Please propose.
 
 ## Media and comments
 

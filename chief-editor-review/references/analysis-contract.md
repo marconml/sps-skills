@@ -117,12 +117,11 @@ For reliable cases, compare angle, played in-video words/sequence for Reels or h
 
 ## Competitor learning and discovery
 
-Keep two independent classification fields:
+Keep two independent newsroom classification fields: **topic pillar** (reader subject/purpose) and **programme** (page-owned editorial product). “Core” is a legacy programme label, not a synonym for the user's topic pillars. Apply approved definitions and membership separately; a programme tag alone does not prove a subject. Competitors retain their own programme identity. Shared general subjects, at most six, support cross-page comparison; focal topic labels may map to these only when definitions match.
 
-1. **Core pillar / programme:** the page-owned named editorial product, identified from approved programme labels or explicit programme membership. Compare the focal page's programme against its own prior months and formats. A competitor post keeps its actual native identity; focal programme names do not become competitor category labels.
-2. **General pillar / subject:** one of at most six report-level subjects derived from actual captions and media on every page. Group related subjects by reader purpose; keep narrower subtopics and geography as separate working fields. Use this field for cross-page cohorts. Record definitions, geography, format and counts; if tags overlap, make that overlap visible and keep their totals separate.
+For each available internal lens, independently calculate current and baseline counts, KPI medians/totals, distributions and comparable high/middle/low cohorts. Write lens-specific diagnosis: topics answer which reader needs gained or weakened; programmes answer which editorial products and executions carried or dragged the month. Keep the page-level population and exclusions constant. A switch changes grouping, cohorts and interpretation, not just labels. Use one analytical home per case with links from the other lens where helpful. A single-lens brief receives the corresponding analysis without a nonfunctional switch.
 
-For example, a GOtrip post can be Core `達人帶路` and general `飲食`; an OpenHolidays food post is general `飲食`, with no GOtrip Core identity. Core membership does not automatically determine general subject. Use competitor-native territories as an additional discovery view.
+Default programme visibility follows eligible decision-month activity. Preserve prior-only programmes in coverage detail and discuss their disappearance when decision-material. Report distinct-post page totals separately from overlapping category sums; label overlap and unmatched coverage. Shared-subject competitor comparisons remain shared-subject comparisons whichever internal lens is selected.
 
 Treat `Other` as an intake queue. Review its posts for coherent recurring territories and leave only an explicitly unresolved residual after that pass. Show how each territory was defined so the report does not hide a competitor strength inside a catch-all label.
 
