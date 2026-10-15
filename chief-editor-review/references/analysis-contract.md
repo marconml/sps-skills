@@ -40,14 +40,14 @@ Resolve duplicate/repost identity first. Within pillar and format where possible
 
 - subject and reader stakes;
 - headline promise, specificity, tension, usefulness, and information order;
-- visual subject, proof, legibility, action, and caption-image division;
+- visual subject, proof, legibility, action, and on-image information order;
 - format and known distribution context.
 
 Inspect the whole eligible cohort before choosing the three most decision-useful drivers. A driver must survive low-performing counterexamples; a feature seen only in winners is a hypothesis, not a proven mechanism. High performers primarily show what to replicate. Low performers carry diagnosis; improvement tests depend on the recommendation gate below.
 
 ### Still-image and carousel review
 
-Review every image in every eligible carousel with available media, not only its cover or a representative slide. For a single photo, inspect subject choice, moment, crop, visual proof, on-image headline, legibility, caption-image division, and the order of information in the caption. For a carousel, additionally inspect the cover promise, reason to swipe, role of each card, information density, repetition, proof or comparison used on each card, progression toward a decision, and the final payoff or action. If a carousel is incomplete, record the missing cards and constrain the conclusion.
+Review every image in every eligible carousel with available media, not only its cover or a representative slide. For a single photo, inspect subject choice, moment, crop, visual proof, on-image headline hierarchy, legibility and the reading path within the image. For a carousel, additionally inspect the cover promise, reason to swipe, role of each card, information density, repetition, proof or comparison used on each card, progression toward a decision, and the final payoff or action. If a carousel is incomplete, record the missing cards and constrain the conclusion.
 
 Compare those choices across high, middle, and low examples. A useful diagnosis names the commissioning or editing decision behind the asset—for example, whether the cover opens one decision, whether each card advances it, and whether the selected image proves the claim—instead of summarizing what the pictures contain.
 
@@ -109,9 +109,15 @@ Comments can prioritize the question or point the coverage should answer. They a
 
 When extracting a competitor formula, define the relevant content-and-format cohort, resolve duplicates and materially repeated creatives, reveal performance, then compare high, middle, and low packages. Retain only mechanisms that recur across stronger posts, are weaker or absent in lower posts, and survive counterexamples. Treat a repeated phrase such as “explained,” “mystery,” or a question mark as surface wording unless the wider package comparison supports it.
 
+## Performance-review boundary
+
+Explain interaction success and weakness primarily through actual images and played video: visible subject, on-image wording, proof, information order, progression and payoff. Captions normally contribute little to this diagnosis. Use captions for identity, matching, taxonomy and context; consider a caption mechanism only in a named exceptional case with visible evidence, such as a PM/comment instruction that directly generates counted interactions. Explain that exception and separate its mechanical effect from media engagement.
+
+This workflow evaluates interaction performance. Treat source-media wording as evidence of the package readers saw, rather than initiating a medical or editorial-safety audit. Keep report judgments and recommendations on the performance mechanism. Preserve source fidelity in proposed copy without adding unrelated claim-verification commentary.
+
 ## Same-topic comparisons
 
-Actively search approved pages for the same named event, person, study, source article, product announcement, or materially identical topic. Establish the match from shared entities, dates, and incident/source details before revealing performance. Broad themes or adjacent controversies are not matches.
+Every review includes a fixed same-post / same-story comparison module. Search the entire approved decision-month focal and competitor population for all discoverable shared named events, people, studies, source articles, product announcements or materially identical stories. Use caption/entity search plus OCR and visual screening where captions are sparse. Keep a match ledger containing accepted groups, rejected near-matches, media coverage and search coverage; aim to include every reliable match, grouping multiple competitor executions under one story. Establish the match from shared entities, dates, and incident/source details before revealing performance. Broad themes or adjacent controversies are not matches.
 
 For reliable cases, compare angle, played in-video words/sequence for Reels or headline/card package for stills, visual choices, format, applicable CTA, primary KPI and supporting metrics. Also compare publication date against the event, opening, announcement, or source release when that timing is known, plus the lag between Pages. State whether the posts were close enough in the news cycle to support a useful execution comparison. First-mover novelty, audience saturation, and later information availability remain alternative explanations when dates differ materially. Separate the observed performance gap from the inferred mechanism. Skip uncertain pairs.
 
@@ -129,7 +135,7 @@ Compare Core programmes internally and general subjects across pages as distinct
 
 ## Performance-blind review
 
-Review actual media in an isolated packet with performance, ranking and data-led conclusions hidden. Still-image review includes its caption/card package; Reel review uses playback alone, with caption/static cover retained only as identification metadata. Use it to find possible clarity, credibility, visual, and information-order issues. Every resulting suggestion remains a Hypothesis / Test until the performance evidence supports it.
+Review actual media in an isolated packet with performance, ranking and data-led conclusions hidden. Still-image review uses the actual images and every available carousel card; Reel review uses playback alone, with caption/static cover retained only as identification metadata. Use it to find possible clarity, credibility, visual, and information-order issues. Every resulting suggestion remains a Hypothesis / Test until the performance evidence supports it.
 
 ## Comment insight
 
@@ -158,19 +164,19 @@ Evaluate this layer using the supplied previous-year following-two-month window 
 
 Start with the equivalent planning month in prior years and a bounded lead-in where the topic required preparation. Use the rest of the supplied history to check recurrence, continuing investment and lower-performing counterexamples. Historical timestamps locate candidates; the reason to repeat must be a predictable trigger rather than merely publication in that month.
 
-Apply a recurrence gate before inspecting performance. A candidate enters the Outlook only when all three conditions hold:
+Apply a recurrence gate before inspecting performance. A candidate is labelled a seasonal signal only when all three conditions hold:
 
 1. the same season, festival, observance, service cycle, or other predictable trigger recurs inside the current planning window;
 2. the historical post directly addressed that trigger rather than merely appearing in the same month;
 3. the newsroom can commission, prepare, update, or publish something for that trigger now.
 
-Verify the current-year date or condition with an approved authoritative source. A following-month historical post may inform earlier commissioning only when the same recurring trigger moves earlier this year or needs production lead-time. One-off people, incidents, generic evergreen topics, and opportunistic news belong in Diagnosis or an editorial backlog, not in this Outlook.
+Verify the current-year date or condition with an approved authoritative source. A following-month historical post may inform earlier commissioning only when the same recurring trigger moves earlier this year or needs production lead-time. One-off people and incidents do not become recurring seasonal topics. Evergreen historical examples can support a separate historical packaging or topic Test within the Outlook, without a seasonal claim.
 
 After recurrence qualification, group equivalent reader questions/topics within each page and format, resolve repeats and ads, and calculate eligible count, KPI median, distribution and breakout concentration. Compare against that page’s same-format baseline from the same historical month; use parent-pillar context when it actually clarifies the opportunity. Separate sustained topic response from a single winner. A thin cohort can support an illustrative historical signal, not a proven winning formula. Use comparable competitors only as additional context.
 
 For each qualified opportunity, inspect the full relevant within-page high, middle, and low historical cohort before selecting examples. Distinguish the seasonal reason to commission from the content, headline, visual, format, and timing mechanism worth testing. A historically strong unrelated post may inform the general Diagnosis, but it cannot qualify or evidence a seasonal topic. State the concrete commission and preparation. When proposing a test, name the alternatives and the editorial decision its result will settle.
 
-Organize the output around the qualified recurring triggers in the next commissioning window. It is valid to show only one or two opportunities—or omit the Outlook—when the historical period contains few genuine seasonal signals. Historical performance is an Observation about the supplied period; the proposed future package remains an Inference or Test. Keep the final Actions chapter as the single place for assignable status calls.
+Organize the output around the qualified recurring triggers in the next commissioning window. Deliver at least three distinct historical directions, recommendations or examples. Prioritize qualified recurring triggers; where fewer than three qualify, complete the set with clearly labelled evergreen historical tests or historical packaging lessons, each linked to an actual supplied post. Keep these separate from seasonal signals and state why the historical execution is worth testing now. The minimum is three substantive directions, not three references to one idea. Historical performance is an Observation about the supplied period; the proposed future package remains an Inference or Test. Keep the final Actions chapter as the single place for assignable status calls.
 
 ## Evidence status
 
