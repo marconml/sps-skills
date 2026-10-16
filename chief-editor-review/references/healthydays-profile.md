@@ -27,3 +27,7 @@ Use for Healthy Days / HealthyDays 日日健康 on Facebook or Instagram. Confir
 The paired identifier `#故事背後或#藝人照顧故事` denotes one programme with alternative matching tags `#故事背後` and `#藝人照顧故事`; preserve the supplied display label until the user chooses a shorter label. Keep #醫學人 and #mip separate pending evidence or user confirmation of equivalence. Resolve legacy/export aliases from actual tags and record the mapping rather than assuming case or acronym equivalence.
 
 Show programmes with eligible posts in the decision month; retain inactive labels and prior-only counts in expandable coverage detail. Use the two independent lenses and synchronized report switch defined in the shared contracts. Definitions not established by these names can be proposed from supplied posts for confirmation.
+
+## Production model
+
+All posts tagged `#健談錄` are reposted videos, as confirmed by the user. Apply the repost-source-selection lens: diagnose the actual source opening, visible demonstration/proof, progression and payoff, then recommend which available videos to select for a defined reader need. Source selection is the default editorial action; new shooting, script rewriting or recutting requires a separate approved production brief. Record this production model independently from programme aliases; it does not imply that every other `#mip` post is a repost.

@@ -160,6 +160,8 @@ Compare median scores by hour, weekday, and daily posting volume. State the KPI 
 
 ## Optional next-month editorial outlook
 
+Search both focal and approved competitor history for recurring subject territories before selecting individual references. Compare each direction across pages and within each page’s relevant format; use lower-response examples to decide the angle and format.
+
 Evaluate this layer using the supplied previous-year following-two-month window for next-month topics and preparation lead-time; longer supplied history or an approved forward plan can supplement it. Current-month diagnosis remains separate from historical topic planning. Keep the supplied historical pages and months as the coverage boundary; missing historical competitors do not trigger recollection.
 
 Start with the equivalent planning month in prior years and a bounded lead-in where the topic required preparation. Use the rest of the supplied history to check recurrence, continuing investment and lower-performing counterexamples. Historical timestamps locate candidates; the reason to repeat must be a predictable trigger rather than merely publication in that month.
@@ -176,7 +178,7 @@ After recurrence qualification, group equivalent reader questions/topics within 
 
 For each qualified opportunity, inspect the full relevant within-page high, middle, and low historical cohort before selecting examples. Distinguish the seasonal reason to commission from the content, headline, visual, format, and timing mechanism worth testing. A historically strong unrelated post may inform the general Diagnosis, but it cannot qualify or evidence a seasonal topic. State the concrete commission and preparation. When proposing a test, name the alternatives and the editorial decision its result will settle.
 
-Organize the output around the qualified recurring triggers in the next commissioning window. Deliver at least three distinct historical directions, recommendations or examples. Prioritize qualified recurring triggers; where fewer than three qualify, complete the set with clearly labelled evergreen historical tests or historical packaging lessons, each linked to an actual supplied post. Keep these separate from seasonal signals and state why the historical execution is worth testing now. The minimum is three substantive directions, not three references to one idea. Historical performance is an Observation about the supplied period; the proposed future package remains an Inference or Test. Keep the final Actions chapter as the single place for assignable status calls.
+Organize the output around the qualified recurring triggers in the next commissioning window. Deliver at least three distinct historical directions, recommendations or examples. Prioritize qualified recurring triggers, then supported recurring topic/series opportunities from focal and competitor history; use a labelled individual-case adaptation only if these broader directions lack support. Keep these separate from seasonal signals and state why the historical execution is worth testing now. The minimum is three substantive directions, not three references to one idea. Historical performance is an Observation about the supplied period; the proposed future package remains an Inference or Test. Keep the final Actions chapter as the single place for assignable status calls.
 
 ## Evidence status
 
