@@ -16,7 +16,7 @@ If an export is already available, inspect it first. Populate the credential-fre
 
 Do not ask the user to repeat page names, competitors, or dates that are readable from the export. The user can provide only the focal page name; derive competitors from the export. Request page URLs only for ambiguous identities or missing evidence links. Ask which profile is the focal page only when the file does not make that clear. Ask other questions only when a missing answer changes the analysis.
 
-Use total interactions per post as the default primary KPI, unless the user explicitly selects another metric. Inspect the exported field and record its exact definition/components and any cross-platform inclusion; use per-post medians for typical performance and monthly totals for scale. Apply this default without asking the user to choose a KPI again. If the required total is absent or definitions are not comparable across pages, explain the gap and ask only for the evidence or decision needed to resolve it; do not silently substitute reach or an engagement rate.
+Use total interactions per post as the default primary KPI, unless the user explicitly selects another metric. Inspect the exported field and record its exact definition/components and any cross-platform inclusion; use arithmetic mean (avg) per post and monthly totals for scale. Median is an explicitly requested alternative. Apply this default without asking the user to choose a KPI again. If the required total is absent or definitions are not comparable across pages, explain the gap and ask only for the evidence or decision needed to resolve it; do not silently substitute reach or an engagement rate.
 
 ## Guide the Fanpage Karma export
 
@@ -157,7 +157,7 @@ Before analysis, present a compact table with one row per page and show:
 
 Reconcile the export's earliest and latest timestamps and row counts across the selected profiles. Flag filters, truncated top-post exports, duplicated rows, summary-only files, mismatched periods, missing competitors, and unequal KPI definitions.
 
-Count valid post records after removing summary/average rows. If the combined export contains exactly 5,000 valid posts, treat possible truncation as a material coverage warning. For long-history reviews, preserve each intended date window: split it into non-overlapping chronological batches, each containing all approved profiles, and reconcile IDs/counts after combining. Prefer monthly batches when coverage is uncertain. This is a cap-driven exception to the one-export default, not a request for separate page exports. A shorter scope requires the user’s choice; a truncated top-post sample cannot establish historical topic medians.
+Count valid post records after removing summary/average rows. If the combined export contains exactly 5,000 valid posts, treat possible truncation as a material coverage warning. For long-history reviews, preserve each intended date window: split it into non-overlapping chronological batches, each containing all approved profiles, and reconcile IDs/counts after combining. Prefer monthly batches when coverage is uncertain. This is a cap-driven exception to the one-export default, not a request for separate page exports. A shorter scope requires the user’s choice; a truncated top-post sample cannot establish historical topic averages.
 
 Return one status:
 
@@ -166,3 +166,7 @@ Return one status:
 - `blocked`: the post population, period, page identity, or chosen KPI is too incomplete for the requested comparison.
 
 Do not begin performance conclusions until the checkpoint is resolved. Never silently supplement Fanpage Karma exports with an outside collection service.
+
+## Owner-only supplemental exports
+
+Follow the approved BU profile’s owner-data collection route alongside Fanpage Karma. Reuse a supplied matching export; otherwise attempt the authorized dashboard download through its visible UI and existing session. Record access failures and request only the missing user login or export. Keep owner reach as a separate source with its own post IDs, dates, coverage, deduplication and field mapping; the brief/profile defines its display or analytical role.

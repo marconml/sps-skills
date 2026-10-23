@@ -33,3 +33,13 @@ missing = {"Example Focal": data[focal], "Example Missing": {cur: {"median": 20}
 assert module.select_median_mover(missing, cur, prev, focal)["selected"] is None
 assert module.select_median_mover(missing, cur, prev, focal)["unranked"][0]["reason"] == "missing median"
 print("PASS: strongest mover, metric-specific endpoint order, filtering, zero/missing bases, declining market")
+
+# Same cohort: mean and median can select different movers; no fallback between fields.
+trial = {"Owner": {prev: {"mean": 10}, cur: {"mean": 30}},
+         "Broad": {prev: {"mean": 100, "median": 10}, cur: {"mean": 110, "median": 30}},
+         "Breakout": {prev: {"mean": 20, "median": 10}, cur: {"mean": 60, "median": 11}}}
+assert module.select_mean_mover(trial, cur, prev, "Owner")["selected"]["page"] == "Breakout"
+assert module.select_statistic_mover(trial, cur, prev, "Owner")["selected"]["page"] == "Breakout"
+assert module.select_median_mover(trial, cur, prev, "Owner")["selected"]["page"] == "Broad"
+assert module.select_mean_mover({"Missing": {prev: {"median": 1}, cur: {"median": 2}}}, cur, prev, "Owner")["selected"] is None
+print("PASS: avg default, explicit median, divergent rankings and no metric fallback")

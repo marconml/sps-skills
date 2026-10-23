@@ -38,6 +38,10 @@ Healthy Days (HD) and Oriental Sunday / 東方新地 (OS) are owner pages. For O
 
 ## Report preferences
 
-Reach is display-only; interaction remains the analytical KPI. Show HD’s whole export population and OS health / entertainment & other separately in the owner reach box, with latest-month change percentage and directional colours. Per-post aggregation follows the current brief; an avg experiment is not a permanent metric change. Preserve independent export populations and explain coverage differences.
+Reach is display-only; interaction remains the analytical KPI. Show HD’s whole export population and OS health / entertainment & other separately in the owner reach box, with latest-month change percentage and directional colours. Arithmetic mean (avg) is the standing aggregation for interactions and displayed reach; median is an explicitly requested alternative. Preserve independent export populations and explain coverage differences.
 
 Order: cross-page interaction trends → decision-month page scorecard → owner reach → topic/programme comparison → focal Top/Bottom → editorial diagnosis → next-month topics. Omit the breadth-of-recovery module and the final three-priority/actions chapter for this profile; the remaining diagnosis and topic directions carry the decisions. Set report month, windows and Top/Bottom count in the run brief. These presentation choices do not remove the shared evidence and media QA.
+
+## NMG reach collection
+
+Alongside Fanpage Karma, collect owner reach from the [NMG report dashboard](http://dashboard.nmg.com.hk/#Portal/MyReport/index) using [the NMG collection workflow](nmg-reach-collection.md). Codex attempts the download itself through the authorized browser session. Reuse matching supplied files. HD is collected as a whole page; OS is downloaded as all posts, then classified locally into health and entertainment & other. Keep reach display-only.
