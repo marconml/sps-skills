@@ -31,3 +31,13 @@ Show programmes with eligible posts in the decision month; retain inactive label
 ## Production model
 
 All posts tagged `#健談錄` are reposted videos, as confirmed by the user. Apply the repost-source-selection lens: diagnose the actual source opening, visible demonstration/proof, progression and payoff, then recommend which available videos to select for a defined reader need. Source selection is the default editorial action; new shooting, script rewriting or recutting requires a separate approved production brief. Record this production model independently from programme aliases; it does not imply that every other `#mip` post is a repost.
+
+## Owner pages, exclusions and terminology
+
+Healthy Days (HD) and Oriental Sunday / 東方新地 (OS) are owner pages. For OS, health means a post containing #日日健康 or #照顧有家 (union, count once); entertainment & other is every remaining post. OS enters cross-page interaction comparisons with its health population only. All HD/OS posts with #pj are confirmed ads and are excluded from current and historical analysis. Apply clear spelling/hash aliases confirmed by the user; #hd_mip equals #mip. Use “Chatbot post” for information-request posts. Display HD without “Overall”.
+
+## Report preferences
+
+Reach is display-only; interaction remains the analytical KPI. Show HD’s whole export population and OS health / entertainment & other separately in the owner reach box, with latest-month change percentage and directional colours. Per-post aggregation follows the current brief; an avg experiment is not a permanent metric change. Preserve independent export populations and explain coverage differences.
+
+Order: cross-page interaction trends → decision-month page scorecard → owner reach → topic/programme comparison → focal Top/Bottom → editorial diagnosis → next-month topics. Omit the breadth-of-recovery module and the final three-priority/actions chapter for this profile; the remaining diagnosis and topic directions carry the decisions. Set report month, windows and Top/Bottom count in the run brief. These presentation choices do not remove the shared evidence and media QA.

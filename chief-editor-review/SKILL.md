@@ -31,7 +31,7 @@ Ask only for business information that is still missing:
 6. Available data: the review month plus its preceding two months, and the following two months from the previous year; reuse supplied files and ask only for missing windows.
 7. Any language override and any presentation-only reference report.
 
-Use total interactions per post as the default primary KPI, unless the user explicitly selects another metric. Inspect the exported field and record its exact definition/components and any cross-platform inclusion; use per-post medians for typical performance and monthly totals for scale. Apply this default without asking the user to choose a KPI again. If the required total is absent or definitions are not comparable across pages, explain the gap and ask only for the evidence or decision needed to resolve it; do not silently substitute reach or an engagement rate.
+Use total interactions per post as the default primary KPI, unless the user explicitly selects another metric. Inspect the exported field and record its exact definition/components and any cross-platform inclusion; use per-post medians for typical performance and monthly totals for scale unless the brief explicitly selects another aggregation. Record the selected statistic once; a mean/avg trial is a separate report, recalculated throughout, with its prior version preserved. Apply this default without asking the user to choose a KPI again. If the required total is absent or definitions are not comparable across pages, explain the gap and ask only for the evidence or decision needed to resolve it; do not silently substitute reach or an engagement rate.
 
 Request two chronological exports, each containing the same approved focal page and competitors: the three complete months ending with the review month, and the two calendar months immediately after that review month in the previous year. For a September 2026 review, request 1 July–30 September 2026 and 1 October–30 November 2025. The first window supplies current diagnosis and its prior-two-month comparison; the second supplies next-month recurring topics and preparation lead-time. State exact dates, including year rollover, and reuse supplied coverage without requesting an entire year.
 
@@ -106,7 +106,7 @@ For photo/carousel cases, derive exact Suggested Hooks and Visual Tests from the
 
 Read and follow [the report contract](references/report-contract.md). Use [the neutral HTML template](assets/chief-editor-report-template.html) as a presentation baseline, adapting it to the approved business-unit reference without carrying over old findings.
 
-Keep the stable evidence-to-action reading path:
+Apply the approved BU profile’s optional chapter choices; shared defaults below remain for other BUs. Keep the stable evidence-to-action reading path:
 
 1. Current-Month Performance
 2. Editorial Diagnosis
@@ -130,7 +130,7 @@ For bilingual copy, lock claims, anchors, status, limitations and actions in the
 
 Unless the user explicitly opts out, deliver both English and Traditional Chinese in the same standalone file. English is the initial view; the language switch changes the complete management narrative while keeping evidence, metrics, images, links, and source-language examples shared.
 
-Use `scripts/embed_images.py` to make local evidence media self-contained. Run `scripts/validate_report.py` and `scripts/browser_qa.js`, then inspect the resulting desktop and mobile screenshots. Verify chart scales, labels, exact values, images, links, text hierarchy, evidence status, credential exclusion, and preservation of previous reports.
+Use `scripts/embed_images.py` to make local evidence media self-contained. Run `scripts/validate_report.py` (use `--profile healthy-days` for that profile’s chapter order) and `scripts/browser_qa.js`, then inspect the resulting desktop and mobile screenshots. Verify chart scales, labels, exact values, images, links, text hierarchy, evidence status, credential exclusion, and preservation of previous reports.
 
 ## Deliver and stop
 
