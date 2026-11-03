@@ -10,8 +10,9 @@ Creates a recurring evidence-backed Facebook review for a Chief Editor or CEO.
 It can reuse approved exports or run bounded collection, then compares the
 current month with the prior two months, diagnoses high/middle/low content,
 same-topic competitor cases, creative mechanisms and non-PM reader feedback,
-and delivers a verified standalone HTML report. It is report-only and never
-changes SPS prompts or publishes content.
+and delivers a verified standalone HTML report. After the report, a user can
+select a recommended topic for a guided, independently researched SPS draft.
+It never changes SPS prompts or publishes content.
 
 ### `refine-pillar-prompts`
 

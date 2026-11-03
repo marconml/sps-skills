@@ -1,13 +1,13 @@
 ---
 name: chief-editor-review
-description: "Create recurring evidence-backed Facebook or Instagram editorial reviews for Chief Editors and management. Use to compare a focal page with approved competitors, diagnose the current month's performance, inspect posts and actual media, extract usable audience signals, and deliver a verified standalone HTML report. Report-only: no SPS prompt changes or publishing."
+description: "Create evidence-backed Facebook or Instagram editorial reviews for Chief Editors and management. Compare a focal page with competitors, diagnose performance and deliver a verified HTML report. If the user chooses a suggested topic afterward, guide a confirmed brief and create an SPS draft; never publish or change SPS prompts."
 ---
 
 # Chief Editor Review
 
 Turn approved Facebook or Instagram evidence into a concise, critical, actionable editorial review. The report should help a Chief Editor decide what to commission, scale, improve, stop, or test; metrics are the evidence base, not the story.
 
-This is a guided report-building skill. It helps the user export complete post details from Fanpage Karma, inspects whatever columns and media are actually available, builds the analysis dynamically, and leads production of the final report. It does not impose a fixed normalized schema or run a one-click report pipeline. It never changes SPS prompts, publishes, schedules, replies, or moderates.
+This is a guided report-building skill with an optional post-report SPS draft handoff. It helps the user export complete post details from Fanpage Karma, inspects whatever columns and media are actually available, builds the analysis dynamically, and leads production of the final report. It does not impose a fixed normalized schema or run a one-click report pipeline. It never changes SPS prompts, publishes, schedules, replies, or moderates.
 
 Guide non-technical colleagues in plain language. Ask for business information, explain unfamiliar terms briefly, and perform the data and report mechanics yourself rather than giving the user a technical manual.
 
@@ -132,7 +132,7 @@ Unless the user explicitly opts out, deliver both English and Traditional Chines
 
 Use `scripts/embed_images.py` to make local evidence media self-contained. Run `scripts/validate_report.py` (use `--profile healthy-days` for that profile’s chapter order) and `scripts/browser_qa.js`, then inspect the resulting desktop and mobile screenshots. Verify chart scales, labels, exact values, images, links, text hierarchy, evidence status, credential exclusion, and preservation of previous reports.
 
-## Deliver and stop
+## Deliver the report
 
 Return the new standalone HTML plus a short receipt naming:
 
@@ -145,12 +145,16 @@ Return the new standalone HTML plus a short receipt naming:
 
 Do not offer or apply SPS prompt changes as part of the report. If the user later wants prompt changes, hand the approved findings to `refine-pillar-prompts` as a separate task.
 
+## Optional SPS draft from a report recommendation
+
+After delivering the report, offer to develop a specific recommended topic as an SPS draft. If the user selects one, or explicitly asks to develop one, read and follow [the SPS draft handoff](references/sps-draft-handoff.md). Propose a filled brief using the report and available context, including destination workspace, Page, pillar, current-year story angle, writing outline and post format. Ask whether the proposed answers are right, invite corrections, and iterate only on material gaps. Once the necessary decisions and evidence are settled, create the authorized draft and verify its saved state. A report recommendation alone does not authorize an SPS write.
+
 ## Hard boundaries
 
 - No credentials, access tokens, commenter identities, or private source URLs in reports or Git.
 - No competitor credentials.
 - No missing value treated as zero and no invented post, metric, image, link, quote, or match.
-- No SPS prompt update, publication, scheduling, reply, or moderation in this skill.
+- SPS writes are limited to the user-selected draft handoff. No SPS prompt update, publication, scheduling, reply, or moderation in this skill.
 
 ## Skill-source maintenance
 
