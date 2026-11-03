@@ -14,9 +14,9 @@ If an export is already available, inspect it first. Populate the credential-fre
 - approved pillar names, definitions, and Fanpage Karma tags when available;
 - known exclusions, promotion rule, report language, and available comments/media.
 
-Do not ask the user to repeat page names, competitors, or dates that are readable from the export. Ask which profile is the focal page only when the file does not make that clear. Ask other questions only when a missing answer changes the analysis.
+Do not ask the user to repeat page names, competitors, or dates that are readable from the export. The user can provide only the focal page name; derive competitors from the export. Request page URLs only for ambiguous identities or missing evidence links. Ask which profile is the focal page only when the file does not make that clear. Ask other questions only when a missing answer changes the analysis.
 
-Ask the user to choose the primary KPI after explaining a recommendation. For a Facebook objective centred on useful redistribution, recommend shares per post when the export exposes shares. If the objective or available fields point elsewhere, recommend the closest direct and comparable measure. Confirm whether Fanpage Karma reports a raw count, an interaction total, or a rate and record any denominator. Do not assume that public engagement equals reach or an engagement rate.
+Use total interactions per post as the default primary KPI, unless the user explicitly selects another metric. Inspect the exported field and record its exact definition/components and any cross-platform inclusion; use arithmetic mean (avg) per post and monthly totals for scale. Median is an explicitly requested alternative. Apply this default without asking the user to choose a KPI again. If the required total is absent or definitions are not comparable across pages, explain the gap and ask only for the evidence or decision needed to resolve it; do not silently substitute reach or an engagement rate.
 
 ## Guide the Fanpage Karma export
 
@@ -24,13 +24,13 @@ First inspect any workbook or CSV the user already supplied. Reuse it when it co
 
 When a new export is needed, begin with this plain-language instruction:
 
-> In Fanpage Karma, select your own page by using `+ Profile`, then add all the competitors you want to compare to the same dashboard. Open the **Content** tab, select the reporting period, change the post table to **Top 5000**, and make **one combined export** containing all selected pages. Upload that single Excel or CSV file here.
+> In Fanpage Karma, select your own page by using `+ Profile`, then add all the competitors you want to compare to the same dashboard. Open the **Content** tab, select the reporting period, change the post table to **Top 5000**, and make **one combined export per date window** containing all selected pages. Upload the two Excel or CSV files here.
 
 Guide the user further only when needed:
 
 1. In the profile list, click `+ Profile` and add the focal page plus every competitor to compare. Keep all intended profiles in the same dashboard selection.
 2. Open the **Content** tab for individual post data; do not export a Benchmarking summary or one page at a time.
-3. Select the exact shared reporting period. If the user asks for a recommendation, propose exact start and end dates rather than saying only “three months.”
+3. Request two chronological exports, each containing the same approved focal page and competitors: the three complete months ending with the review month, and the two calendar months immediately after that review month in the previous year. For a September 2026 review, request 1 July–30 September 2026 and 1 October–30 November 2025. The first window supplies current diagnosis and its prior-two-month comparison; the second supplies next-month recurring topics and preparation lead-time. For a December 2026 review, the windows are 1 October–31 December 2026 and 1 January–28 February 2026 (January–February 2027 planning months shifted back one year). State exact dates, including year rollover, and reuse supplied coverage without requesting an entire year.
 4. Change the result/table size to **Top 5000 Posts** and use `No filter` unless the user deliberately approved a narrower content filter. This maximizes post-history coverage but does not guarantee completeness when more than 5,000 posts fall inside the period.
 5. Select the available key figures/KPIs needed for the brief, then use the Content export control to download one combined Excel or CSV containing every selected profile.
 6. If comment text is unavailable in the combined post export, record that limitation and continue only at the approved coverage level. Do not ask the user to split or repeat the post export by profile.
@@ -50,18 +50,20 @@ Profiles in the same dashboard:
 - Competitor 2: Competitor B
 Content tab: Top 5000 Posts Overview
 Filter: No filter
-Period: 1 June 2026 to 31 August 2026
+Review month: September 2026
+Current export: 1 July to 30 September 2026
+Prior-year planning export: 1 October to 30 November 2025
 Timezone: Hong Kong time, if Fanpage Karma asks
 Post columns: combined interactions, shares/reposts, likes, comments,
 impressions/views, reach, post date, profile, message, post ID, post link,
 and image/media link where available
-Export: One combined Excel or CSV for all three profiles
+Export: Two files, one per date window, each containing all three profiles
 
 Information to tell Codex after uploading
 Our page: Example Health
 Audience: Hong Kong adults interested in practical health information
 Objective: Increase useful sharing of service-led health content
-Primary KPI: Please recommend from the exported fields
+Primary KPI: Total interactions per post (default)
 Existing pillars or tags: Three-high management; elder care; prevention
 Pillar definitions: Three-high management covers blood pressure, glucose,
 and blood lipids; elder care covers practical support for older adults
@@ -69,7 +71,7 @@ Editorial rules/exclusions: Do not recommend stopping required service posts
 Available media and comment text: Only what is included in the export
 Previous reports: None
 Current or next-period content plan: None
-Prior-year data for an outlook: None
+Historical coverage: October–November 2025; please check recurring topics for October 2026
 Report language: English and Traditional Chinese
 Reference report: None
 ```
@@ -104,21 +106,23 @@ For every eligible publication, seek the strongest available equivalents of:
 
 Preserve missing values as missing. Keep the original metric label and definition. If a metric is available for some pages but not others, do not use it as a cross-page KPI without explicit qualification.
 
-## Dynamic pillar handling
+## Classification intake: topic and programme
 
-Use one of these routes, in order:
+Collect the newsroom's topic pillars and/or program／欄目／節目. Reuse confirmed profiles and export tags before asking; accept either lens alone or `Please propose`. Record each lens's exact labels, definitions, order, membership rules and aliases independently. One topic can span multiple programmes; a programme can cover multiple topics. Approved tags drive membership only in the lens they identify. Infer missing topic membership from the actual post, and confirm a proposed taxonomy before conclusions.
 
-1. Use approved Fanpage Karma tags when they consistently represent the newsroom's content pillars.
-2. Apply user-supplied pillar definitions, documenting ambiguous assignments.
-3. If neither is available, inspect topics and formats in the approved exports, propose a small working taxonomy with definitions and examples, and wait for confirmation before pillar analysis.
+With both lenses, prepare an internal report switch labelled `主題 / 欄目` and `Topics / Programmes`. Topic names remain verbatim across languages. Programme names also remain verbatim. Preserve all approved labels in the working taxonomy; show only programmes with eligible decision-month posts in the default report. Keep inactive programmes and prior-only posts in expandable coverage detail so hiding rows does not hide discontinued output or distort totals. An approved BU profile can explicitly require all programmes to remain visible.
 
-Keep an `Unresolved` intake group for genuinely ambiguous posts. Do not hide a large share of output inside `Other`; revisit it for coherent recurring territories.
+Use at most six shared general subjects for cross-page comparison, mapping approved newsroom topics where semantically comparable. Keep branded programmes page-native. Record overlap, unclassified coverage and distinct-post denominators; review `Other` as an intake queue.
+
+In the filled business brief, offer two separate answers:
+- Topic pillars and definitions: supplied list, None, or Please propose.
+- Program／欄目／節目, tags and aliases: supplied list, None, or Please propose.
 
 ## Media and comments
 
 Codex downloads original media from approved post or media links into the run folder when accessible. Do not make the user install a downloader. Record inaccessible, expired, or absent media rather than replacing it with unrelated imagery.
 
-For every eligible carousel with available media, download and inspect every image in order. For each Reel or short video selected for media analysis, inspect selected frames: the cover, multiple frames from the opening three seconds, evenly spaced or scene-change frames across the body, and the closing payoff. Record the frame-selection rule; do not imply frame-by-frame inspection. Use audio or a local transcript where available, with speech recognition treated as structural assistance rather than a verbatim source.
+For every eligible carousel with available media, download and inspect every image in order. For each Reel or short video selected for media analysis, watch playback and inspect selected frames: multiple frames from the opening three seconds, evenly spaced or scene-change frames across the body, and the closing payoff. Record the frame-selection rule; do not imply frame-by-frame inspection. Caption and static cover remain identification/classification/exclusion metadata; assess Reel performance from the played footage, in-video wording and audio alone. Use audio or a local transcript where available, with speech recognition treated as structural assistance rather than a verbatim source.
 
 Comments are analyzed only when lawfully supplied. Identify intentional comment-to-private-message posts from the caption/Page-reply pattern and exclude them from newsroom comment insight. Remove commenter names, usernames, profile URLs, avatars, IDs, and other identity fields. Keep Page-authored replies separate. Missing comment exports limit the Corresponding method and must be disclosed.
 
@@ -153,7 +157,7 @@ Before analysis, present a compact table with one row per page and show:
 
 Reconcile the export's earliest and latest timestamps and row counts across the selected profiles. Flag filters, truncated top-post exports, duplicated rows, summary-only files, mismatched periods, missing competitors, and unequal KPI definitions.
 
-Count valid post records after removing summary/average rows. If the combined export contains exactly 5,000 valid posts, treat possible truncation as a material coverage warning. Recommend a shorter date range and a new one-export run when complete history is required; otherwise record the user's acceptance of the Top 5000 limit.
+Count valid post records after removing summary/average rows. If the combined export contains exactly 5,000 valid posts, treat possible truncation as a material coverage warning. For long-history reviews, preserve each intended date window: split it into non-overlapping chronological batches, each containing all approved profiles, and reconcile IDs/counts after combining. Prefer monthly batches when coverage is uncertain. This is a cap-driven exception to the one-export default, not a request for separate page exports. A shorter scope requires the user’s choice; a truncated top-post sample cannot establish historical topic averages.
 
 Return one status:
 
@@ -162,3 +166,7 @@ Return one status:
 - `blocked`: the post population, period, page identity, or chosen KPI is too incomplete for the requested comparison.
 
 Do not begin performance conclusions until the checkpoint is resolved. Never silently supplement Fanpage Karma exports with an outside collection service.
+
+## Owner-only supplemental exports
+
+Follow the approved BU profile’s owner-data collection route alongside Fanpage Karma. Reuse a supplied matching export; otherwise attempt the authorized dashboard download through its visible UI and existing session. Record access failures and request only the missing user login or export. Keep owner reach as a separate source with its own post IDs, dates, coverage, deduplication and field mapping; the brief/profile defines its display or analytical role.

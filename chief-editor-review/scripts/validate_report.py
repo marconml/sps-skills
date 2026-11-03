@@ -77,33 +77,38 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("report", type=Path)
     parser.add_argument("--receipt", type=Path)
+    parser.add_argument("--profile", choices=["default", "healthy-days"], default="default")
     args = parser.parse_args()
 
     text = args.report.read_text(encoding="utf-8")
     tree = ReportParser()
     tree.feed(text)
+    required_ids = (REQUIRED_IDS - {"actions"}) | {"outlook"} if args.profile == "healthy-days" else REQUIRED_IDS
+    reading_path = ["scope", "movement", "drivers", "outlook"] if args.profile == "healthy-days" else REQUIRED_READING_PATH
+    end_section = "outlook" if args.profile == "healthy-days" else "actions"
     checks = {
         "has_title": bool("".join(tree.title_text).strip()),
         "one_h1": tree.h1_count == 1,
-        "required_sections": not (REQUIRED_IDS - tree.ids),
+        "required_sections": not (required_ids - tree.ids),
         "standard_performance_modules": not (REQUIRED_MODULES - tree.modules),
         "data_first_reading_path": [
             section_id
             for section_id in tree.section_ids
-            if section_id in REQUIRED_READING_PATH
+            if section_id in reading_path
         ]
-        == REQUIRED_READING_PATH
+        == reading_path
         and (
             "decisions" not in tree.section_ids
             or tree.section_ids.index("drivers")
             < tree.section_ids.index("decisions")
-            < tree.section_ids.index("actions")
+            < tree.section_ids.index(end_section)
         )
         and (
             "outlook" not in tree.section_ids
+            or args.profile == "healthy-days"
             or tree.section_ids.index("drivers")
             < tree.section_ids.index("outlook")
-            < tree.section_ids.index("actions")
+            < tree.section_ids.index(end_section)
         ),
         "bilingual_language_switch": (
             tree.default_language == "en"
@@ -126,7 +131,7 @@ def main() -> int:
     receipt = {
         "status": "PASS" if all(checks.values()) else "FAIL",
         "checks": checks,
-        "missing_section_ids": sorted(REQUIRED_IDS - tree.ids),
+        "missing_section_ids": sorted(required_ids - tree.ids),
         "missing_module_ids": sorted(REQUIRED_MODULES - tree.modules),
         "section_order": tree.section_ids,
         "image_count": len(tree.images),
