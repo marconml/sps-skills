@@ -25,7 +25,7 @@ Use for Healthy Days / HealthyDays 日日健康 on Facebook or Instagram. Confir
 - #故事背後或#藝人照顧故事
 - #1MHT
 
-The paired identifier `#故事背後或#藝人照顧故事` denotes one programme with alternative matching tags `#故事背後` and `#藝人照顧故事`; preserve the supplied display label until the user chooses a shorter label. Keep #醫學人 and #mip separate pending evidence or user confirmation of equivalence. Resolve legacy/export aliases from actual tags and record the mapping rather than assuming case or acronym equivalence.
+The paired identifier `#故事背後或#藝人照顧故事` denotes one programme with alternative matching tags `#故事背後` and `#藝人照顧故事`; preserve the supplied display label until the user chooses a shorter label. Use #醫學人 as the programme display label; #杏林道 is its confirmed alternative tag. A post tagged with either belongs to the same programme, and a post with both counts once. Apply the alias to current and historical membership before programme aggregates, rankings and diagnosis. Keep this programme separate from #mip. Resolve legacy/export aliases from actual tags and record the mapping rather than assuming case or acronym equivalence.
 
 #1MDT is the confirmed tag for #1分鐘醫聊室; keep it independent of #1MHT and #HD健康Talk. When the review brief identifies trial programmes, give them a visible side-by-side read of eligible volume, average interactions, subject/execution differences and the next selection decision, in addition to their switchable programme rows. Compare with available prior output rather than assuming a trial is newly launched.
 
